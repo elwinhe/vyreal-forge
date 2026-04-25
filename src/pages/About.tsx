@@ -89,7 +89,7 @@ const About = () => {
         <FadeInUp className="eyebrow body-muted mb-6">What are we?</FadeInUp>
         <FadeInUp
           as="p"
-          delay={0.1}
+          delay={0.2}
           className="max-w-2xl body-muted font-medium"
           style={{ fontSize: "clamp(20px, 2.6vw, 40px)", lineHeight: 1.4 }}
         >
@@ -101,7 +101,7 @@ const About = () => {
       <section className="mt-32 md:mt-48 px-5 md:px-8">
         <div className="flex items-end justify-between mb-10">
           <FadeInUp as="h2" className="eyebrow body-muted">The team</FadeInUp>
-          <FadeInUp as="span" delay={0.1} className="text-sm body-muted">{team.length} operators</FadeInUp>
+          <FadeInUp as="span" delay={0.2} className="text-sm body-muted">{team.length} operators</FadeInUp>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
           {team.map((m) => (

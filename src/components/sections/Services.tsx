@@ -34,7 +34,7 @@ export function Services() {
         {services.map((s, i) => (
           <FadeInUp
             key={s.num}
-            delay={i * 0.08}
+            delay={i * 0.18}
             onMouseEnter={() => setHover(i)}
             onMouseLeave={() => setHover(null)}
             className="relative grid grid-cols-12 gap-4 py-10 md:py-14 border-t border-foreground/10 transition-colors duration-500"
