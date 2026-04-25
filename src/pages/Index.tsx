@@ -109,13 +109,13 @@ const Index = () => {
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10 md:mb-16">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-16">
               <h2 className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start">
                 Projects
               </h2>
               <p
                 className="max-w-xl body-muted leading-snug self-end md:self-auto"
-                style={{ fontSize: "clamp(20px, 2.6vw, 40px)", lineHeight: 1.4 }}
+                style={{ fontSize: "clamp(16px, 2vw, 28px)", lineHeight: 1.4 }}
               >
                 Great things come from shared momentum. You show us your north star, we'll handle the execution, and
                 together we make impact at scale.
