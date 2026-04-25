@@ -1,6 +1,54 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
+
+function MenuIcon({ open }: { open: boolean }) {
+  const ease = [0.16, 1, 0.3, 1] as const;
+  const duration = 0.4;
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" className="overflow-visible">
+      {/* Top bar -> top half of X */}
+      <motion.line
+        x1="2"
+        x2="14"
+        y1="4"
+        y2="4"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        initial={false}
+        animate={open ? { x1: 3, y1: 3, x2: 13, y2: 13 } : { x1: 2, y1: 4, x2: 14, y2: 4 }}
+        transition={{ duration, ease }}
+      />
+      {/* Middle bar fades */}
+      <motion.line
+        x1="2"
+        x2="14"
+        y1="8"
+        y2="8"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        initial={false}
+        animate={open ? { opacity: 0 } : { opacity: 1 }}
+        transition={{ duration: duration * 0.6, ease }}
+      />
+      {/* Bottom bar -> bottom half of X */}
+      <motion.line
+        x1="2"
+        x2="14"
+        y1="12"
+        y2="12"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        initial={false}
+        animate={open ? { x1: 3, y1: 13, x2: 13, y2: 3 } : { x1: 2, y1: 12, x2: 14, y2: 12 }}
+        transition={{ duration, ease }}
+      />
+    </svg>
+  );
+}
 import { useTransitionNavigate } from "@/components/motion/RouteTransition";
 
 const items = [
