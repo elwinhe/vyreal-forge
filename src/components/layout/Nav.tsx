@@ -18,13 +18,15 @@ export function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-[80] bg-background/80 backdrop-blur-md border-b border-foreground/10">
       <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
-        <Link
-          to="/"
-          onClick={() => setOpen(false)}
+        <button
+          onClick={() => {
+            setOpen(false);
+            navigate("/");
+          }}
           className="display text-2xl md:text-[28px] tracking-display leading-none"
         >
           Vyreal
-        </Link>
+        </button>
 
         <div className="flex items-center gap-2">
           <button
