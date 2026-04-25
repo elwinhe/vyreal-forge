@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { PageShell } from "@/components/layout/PageShell";
-import { HomeLoader } from "@/components/motion/HomeLoader";
 import { Marquee } from "@/components/sections/Marquee";
 import { ProjectCard, PROJECTS } from "@/components/sections/ProjectCard";
 import { ParallaxStack } from "@/components/sections/ParallaxStack";
@@ -10,11 +8,7 @@ import { Services } from "@/components/sections/Services";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const SEEN_KEY = "vyreal_loader_seen";
-
 const Index = () => {
-  const firstLoad = typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) !== "1";
-  const [loaderDone, setLoaderDone] = useState(!firstLoad);
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const headlineY = useTransform(scrollYProgress, [0, 1], [0, -40]);
@@ -22,12 +16,12 @@ const Index = () => {
 
   return (
     <>
-      <HomeLoader onDone={() => setLoaderDone(true)} />
       <PageShell>
         <motion.div
-          initial={firstLoad ? { y: 80, opacity: 0 } : { y: 0, opacity: 1 }}
-          animate={loaderDone ? { y: 0, opacity: 1 } : {}}
+          initial={{ y: 0, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        >
         >
           {/* HERO */}
           <section ref={heroRef} className="px-5 md:px-8 pt-10 md:pt-16">
