@@ -91,7 +91,7 @@ export function Nav() {
             className="h-10 px-4 inline-flex items-center gap-2 rounded-full border border-foreground/15 hover:bg-transition1/40 transition-colors"
           >
             <span className="text-sm">{open ? "Close" : "Menu"}</span>
-            {open ? <X size={16} /> : <Menu size={16} />}
+            <MenuIcon open={open} />
           </button>
         </div>
       </div>
