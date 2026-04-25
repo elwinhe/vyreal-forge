@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTransitionNavigate } from "@/components/motion/RouteTransition";
 
 const items = [
   { label: "Home", to: "/" },
@@ -13,7 +13,7 @@ const items = [
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useTransitionNavigate();
 
   return (
     <header className="fixed top-0 inset-x-0 z-[80] bg-background/80 backdrop-blur-md border-b border-foreground/10">
