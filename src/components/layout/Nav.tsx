@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
+import { useLocation } from "react-router-dom";
+
+const SEEN_KEY = "vyreal_loader_seen";
 
 function MenuIcon({ open }: { open: boolean }) {
   const ease = [0.16, 1, 0.3, 1] as const;
@@ -62,6 +65,12 @@ export function Nav() {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
   const navigate = useTransitionNavigate();
+  const location = useLocation();
+  // Animate the logo in only on first homepage load (after the loader exits)
+  const animateLogo =
+    location.pathname === "/" &&
+    typeof window !== "undefined" &&
+    sessionStorage.getItem(SEEN_KEY) !== "1";
 
   return (
     <header className="fixed top-0 inset-x-0 z-[80] bg-background/80 backdrop-blur-md border-b border-foreground/10">
@@ -71,9 +80,16 @@ export function Nav() {
             setOpen(false);
             navigate("/");
           }}
-          className="display text-2xl md:text-[28px] tracking-display leading-none"
+          className="display text-2xl md:text-[28px] tracking-display leading-none overflow-hidden"
         >
-          Vyreal
+          <motion.span
+            initial={animateLogo ? { y: "110%" } : false}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-block"
+          >
+            Vyreal
+          </motion.span>
         </button>
 
         <div className="flex items-center gap-2">
