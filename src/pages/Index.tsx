@@ -116,7 +116,7 @@ const Index = () => {
               </FadeInUp>
               <FadeInUp
                 as="p"
-                delay={0.1}
+                delay={0.2}
                 className="max-w-xl body-muted leading-snug self-end md:self-auto"
                 style={{ fontSize: "clamp(16px, 2vw, 28px)", lineHeight: 1.4 }}
               >
