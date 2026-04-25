@@ -113,9 +113,9 @@ const Index = () => {
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between items-center gap-6 mb-10 md:mb-16">
-              <h2 className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">Projects</h2>
-              <p className="hidden md:block max-w-md text-base md:text-lg body-muted leading-snug">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10 md:mb-16">
+              <h2 className="display text-[16vw] md:text-[14vw] tracking-display leading-[0.85] self-start">Projects</h2>
+              <p className="max-w-md text-base md:text-lg body-muted leading-snug text-right md:text-left self-end md:self-auto">
                 Great things come from shared momentum. You show us your north star, we'll handle the execution, and
                 together we make impact at scale.
               </p>
