@@ -17,8 +17,8 @@ export function ParallaxStack({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const yTop = useTransform(scrollYProgress, [0, 1], [60, -60]);
-  const yBottom = useTransform(scrollYProgress, [0, 1], [180, -180]);
+  const yTop = useTransform(scrollYProgress, [0, 1], [20, -20]);
+  const yBottom = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
     <div ref={ref} className="relative">
