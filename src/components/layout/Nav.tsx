@@ -67,9 +67,7 @@ export function Nav() {
   const location = useLocation();
   // Animate the logo in only on first homepage load (after the loader exits)
   const animateLogo =
-    location.pathname === "/" &&
-    typeof window !== "undefined" &&
-    sessionStorage.getItem(SEEN_KEY) !== "1";
+    location.pathname === "/" && typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) !== "1";
 
   return (
     <header className="fixed top-2 left-2 right-2 z-[80] bg-background/60 backdrop-blur-2xl border border-foreground/10 rounded-2xl overflow-hidden shadow-[0_8px_24px_-12px_hsl(var(--foreground)/0.18)]">
@@ -94,7 +92,7 @@ export function Nav() {
         <button
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((o) => !o)}
-          className="h-11 w-11 grid place-items-center hover:text-transition2 transition-colors"
+          className="h-11 w-11 grid place-items-center transition-colors"
         >
           <MenuIcon open={open} />
         </button>
