@@ -34,13 +34,13 @@ const Index = () => {
             <div className="eyebrow body-muted mb-6">AI content studio · The ultimate UGC orchestrator</div>
             <motion.h1
               style={{ y: headlineY }}
-              className="display text-[18vw] md:text-[14vw] tracking-display leading-[1]"
+              className="display text-[15vw] md:text-[14vw] tracking-display leading-[1]"
             >
               UGC at scale.
             </motion.h1>
             <motion.h1
               style={{ y: headlineY }}
-              className="display text-[18vw] md:text-[14vw] tracking-display leading-[1] text-transition2"
+              className="display text-[15vw] md:text-[14vw] tracking-display leading-[1] text-transition2"
             >
               Real results.
             </motion.h1>
