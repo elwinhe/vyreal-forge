@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="eyebrow body-muted mb-6">Contact</div>
 
         <motion.h1 style={{ y: ySlow }} className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">
-          Get in touch.
+          Let's Connect.
         </motion.h1>
 
         <motion.div style={{ y: yFast }} className="mt-6 space-y-4 md:space-y-6">
@@ -33,7 +33,7 @@ const Contact = () => {
 
           <div className="pt-10 md:pt-16">
             <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
-              Have a project in mind? Reach out and we'll discuss the best way to move forward.
+              Have something to promote? Don't hesitate to reach out.
             </p>
           </div>
         </motion.div>
