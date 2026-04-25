@@ -28,25 +28,23 @@ const Index = () => {
         >
           {/* HERO */}
           <section ref={heroRef} className="px-5 md:px-8 pt-10 md:pt-16">
-            <div className="grid grid-cols-12 items-end gap-6">
-              <div className="col-span-12 md:col-span-9">
-                <div className="eyebrow body-muted mb-6">AI content studio · UGC + Monetization</div>
-                <motion.h1
-                  style={{ y: headlineY }}
-                  className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]"
-                >
-                  UGC at scale.
-                </motion.h1>
-                <motion.h1
-                  style={{ y: headlineY }}
-                  className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2"
-                >
-                  Real results.
-                </motion.h1>
-              </div>
-              <div className="col-span-12 md:col-span-3 md:pb-8">
-                <p className="body-muted text-base md:text-lg max-w-xs">We're the ultimate UGC orchestrator.</p>
-              </div>
+            <div className="eyebrow body-muted mb-6">AI content studio · UGC + Monetization</div>
+            <motion.h1
+              style={{ y: headlineY }}
+              className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]"
+            >
+              UGC at scale.
+            </motion.h1>
+            <motion.h1
+              style={{ y: headlineY }}
+              className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2"
+            >
+              Real results.
+            </motion.h1>
+            <div className="mt-8 md:mt-10 grid grid-cols-12">
+              <p className="col-span-12 md:col-span-4 md:col-start-9 body-muted text-base md:text-lg">
+                We're the ultimate UGC orchestrator.
+              </p>
             </div>
 
             {/* Hero reel placeholder */}
@@ -148,14 +146,11 @@ const Index = () => {
 
           {/* BLURB */}
           <section className="mt-40 md:mt-56 px-5 md:px-8">
-            <ParallaxStack top="Vyreal" bottom="real virality" />
-            <div className="mt-12 md:mt-20 grid grid-cols-12">
-              <p className="col-span-12 md:col-span-7 md:col-start-4 body-muted text-lg md:text-xl">
-                We're here to create videos that perform, spanning winning UGC formats at scale. From concept to
-                execution, we work closely with you to orchestrate an end-to-end production process that leaves real
-                impact.
-              </p>
-            </div>
+            <ParallaxStack
+              top="Vyreal"
+              bottom="real virality"
+              caption="We're here to create videos that perform, spanning winning UGC formats at scale. From concept to execution, we work closely with you to orchestrate an end-to-end production process that leaves real impact."
+            />
           </section>
 
           {/* SERVICES */}
