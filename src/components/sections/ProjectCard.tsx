@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <figure className="group relative frame-media aspect-[9/16] w-full overflow-hidden">
+    <figure className="group relative frame-card aspect-[9/16] w-full max-h-[80vh] overflow-hidden">
       {/* Zoomable video / background layer */}
       <motion.div
         className="absolute inset-0"
@@ -66,12 +66,12 @@ export function ProjectCard({ project }: { project: Project }) {
       </motion.div>
 
       {/* Static overlay UI — does not zoom */}
-      <div className="absolute top-3 right-3 z-10">
+      <div className="absolute top-6 right-6 z-10">
         <span className="text-[10px] lg:text-xs xl:text-sm uppercase tracking-[0.18em] text-white/85 bg-black/30 backdrop-blur px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
           {project.tag}
         </span>
       </div>
-      <figcaption className="absolute inset-x-0 bottom-0 p-4 flex items-end justify-between z-10">
+      <figcaption className="absolute inset-x-0 bottom-0 p-6 md:p-8 flex items-end justify-between z-10">
         <div className="text-xs lg:text-sm xl:text-base uppercase tracking-[0.18em] text-white/95">
           {project.views}
         </div>
