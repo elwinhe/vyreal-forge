@@ -89,7 +89,7 @@
     line-height: 0.92;
   }
   .eyebrow {
-    font-size: 16px;
+    font-size: clamp(11px, 1.1vw, 14px);
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 500;
