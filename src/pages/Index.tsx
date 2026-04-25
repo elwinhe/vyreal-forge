@@ -114,7 +114,7 @@ const Index = () => {
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10 md:mb-16">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-16 mb-10 md:mb-16">
               <h2 className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start">
                 Projects
               </h2>
