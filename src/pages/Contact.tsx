@@ -20,13 +20,13 @@ const Contact = () => {
         <motion.div style={{ y: yFast }} className="mt-6 space-y-4 md:space-y-6">
           <a
             href="mailto:work@vyreal.ai"
-            className="block display font-light text-[12vw] md:text-[9vw] tracking-display leading-[0.9] text-transition2 hover:opacity-80 transition-opacity"
+            className="block display font-light text-[12vw] md:text-[9vw] tracking-display leading-[0.9] text-foreground story-link"
           >
             work@vyreal.ai
           </a>
           <a
             href="tel:+16692472645"
-            className="block display font-light text-[12vw] md:text-[9vw] tracking-display leading-[0.9] hover:text-transition2 transition-colors"
+            className="block display font-light text-[12vw] md:text-[9vw] tracking-display leading-[0.9] text-foreground story-link"
           >
             (669) 247-2645
           </a>
