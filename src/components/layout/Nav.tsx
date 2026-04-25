@@ -80,7 +80,7 @@ export function Nav() {
             setOpen(false);
             navigate("/");
           }}
-          className="display text-2xl md:text-[28px] tracking-display leading-none overflow-hidden"
+          className="display text-2xl md:text-[28px] tracking-display leading-[1.15] overflow-hidden py-1"
         >
           <motion.span
             initial={animateLogo ? { y: "110%" } : false}
