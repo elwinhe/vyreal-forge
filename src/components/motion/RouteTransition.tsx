@@ -21,13 +21,13 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
       return;
     }
     setPhase("covering");
-    // After both panels have covered the screen, swap content and reveal
+    // After both panels have covered the screen, hold 0.5s, then swap content and reveal
     const swap = setTimeout(() => {
       setDisplayedKey(location.pathname);
       setPhase("revealing");
       window.scrollTo(0, 0);
-    }, 700);
-    const done = setTimeout(() => setPhase("idle"), 1500);
+    }, 1200);
+    const done = setTimeout(() => setPhase("idle"), 2000);
     return () => {
       clearTimeout(swap);
       clearTimeout(done);
