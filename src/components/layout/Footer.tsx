@@ -1,17 +1,9 @@
-import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 const socials = [
   { label: "Instagram", href: "#" },
   { label: "TikTok", href: "#" },
   { label: "X / Twitter", href: "#" },
-];
-
-const navItems = [
-  { label: "Home", to: "/" },
-  { label: "About us", to: "/about" },
-  { label: "Projects", to: "/projects" },
-  { label: "Contact", to: "/contact" },
 ];
 
 export function Footer() {
@@ -23,7 +15,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-10">
-          <div className="space-y-2 text-3xl md:text-5xl tracking-tight">
+          <div className="space-y-2 text-3xl md:text-3xl tracking-tight">
             <a href="mailto:work@vyreal.ai" className="block body-muted hover:text-foreground transition-colors">
               work@vyreal.ai
             </a>
@@ -32,22 +24,6 @@ export function Footer() {
             </a>
           </div>
 
-          <ul className="flex flex-col gap-2 text-base md:text-lg md:items-end md:text-right">
-            {navItems.map((it) => (
-              <li key={it.to}>
-                <Link
-                  to={it.to}
-                  className="group inline-flex items-center gap-1 relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-transition2 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-                >
-                  <span>{it.label}</span>
-                  <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-12 flex justify-end">
           <ul className="flex flex-col gap-2 text-base md:text-lg md:items-end md:text-right">
             {socials.map((s) => (
               <li key={s.label}>
