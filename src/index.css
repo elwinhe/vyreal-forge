@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,15 +10,15 @@
 @layer base {
   :root {
     /* Brand palette */
-    --background: 30 13% 92%;        /* #EFECEA warm cream */
-    --foreground: 0 0% 4%;           /* #0A0A0A */
-    --muted-ink: 0 1% 39%;           /* #666464 */
+    --background: 30 13% 92%; /* #EFECEA warm cream */
+    --foreground: 0 0% 4%; /* #0A0A0A */
+    --muted-ink: 0 1% 39%; /* #666464 */
 
-    --transition-1: 19 56% 82%;      /* #EACBB9 */
-    --transition-2: 21 67% 48%;      /* #CC6329 */
-    --loader: 0 0% 0%;               /* #000000 */
+    --transition-1: 19 56% 82%; /* #EACBB9 */
+    --transition-2: 21 67% 48%; /* #CC6329 */
+    --loader: 0 0% 0%; /* #000000 */
 
-    --hairline: 0 0% 4%;             /* used with /10 opacity */
+    --hairline: 0 0% 4%; /* used with /10 opacity */
 
     /* shadcn token bridge */
     --card: 30 13% 92%;
@@ -55,10 +55,16 @@
   * {
     @apply border-border;
   }
-  html, body {
+  html,
+  body {
     @apply bg-background text-foreground;
-    font-family: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    font-feature-settings: 'ss01', 'cv11';
+    font-family:
+      "Inter Tight",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -73,7 +79,7 @@
 
 @layer utilities {
   .display {
-    font-family: 'Inter Tight', sans-serif;
+    font-family: "Inter Tight", sans-serif;
     font-weight: 600;
     letter-spacing: -0.04em;
     line-height: 0.88;
@@ -83,7 +89,7 @@
     line-height: 0.92;
   }
   .eyebrow {
-    font-size: 11px;
+    font-size: 16px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 500;
@@ -124,8 +130,12 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Custom cursor sparkle particles */
