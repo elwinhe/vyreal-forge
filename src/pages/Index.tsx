@@ -120,7 +120,7 @@ const Index = () => {
             <div className="md:hidden -mx-5 px-5 overflow-x-auto">
               <div className="flex gap-4 w-max">
                 {PROJECTS.slice(0, 4).map((p, i) => (
-                  <div key={i} className="w-[78vw]">
+                  <div key={i} className="w-[55vw] max-w-[280px] max-h-[70vh]">
                     <ProjectCard project={p} />
                   </div>
                 ))}
