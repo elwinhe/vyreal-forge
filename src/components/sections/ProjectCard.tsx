@@ -66,12 +66,12 @@ export function ProjectCard({ project }: { project: Project }) {
       </motion.div>
 
       {/* Static overlay UI — does not zoom */}
-      <div className="absolute top-6 right-6 z-10">
-        <span className="text-[10px] lg:text-xs xl:text-sm uppercase tracking-[0.18em] text-white/85 bg-black/30 backdrop-blur px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
+      <div className="absolute top-5 right-5 z-10">
+        <span className="text-xs lg:text-sm xl:text-base uppercase tracking-[0.18em] text-white/85 bg-black/30 backdrop-blur px-4 py-2 lg:px-5 lg:py-2.5 rounded-full">
           {project.tag}
         </span>
       </div>
-      <figcaption className="absolute inset-x-0 bottom-0 p-2 md:p-3 flex items-end justify-between z-10">
+      <figcaption className="absolute inset-x-0 bottom-0 p-5 flex items-end justify-between z-10">
         <div className="text-xs lg:text-sm xl:text-base uppercase tracking-[0.18em] text-white/95">
           {project.views}
         </div>
