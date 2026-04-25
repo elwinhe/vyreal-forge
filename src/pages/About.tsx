@@ -79,7 +79,7 @@ const About = () => {
         </h1>
       </section>
 
-      <section className="mt-[60vh] md:mt-[80vh] px-5 md:px-8">
+      <section className="mt-24 md:mt-32 px-5 md:px-8">
         <div className="eyebrow body-muted mb-6">What are we?</div>
         <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
           Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
