@@ -10,8 +10,11 @@ import { Services } from "@/components/sections/Services";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const SEEN_KEY = "vyreal_loader_seen";
+
 const Index = () => {
-  const [loaderDone, setLoaderDone] = useState(false);
+  const firstLoad = typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) !== "1";
+  const [loaderDone, setLoaderDone] = useState(!firstLoad);
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const headlineY = useTransform(scrollYProgress, [0, 1], [0, -40]);
@@ -22,7 +25,7 @@ const Index = () => {
       <HomeLoader onDone={() => setLoaderDone(true)} />
       <PageShell>
         <motion.div
-          initial={{ y: 80, opacity: 0 }}
+          initial={firstLoad ? { y: 80, opacity: 0 } : { y: 0, opacity: 1 }}
           animate={loaderDone ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >

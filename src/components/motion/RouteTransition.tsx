@@ -117,21 +117,16 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
           />
         </>
       ) : (
-        // Home variant — single clean black panel with Vyreal logo
+        // Home variant — single clean black panel sweep with static logo
         <motion.div
           className="fixed inset-0 z-[100] pointer-events-none bg-loader flex items-center justify-center"
           initial={{ y: "100%" }}
           animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
-          transition={{ duration: 0.7, ease: [0.7, 0, 0.2, 1] }}
+          transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1] }}
         >
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={covered ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: covered ? 0.25 : 0, ease: [0.16, 1, 0.3, 1] }}
-            className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display"
-          >
+          <span className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
             Vyreal
-          </motion.span>
+          </span>
         </motion.div>
       )}
     </Ctx.Provider>

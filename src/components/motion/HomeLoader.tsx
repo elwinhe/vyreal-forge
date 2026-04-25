@@ -1,20 +1,31 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
+const SEEN_KEY = "vyreal_loader_seen";
+
 export function HomeLoader({ onDone }: { onDone?: () => void }) {
-  const [show, setShow] = useState(true);
+  // Only show on first load of the session — subsequent home visits skip it
+  const [show, setShow] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return sessionStorage.getItem(SEEN_KEY) !== "1";
+  });
 
   useEffect(() => {
+    if (!show) {
+      onDone?.();
+      return;
+    }
     const ready = new Promise<void>((res) => {
       if (document.readyState === "complete") res();
       else window.addEventListener("load", () => res(), { once: true });
     });
     const minTime = new Promise<void>((res) => setTimeout(res, 900));
     Promise.all([ready, minTime]).then(() => {
+      sessionStorage.setItem(SEEN_KEY, "1");
       setShow(false);
       setTimeout(() => onDone?.(), 700);
     });
-  }, [onDone]);
+  }, [onDone, show]);
 
   return (
     <AnimatePresence>
