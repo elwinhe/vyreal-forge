@@ -20,7 +20,7 @@ const Contact = () => {
           Get in touch.
         </motion.h1>
 
-        <motion.div style={{ y: yFast }} className="mt-6 space-y-2">
+        <motion.div style={{ y: yFast }} className="mt-6 space-y-6 md:space-y-10">
           <a
             href="mailto:work@vyreal.ai"
             className="block display font-light text-[12vw] md:text-[9vw] tracking-display leading-[0.9] text-transition2 hover:opacity-80 transition-opacity"
@@ -33,14 +33,14 @@ const Contact = () => {
           >
             (669) 247-2645
           </a>
-        </motion.div>
 
-        <div className="mt-16 md:mt-24 grid grid-cols-12">
-          <p className="col-span-12 md:col-span-6 md:col-start-7 body-muted text-lg md:text-xl">
-            Have a project in mind? Reach out and we'll discuss the best way to
-            move forward.
-          </p>
-        </div>
+          <div className="grid grid-cols-12 pt-10 md:pt-16">
+            <p className="col-span-12 md:col-span-6 md:col-start-7 body-muted font-medium text-xl md:text-2xl">
+              Have a project in mind? Reach out and we'll discuss the best way to
+              move forward.
+            </p>
+          </div>
+        </motion.div>
       </section>
     </PageShell>
   );
