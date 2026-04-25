@@ -16,10 +16,16 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div className="space-y-2 text-3xl md:text-3xl tracking-tight">
-            <a href="mailto:work@vyreal.ai" className="block body-muted hover:text-foreground transition-colors">
+            <a
+              href="mailto:work@vyreal.ai"
+              className="block w-fit body-muted relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+            >
               work@vyreal.ai
             </a>
-            <a href="tel:+16692472645" className="block body-muted hover:text-foreground transition-colors">
+            <a
+              href="tel:+16692472645"
+              className="block w-fit body-muted relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+            >
               (669) 247-2645
             </a>
           </div>
