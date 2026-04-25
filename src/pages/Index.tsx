@@ -113,9 +113,9 @@ const Index = () => {
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
-            <div className="flex flex-col items-center text-center gap-6 mb-10 md:mb-16">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
               <h2 className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">Projects</h2>
-              <p className="max-w-md text-base md:text-lg body-muted leading-snug">
+              <p className="hidden md:block max-w-md text-base md:text-lg body-muted leading-snug">
                 Great things come from shared momentum. We bring the ideas, you bring the ambition, and together we make creative that actually lands.
               </p>
             </div>
