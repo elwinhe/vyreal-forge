@@ -45,10 +45,7 @@ const Index = () => {
                 </motion.h1>
               </div>
               <div className="col-span-12 md:col-span-3 md:pb-8">
-                <p className="body-muted text-base md:text-lg max-w-xs">
-                  Vyreal runs two arms — AI UGC and AI OnlyFans monetization.
-                  Operator-grade content, built to perform.
-                </p>
+                <p className="body-muted text-base md:text-lg max-w-xs">We're the ultimate UGC orchestrator.</p>
               </div>
             </div>
 
@@ -63,15 +60,13 @@ const Index = () => {
               <div
                 className="absolute inset-0"
                 style={{
-                  background:
-                    "linear-gradient(120deg,#0A0A0A 0%,#3a2418 35%,#CC6329 70%,#EACBB9 100%)",
+                  background: "linear-gradient(120deg,#0A0A0A 0%,#3a2418 35%,#CC6329 70%,#EACBB9 100%)",
                 }}
               />
               <div
                 className="absolute inset-0 mix-blend-overlay"
                 style={{
-                  background:
-                    "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.35), transparent 60%)",
+                  background: "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.35), transparent 60%)",
                 }}
               />
               <div className="absolute inset-0 grid place-items-center">
@@ -79,9 +74,7 @@ const Index = () => {
                   <div className="text-[10px] uppercase tracking-[0.2em] opacity-80 mb-3">
                     [ hero reel — placeholder ]
                   </div>
-                  <div className="display text-5xl md:text-8xl tracking-display">
-                    real / virality
-                  </div>
+                  <div className="display text-5xl md:text-8xl tracking-display">real / virality</div>
                 </div>
               </div>
               <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.18em] text-white/80">
@@ -103,40 +96,29 @@ const Index = () => {
           {/* CLIENT / CREATOR MARQUEE */}
           <section className="mt-32 md:mt-48 border-y border-foreground/10 py-8">
             <Marquee>
-              {[
-                "NORTHWAVE",
-                "LUXE / CO",
-                "SERA",
-                "OBELISK",
-                "FORMA",
-                "ATELIER 9",
-                "MONO",
-                "RIVER & OAK",
-              ].map((name, i) => (
-                <div key={i} className="flex items-center gap-16">
-                  <span className="display text-3xl md:text-5xl tracking-display text-foreground/65">
-                    {name}
-                  </span>
-                  {i % 2 === 0 && (
-                    <span
-                      className="h-12 w-12 rounded-full"
-                      style={{
-                        background: `linear-gradient(135deg,#EACBB9,#CC6329)`,
-                      }}
-                      aria-label="Creator avatar"
-                    />
-                  )}
-                </div>
-              ))}
+              {["NORTHWAVE", "LUXE / CO", "SERA", "OBELISK", "FORMA", "ATELIER 9", "MONO", "RIVER & OAK"].map(
+                (name, i) => (
+                  <div key={i} className="flex items-center gap-16">
+                    <span className="display text-3xl md:text-5xl tracking-display text-foreground/65">{name}</span>
+                    {i % 2 === 0 && (
+                      <span
+                        className="h-12 w-12 rounded-full"
+                        style={{
+                          background: `linear-gradient(135deg,#EACBB9,#CC6329)`,
+                        }}
+                        aria-label="Creator avatar"
+                      />
+                    )}
+                  </div>
+                ),
+              )}
             </Marquee>
           </section>
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
             <div className="flex items-end justify-between mb-10 md:mb-16">
-              <h2 className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">
-                Projects
-              </h2>
+              <h2 className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">Projects</h2>
               <Link
                 to="/projects"
                 className="hidden md:inline-flex items-center gap-2 text-sm border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
@@ -157,10 +139,7 @@ const Index = () => {
             </div>
             <div className="hidden md:grid grid-cols-3 gap-6 group/cards">
               {PROJECTS.slice(0, 3).map((p, i) => (
-                <div
-                  key={i}
-                  className="transition-all duration-500 group-hover/cards:opacity-60 hover:!opacity-100"
-                >
+                <div key={i} className="transition-all duration-500 group-hover/cards:opacity-60 hover:!opacity-100">
                   <ProjectCard project={p} />
                 </div>
               ))}
@@ -172,10 +151,9 @@ const Index = () => {
             <ParallaxStack top="Vyreal" bottom="real virality" />
             <div className="mt-12 md:mt-20 grid grid-cols-12">
               <p className="col-span-12 md:col-span-7 md:col-start-4 body-muted text-lg md:text-xl">
-                We're here to create videos that perform, spanning winning UGC
-                formats at scale. From concept to execution, we work closely with
-                you to orchestrate an end-to-end production process that leaves
-                real impact.
+                We're here to create videos that perform, spanning winning UGC formats at scale. From concept to
+                execution, we work closely with you to orchestrate an end-to-end production process that leaves real
+                impact.
               </p>
             </div>
           </section>
