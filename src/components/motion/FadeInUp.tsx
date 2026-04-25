@@ -18,7 +18,7 @@ interface FadeInUpProps extends Omit<HTMLMotionProps<"div">, "children"> {
 export function FadeInUp({
   children,
   delay = 0,
-  duration = 0.8,
+  duration = 0.9,
   y = 32,
   once = true,
   amount = 0.2,
@@ -26,12 +26,14 @@ export function FadeInUp({
   ...rest
 }: FadeInUpProps) {
   const Comp = motion[as] as typeof motion.div;
+  // Base delay so the animation has a beat before kicking in
+  const BASE_DELAY = 0.15;
   return (
     <Comp
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, amount }}
-      transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration, delay: BASE_DELAY + delay, ease: [0.16, 1, 0.3, 1] }}
       {...rest}
     >
       {children}
