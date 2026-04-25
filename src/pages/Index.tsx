@@ -117,7 +117,7 @@ const Index = () => {
               <h2 className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start">
                 Projects
               </h2>
-              <p className="max-w-md text-base md:text-lg body-muted leading-snug self-end md:self-auto">
+              <p className="max-w-md text-base md:text-xl body-muted leading-snug self-end md:self-auto">
                 Great things come from shared momentum. You show us your north star, we'll handle the execution, and
                 together we make impact at scale.
               </p>
