@@ -88,7 +88,7 @@ const About = () => {
       <section className="mt-32 md:mt-48 px-5 md:px-8">
         <div className="flex items-end justify-between mb-10">
           <h2 className="eyebrow body-muted">The team</h2>
-          <span className="eyebrow body-muted">{team.length} operators</span>
+          <span className="text-sm body-muted">{team.length} operators</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
           {team.map((m) => (
