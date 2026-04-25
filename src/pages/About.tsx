@@ -73,8 +73,8 @@ const About = () => {
     <PageShell>
       <section className="px-5 md:px-8 pt-10 md:pt-16">
         <div className="eyebrow body-muted mb-6">About</div>
-        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.9]">Distribution.</h1>
-        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.9] text-transition2">
+        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[1]">Distribution.</h1>
+        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[1] text-transition2">
           Built by Experts.
         </h1>
         <div className="mt-10 md:mt-16">
