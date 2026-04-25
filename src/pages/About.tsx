@@ -27,6 +27,18 @@ const team: Member[] = [
     bio: "Hooks, pacing, format taste. Ten thousand reels worth of pattern recognition.",
     bg: "linear-gradient(160deg,#222 0%,#444 50%,#CC6329 100%)",
   },
+  {
+    name: "Ishaan",
+    role: "Content Lead",
+    bio: "2M followers across socials, 51M total engagement, scripting wizard.",
+    bg: "linear-gradient(160deg,#1A1212 0%,#6B3A22 60%,#EACBB9 100%)",
+  },
+  {
+    name: "Richard",
+    role: "Operations",
+    bio: "The orchestrator behind agentic workflows and creatives.",
+    bg: "linear-gradient(160deg,#0A0A0A 0%,#2a2a2a 50%,#8C5B45 100%)",
+  },
 ];
 
 function TeamCard({ m }: { m: Member }) {
