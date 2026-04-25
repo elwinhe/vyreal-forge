@@ -133,7 +133,7 @@ const Index = () => {
                 ))}
               </div>
             </div>
-            <div className="hidden md:grid grid-cols-3 gap-6 group/cards">
+            <div className="hidden md:grid grid-cols-3 gap-1 group/cards">
               {PROJECTS.slice(0, 3).map((p, i) => (
                 <div key={i} className="transition-all duration-500 group-hover/cards:opacity-60 hover:!opacity-100">
                   <ProjectCard project={p} />

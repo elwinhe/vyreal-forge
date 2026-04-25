@@ -49,22 +49,29 @@ export const PROJECTS: Project[] = [
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <motion.figure
-      whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative frame-media aspect-[9/16] w-full"
-      style={{ background: project.bg }}
-    >
-      {/* shimmer placeholder */}
-      <div className="absolute inset-0 opacity-60 mix-blend-overlay"
-        style={{ background: "radial-gradient(60% 40% at 30% 20%, rgba(255,255,255,0.25), transparent 60%)" }}
-      />
-      <div className="absolute top-3 right-3">
+    <figure className="group relative frame-media aspect-[9/16] w-full overflow-hidden">
+      {/* Zoomable video / background layer */}
+      <motion.div
+        className="absolute inset-0"
+        style={{ background: project.bg }}
+        initial={false}
+        whileHover={{ scale: 1.06 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {/* shimmer placeholder */}
+        <div
+          className="absolute inset-0 opacity-60 mix-blend-overlay"
+          style={{ background: "radial-gradient(60% 40% at 30% 20%, rgba(255,255,255,0.25), transparent 60%)" }}
+        />
+      </motion.div>
+
+      {/* Static overlay UI — does not zoom */}
+      <div className="absolute top-3 right-3 z-10">
         <span className="text-[10px] uppercase tracking-[0.18em] text-white/85 bg-black/30 backdrop-blur px-2 py-1 rounded-full">
           {project.tag}
         </span>
       </div>
-      <figcaption className="absolute inset-x-0 bottom-0 p-4 flex items-end justify-between">
+      <figcaption className="absolute inset-x-0 bottom-0 p-4 flex items-end justify-between z-10">
         <div className="text-[10px] uppercase tracking-[0.18em] text-white/95">
           {project.views}
         </div>
@@ -72,6 +79,6 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.title}
         </div>
       </figcaption>
-    </motion.figure>
+    </figure>
   );
 }
