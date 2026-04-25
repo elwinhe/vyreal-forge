@@ -119,7 +119,7 @@ export function Nav() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden mx-5 md:mx-8 mt-3 rounded-2xl bg-background/85 backdrop-blur-md border border-foreground/10"
+            className="overflow-hidden"
           >
             <ul className="py-3">
               {items.map((it, i) => (
@@ -129,7 +129,7 @@ export function Nav() {
                       setOpen(false);
                       navigate(it.to);
                     }}
-                    className="nav-slide-item w-full text-left px-6 py-4 display text-3xl md:text-5xl tracking-display hover:text-transition2 transition-colors"
+                    className="nav-slide-item w-full text-center px-6 py-4 display text-3xl md:text-5xl tracking-display hover:text-transition2 transition-colors"
                   >
                     <motion.span
                       initial={{ opacity: 0 }}
