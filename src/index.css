@@ -127,6 +127,23 @@
     border-radius: 16px;
     overflow: hidden;
   }
+  /* Nav menu item slide-up text effect */
+  .nav-slide-current {
+    transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(0);
+  }
+  .nav-slide-incoming {
+    transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(100%);
+  }
+  .nav-slide-item:hover .nav-slide-current,
+  .nav-slide-item:focus-visible .nav-slide-current {
+    transform: translateY(-100%);
+  }
+  .nav-slide-item:hover .nav-slide-incoming,
+  .nav-slide-item:focus-visible .nav-slide-incoming {
+    transform: translateY(0);
+  }
   /* Bottom blur fade — persistent depth cue */
   .bottom-fade {
     position: fixed;
