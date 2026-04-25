@@ -11,13 +11,13 @@ interface Member {
 const team: Member[] = [
   {
     name: "Rishi",
-    role: "Co-founder · Strategy",
+    role: "Co-founder · CEO",
     bio: "Built creator monetization stacks from zero to eight figures. Operator-first.",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#3a2418 60%,#CC6329 100%)",
   },
   {
-    name: "Victor",
-    role: "Co-founder · Production",
+    name: "Richard",
+    role: "Co-founder · Operations",
     bio: "Motion-control systems, AI pipelines, and a long history of shipping hits.",
     bg: "linear-gradient(160deg,#EACBB9 0%,#8C5B45 70%,#1A1212 100%)",
   },
@@ -34,9 +34,9 @@ const team: Member[] = [
     bg: "linear-gradient(160deg,#1A1212 0%,#6B3A22 60%,#EACBB9 100%)",
   },
   {
-    name: "Richard",
-    role: "Co-founder · Operations",
-    bio: "The orchestrator behind agentic workflows and talent management.",
+    name: "Victor",
+    role: "Tech Lead",
+    bio: "The orchestrator behind agentic workflow management.",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#2a2a2a 50%,#8C5B45 100%)",
   },
 ];
