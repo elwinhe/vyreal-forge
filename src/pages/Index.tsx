@@ -117,9 +117,9 @@ const Index = () => {
               <h2 className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">Projects</h2>
               <Link
                 to="/projects"
-                className="hidden md:inline-flex items-center gap-2 text-sm border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
+                className="hidden md:inline-flex items-center gap-2 text-base md:text-lg border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
               >
-                See all <ArrowRight size={14} />
+                See all <ArrowRight size={18} />
               </Link>
             </div>
 
@@ -139,6 +139,16 @@ const Index = () => {
                   <ProjectCard project={p} />
                 </div>
               ))}
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <Link
+                to="/projects"
+                className="group inline-flex items-center gap-2 text-base md:text-lg border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
+              >
+                View all projects
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           </section>
 
