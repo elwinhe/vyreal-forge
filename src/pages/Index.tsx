@@ -78,7 +78,7 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <div className="mt-8 flex">
+            <div className="mt-8 flex justify-center">
               <Link
                 to="/contact"
                 className="group inline-flex items-center gap-2 text-base md:text-lg border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
