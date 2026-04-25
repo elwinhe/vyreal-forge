@@ -77,12 +77,14 @@ const About = () => {
         <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[calc(0.85em+2px)] text-transition2">
           Industry Experts.
         </h1>
-        <div className="mt-10 md:mt-16">
-          <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
-            Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
-            top-tier creators. Built by operators, run like a production house.
-          </p>
-        </div>
+      </section>
+
+      <section className="mt-[60vh] md:mt-[80vh] px-5 md:px-8">
+        <div className="eyebrow body-muted mb-6">What are we?</div>
+        <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
+          Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
+          top-tier creators. Built by operators, run like a production house.
+        </p>
       </section>
 
       <section className="mt-32 md:mt-48 px-5 md:px-8">
