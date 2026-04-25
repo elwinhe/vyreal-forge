@@ -27,7 +27,7 @@ export function FadeInUp({
 }: FadeInUpProps) {
   const Comp = motion[as] as typeof motion.div;
   // Base delay so the animation has a beat before kicking in
-  const BASE_DELAY = 0.15;
+  const BASE_DELAY = 0.25;
   return (
     <Comp
       initial={{ opacity: 0, y }}
