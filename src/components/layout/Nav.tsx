@@ -16,8 +16,8 @@ export function Nav() {
   const navigate = useNavigate();
 
   return (
-    <header className="fixed top-0 inset-x-0 z-[80]">
-      <div className="px-5 md:px-8 pt-5 md:pt-6 flex items-center justify-between">
+    <header className="fixed top-0 inset-x-0 z-[80] bg-background/80 backdrop-blur-md border-b border-foreground/10">
+      <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
         <Link
           to="/"
           onClick={() => setOpen(false)}
