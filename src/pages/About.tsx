@@ -73,8 +73,10 @@ const About = () => {
     <PageShell>
       <section className="px-5 md:px-8 pt-10 md:pt-16">
         <div className="eyebrow body-muted mb-6">About</div>
-        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[1]">Built by</h1>
-        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[1] text-transition2">The Best.</h1>
+        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">Built by</h1>
+        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2">
+          The Best.
+        </h1>
         <div className="mt-10 md:mt-16">
           <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
             Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
