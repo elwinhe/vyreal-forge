@@ -39,7 +39,7 @@ export function ParallaxStack({
       </motion.div>
       {caption && (
         <motion.div style={{ y: yCaption }} className="mt-12 md:mt-20 grid grid-cols-12">
-          <p className="col-span-12 md:col-span-7 body-muted text-lg md:text-xl">
+          <p className="col-span-12 md:col-span-7 body-muted text-lg md:text-xl xl:text-2xl">
             {caption}
           </p>
         </motion.div>
