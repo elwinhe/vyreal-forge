@@ -160,7 +160,7 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
                 transition={{
                   duration: 0.6,
                   ease: [0.7, 0, 0.3, 1],
-                  delay: phase === "covering" ? 0.4 : 0,
+                  delay: phase === "covering" ? 0.2 : 0,
                 }}
               >
                 <span className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
