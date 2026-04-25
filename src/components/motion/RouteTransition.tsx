@@ -100,22 +100,30 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
       </AnimatePresence>
 
       {variant === "panels" ? (
-        <>
-          {/* Layer 1 — peach */}
-          <motion.div
-            className="fixed inset-0 z-[100] pointer-events-none bg-transition1"
-            initial={{ y: "100%" }}
-            animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
-            transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1] }}
-          />
-          {/* Layer 2 — orange, lags slightly */}
-          <motion.div
-            className="fixed inset-0 z-[101] pointer-events-none bg-transition2"
-            initial={{ y: "100%" }}
-            animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
-            transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1], delay: phase === "covering" ? 0.1 : 0.05 }}
-          />
-        </>
+        <AnimatePresence>
+          {phase !== "idle" && (
+            <>
+              {/* Layer 1 — peach */}
+              <motion.div
+                key="panel-peach"
+                className="fixed inset-0 z-[100] pointer-events-none bg-transition1"
+                initial={{ y: "100%" }}
+                animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
+                exit={{ y: "-100%" }}
+                transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1] }}
+              />
+              {/* Layer 2 — orange, lags slightly */}
+              <motion.div
+                key="panel-orange"
+                className="fixed inset-0 z-[101] pointer-events-none bg-transition2"
+                initial={{ y: "100%" }}
+                animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
+                exit={{ y: "-100%" }}
+                transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1], delay: phase === "covering" ? 0.1 : 0.05 }}
+              />
+            </>
+          )}
+        </AnimatePresence>
       ) : (
         // Home variant — single clean black panel sweep with static logo.
         // Unmounts after reveal so it never animates back down.
