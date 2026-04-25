@@ -43,7 +43,7 @@ const Index = () => {
             </motion.h1>
             <div className="mt-8 md:mt-10 grid grid-cols-12">
               <p className="col-span-12 md:col-span-4 md:col-start-9 body-muted text-base md:text-lg">
-                We're the ultimate UGC orchestrator.
+                The ultimate UGC orchestrator.
               </p>
             </div>
 
