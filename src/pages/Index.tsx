@@ -83,7 +83,9 @@ const Index = () => {
           </section>
 
           {/* CLIENT / CREATOR MARQUEE */}
-          <section className="mt-32 md:mt-48 border-y border-foreground/10 py-8">
+          <section className="mt-32 md:mt-48">
+            <div className="eyebrow body-muted mb-6 px-5 md:px-8">Who we worked with</div>
+            <div className="border-y border-foreground/10 py-8">
             <Marquee>
               {["NORTHWAVE", "LUXE / CO", "SERA", "OBELISK", "FORMA", "ATELIER 9", "MONO", "RIVER & OAK"].map(
                 (name, i) => (
