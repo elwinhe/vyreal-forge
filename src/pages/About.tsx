@@ -24,7 +24,7 @@ const team: Member[] = [
   {
     name: "Elwin",
     role: "Head of Creative",
-    bio: "Hooks, pacing, format taste. Ten thousand reels worth of pattern recognition.",
+    bio: "Leads the creative design and maintains backend infrastructure supporting our workflows",
     bg: "linear-gradient(160deg,#222 0%,#444 50%,#CC6329 100%)",
   },
   {
