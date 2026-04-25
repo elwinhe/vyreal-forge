@@ -31,8 +31,8 @@ const Contact = () => {
             (669) 247-2645
           </a>
 
-          <div className="grid grid-cols-12 pt-10 md:pt-16">
-            <p className="col-span-12 md:col-span-6 md:col-start-7 body-muted font-medium text-xl md:text-2xl">
+          <div className="pt-10 md:pt-16">
+            <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
               Have a project in mind? Reach out and we'll discuss the best way to move forward.
             </p>
           </div>
