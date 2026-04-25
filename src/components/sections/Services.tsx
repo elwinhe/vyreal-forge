@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FadeInUp } from "@/components/motion/FadeInUp";
 
 interface Service {
   num: string;
@@ -28,11 +29,12 @@ export function Services() {
   const [hover, setHover] = useState<number | null>(null);
   return (
     <section className="px-5 md:px-8">
-      <div className="eyebrow body-muted mb-6">Services</div>
+      <FadeInUp className="eyebrow body-muted mb-6">Services</FadeInUp>
       <div>
         {services.map((s, i) => (
-          <div
+          <FadeInUp
             key={s.num}
+            delay={i * 0.08}
             onMouseEnter={() => setHover(i)}
             onMouseLeave={() => setHover(null)}
             className="relative grid grid-cols-12 gap-4 py-10 md:py-14 border-t border-foreground/10 transition-colors duration-500"
@@ -47,7 +49,7 @@ export function Services() {
             <div className="col-start-3 md:col-start-8 col-span-10 md:col-span-5 md:pl-4 body-muted text-base md:text-xl max-w-md">
               {s.desc}
             </div>
-          </div>
+          </FadeInUp>
         ))}
         <div className="border-t border-foreground/10" />
       </div>

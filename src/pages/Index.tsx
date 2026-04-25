@@ -5,6 +5,7 @@ import { Marquee } from "@/components/sections/Marquee";
 import { ProjectCard, PROJECTS } from "@/components/sections/ProjectCard";
 import { ParallaxStack } from "@/components/sections/ParallaxStack";
 import { Services } from "@/components/sections/Services";
+import { FadeInUp } from "@/components/motion/FadeInUp";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -84,7 +85,7 @@ const Index = () => {
 
           {/* CLIENT / CREATOR MARQUEE */}
           <section className="mt-32 md:mt-48">
-            <div className="eyebrow body-muted mb-6 px-5 md:px-8">Who we worked with</div>
+            <FadeInUp className="eyebrow body-muted mb-6 px-5 md:px-8">Who we worked with</FadeInUp>
             <div className="border-y border-foreground/10 py-8">
             <Marquee>
               {["NORTHWAVE", "LUXE / CO", "SERA", "OBELISK", "FORMA", "ATELIER 9", "MONO", "RIVER & OAK"].map(
@@ -110,16 +111,18 @@ const Index = () => {
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-16">
-              <h2 className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start">
+              <FadeInUp as="h2" className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start">
                 Projects
-              </h2>
-              <p
+              </FadeInUp>
+              <FadeInUp
+                as="p"
+                delay={0.1}
                 className="max-w-xl body-muted leading-snug self-end md:self-auto"
                 style={{ fontSize: "clamp(16px, 2vw, 28px)", lineHeight: 1.4 }}
               >
                 Great things come from shared momentum. You show us your north star, we'll handle the execution, and
                 together we make impact at scale.
-              </p>
+              </FadeInUp>
             </div>
 
             {/* Mobile: horizontal scroll. Desktop: 3-col grid. */}
