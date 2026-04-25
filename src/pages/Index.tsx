@@ -140,6 +140,16 @@ const Index = () => {
                 </div>
               ))}
             </div>
+
+            <div className="mt-8 flex">
+              <Link
+                to="/projects"
+                className="group inline-flex items-center gap-2 text-base md:text-lg border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
+              >
+                View all projects
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
           </section>
 
           {/* BLURB */}
