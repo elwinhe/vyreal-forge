@@ -104,6 +104,7 @@ const Index = () => {
                 ),
               )}
             </Marquee>
+            </div>
           </section>
 
           {/* PROJECTS */}
