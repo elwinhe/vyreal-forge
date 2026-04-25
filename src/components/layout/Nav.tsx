@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sun, Moon } from "lucide-react";
+
 import { useLocation } from "react-router-dom";
 
 const SEEN_KEY = "vyreal_loader_seen";
@@ -63,7 +63,6 @@ const items = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
-  const [dark, setDark] = useState(false);
   const navigate = useTransitionNavigate();
   const location = useLocation();
   // Animate the logo in only on first homepage load (after the loader exits)
@@ -92,23 +91,13 @@ export function Nav() {
           </motion.span>
         </button>
 
-        <div className="flex items-center gap-3">
-          <button
-            aria-label="Toggle theme"
-            onClick={() => setDark((d) => !d)}
-            className="h-11 w-11 grid place-items-center hover:text-transition2 transition-colors"
-            title="Dark mode coming soon"
-          >
-            {dark ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
-          <button
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((o) => !o)}
-            className="h-11 w-11 grid place-items-center hover:text-transition2 transition-colors"
-          >
-            <MenuIcon open={open} />
-          </button>
-        </div>
+        <button
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((o) => !o)}
+          className="h-11 w-11 grid place-items-center hover:text-transition2 transition-colors"
+        >
+          <MenuIcon open={open} />
+        </button>
       </div>
 
       <AnimatePresence>
