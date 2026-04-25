@@ -6,14 +6,18 @@ import { ProjectCard, PROJECTS } from "@/components/sections/ProjectCard";
 import { ParallaxStack } from "@/components/sections/ParallaxStack";
 import { Services } from "@/components/sections/Services";
 import { FadeInUp } from "@/components/motion/FadeInUp";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const headlineY = useTransform(scrollYProgress, [0, 1], [0, -40]);
-  const reelY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const headlineYRaw = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const reelYRaw = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const headlineY = isMobile ? 0 : headlineYRaw;
+  const reelY = isMobile ? 0 : reelYRaw;
 
   return (
     <>
