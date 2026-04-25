@@ -77,8 +77,8 @@ const About = () => {
         <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2">
           Real results.
         </h1>
-        <div className="mt-10 md:mt-16 grid grid-cols-12">
-          <p className="col-span-12 md:col-span-6 md:col-start-7 body-muted text-lg md:text-xl">
+        <div className="mt-10 md:mt-16">
+          <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
             Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
             top-tier creators. Built by operators, run like a production house.
           </p>
