@@ -14,7 +14,7 @@ function MenuIcon({ open }: { open: boolean }) {
         y1="4"
         y2="4"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="2"
         strokeLinecap="round"
         initial={false}
         animate={open ? { x1: 3, y1: 3, x2: 13, y2: 13 } : { x1: 2, y1: 4, x2: 14, y2: 4 }}
@@ -27,7 +27,7 @@ function MenuIcon({ open }: { open: boolean }) {
         y1="8"
         y2="8"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="2"
         strokeLinecap="round"
         initial={false}
         animate={open ? { opacity: 0 } : { opacity: 1 }}
@@ -40,7 +40,7 @@ function MenuIcon({ open }: { open: boolean }) {
         y1="12"
         y2="12"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="2"
         strokeLinecap="round"
         initial={false}
         animate={open ? { x1: 3, y1: 13, x2: 13, y2: 3 } : { x1: 2, y1: 12, x2: 14, y2: 12 }}
