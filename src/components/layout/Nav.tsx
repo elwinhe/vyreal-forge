@@ -138,7 +138,7 @@ export function Nav() {
                       className="relative inline-block overflow-hidden align-bottom leading-[1.1]"
                     >
                       <span className="nav-slide-current block">{it.label}</span>
-                      <span aria-hidden className="nav-slide-incoming absolute left-0 top-0 block w-full translate-y-full">
+                      <span aria-hidden className="nav-slide-incoming absolute left-0 top-0 block w-full">
                         {it.label}
                       </span>
                     </motion.span>
