@@ -129,15 +129,25 @@ export function Nav() {
                       setOpen(false);
                       navigate(it.to);
                     }}
-                    className="w-full text-left px-6 py-4 display text-3xl md:text-5xl tracking-display hover:text-transition2 transition-colors"
+                    className="group/item w-full text-left px-6 py-4 display text-3xl md:text-5xl tracking-display hover:text-transition2 transition-colors"
                   >
                     <motion.span
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.05 + i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                      className="inline-block"
+                      className="inline-block relative overflow-hidden align-bottom leading-[1.1]"
                     >
-                      {it.label}
+                      {/* current label — slides up & out on hover */}
+                      <span className="block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/item:-translate-y-full">
+                        {it.label}
+                      </span>
+                      {/* incoming label — slides up into place on hover */}
+                      <span
+                        aria-hidden
+                        className="absolute inset-0 block translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/item:translate-y-0"
+                      >
+                        {it.label}
+                      </span>
                     </motion.span>
                   </button>
                 </li>

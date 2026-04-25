@@ -54,7 +54,11 @@
 @layer base {
   * {
     @apply border-border;
-    transition-property: font-size, line-height, letter-spacing, padding, margin, width, height, gap, border-radius;
+  }
+  /* Smooth size transitions for everything except framer-motion-controlled
+     elements (which manage their own animations and would conflict). */
+  *:not([style*="transform"]):not(.no-size-transition) {
+    transition-property: font-size, line-height, letter-spacing, padding, gap, border-radius;
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   }
