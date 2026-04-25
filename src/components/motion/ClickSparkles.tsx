@@ -8,6 +8,7 @@ export function ClickSparkles() {
     function onClick(e: MouseEvent) {
       if (e.button !== 0) return;
       const count = 5;
+      const distance = 20;
       for (let i = 0; i < count; i++) {
         const el = document.createElement("span");
         el.className = "vy-spark";
@@ -15,8 +16,8 @@ export function ClickSparkles() {
         el.style.top = `${e.clientY}px`;
         document.body.appendChild(el);
 
-        const angle = (Math.PI * 2 * i) / count + Math.random() * 0.6;
-        const distance = 28 + Math.random() * 22;
+        // Symmetrical 5-point star: evenly spaced points, top-aligned
+        const angle = (Math.PI * 2 * i) / count - Math.PI / 2;
         const dx = Math.cos(angle) * distance;
         const dy = Math.sin(angle) * distance;
 
@@ -25,7 +26,7 @@ export function ClickSparkles() {
             { transform: `translate(-50%, -50%) translate(0,0) scale(1)`, opacity: 1 },
             { transform: `translate(-50%, -50%) translate(${dx}px, ${dy}px) scale(0.2)`, opacity: 0 },
           ],
-          { duration: 380, easing: "cubic-bezier(0.16,1,0.3,1)" }
+          { duration: 560, easing: "cubic-bezier(0.22,1,0.36,1)" }
         );
         anim.onfinish = () => el.remove();
       }
