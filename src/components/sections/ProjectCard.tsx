@@ -72,10 +72,10 @@ export function ProjectCard({ project }: { project: Project }) {
         </span>
       </div>
       <figcaption className="absolute inset-x-0 bottom-0 p-4 flex items-end justify-between z-10">
-        <div className="text-[10px] lg:text-xs xl:text-sm uppercase tracking-[0.18em] text-white/95">
+        <div className="text-xs lg:text-sm xl:text-base uppercase tracking-[0.18em] text-white/95">
           {project.views}
         </div>
-        <div className="text-xs lg:text-sm xl:text-base text-white/80 max-w-[55%] text-right leading-tight">
+        <div className="text-sm lg:text-base xl:text-lg text-white/80 max-w-[55%] text-right leading-tight">
           {project.title}
         </div>
       </figcaption>
