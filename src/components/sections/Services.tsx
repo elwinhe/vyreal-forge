@@ -41,10 +41,10 @@ export function Services() {
             }}
           >
             <div className="col-span-2 md:col-span-1 text-sm body-muted pl-2">{s.num}</div>
-            <div className="col-span-10 md:col-span-6 display text-4xl md:text-7xl tracking-display leading-[0.95]">
+            <div className="col-span-10 md:col-span-6 md:pr-12 display text-4xl md:text-7xl tracking-display leading-[0.95]">
               {s.title}
             </div>
-            <div className="col-start-3 md:col-start-8 col-span-10 md:col-span-5 body-muted text-base md:text-xl max-w-md">
+            <div className="col-start-3 md:col-start-8 col-span-10 md:col-span-5 md:pl-8 body-muted text-base md:text-xl max-w-md">
               {s.desc}
             </div>
           </div>
