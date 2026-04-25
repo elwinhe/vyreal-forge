@@ -34,13 +34,13 @@ const Index = () => {
             <div className="eyebrow body-muted mb-6">AI content studio · The ultimate UGC orchestrator</div>
             <motion.h1
               style={{ y: headlineY }}
-              className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]"
+              className="display text-[18vw] md:text-[14vw] tracking-display leading-[1]"
             >
               UGC at scale.
             </motion.h1>
             <motion.h1
               style={{ y: headlineY }}
-              className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2"
+              className="display text-[18vw] md:text-[14vw] tracking-display leading-[1] text-transition2"
             >
               Real results.
             </motion.h1>
@@ -90,8 +90,7 @@ const Index = () => {
           </section>
 
           {/* CLIENT / CREATOR MARQUEE */}
-          <div className="eyebrow body-muted mb-6 mt-32 md:mt-48 px-5 md:px-8">Who we've worked with</div>
-          <section className="border-y border-foreground/10 py-8">
+          <section className="mt-32 md:mt-48 border-y border-foreground/10 py-8">
             <Marquee>
               {["NORTHWAVE", "LUXE / CO", "SERA", "OBELISK", "FORMA", "ATELIER 9", "MONO", "RIVER & OAK"].map(
                 (name, i) => (
@@ -114,7 +113,7 @@ const Index = () => {
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-16 mb-10 md:mb-16">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10 md:mb-16">
               <h2 className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start">
                 Projects
               </h2>
