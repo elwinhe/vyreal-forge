@@ -88,7 +88,7 @@ const About = () => {
         <div className="eyebrow body-muted mb-6">What are we?</div>
         <p
           className="max-w-2xl body-muted font-medium"
-          style={{ fontSize: "clamp(16px, 1.8vw, 28px)", lineHeight: 1.5 }}
+          style={{ fontSize: "clamp(20px, 2.6vw, 40px)", lineHeight: 1.4 }}
         >
           Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
           top-tier creators. Built by operators, run like a production house.
