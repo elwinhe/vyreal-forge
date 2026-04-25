@@ -73,15 +73,23 @@ const About = () => {
     <PageShell>
       <section className="px-5 md:px-8 pt-10 md:pt-16">
         <div className="eyebrow body-muted mb-6">About</div>
-        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">Built by</h1>
-        <h1 className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2">
+        <h1 className="display tracking-display leading-[0.85]" style={{ fontSize: "clamp(64px, 15vw, 240px)" }}>
+          Built by
+        </h1>
+        <h1
+          className="display tracking-display leading-[0.85] text-transition2"
+          style={{ fontSize: "clamp(64px, 15vw, 240px)" }}
+        >
           Industry Experts.
         </h1>
       </section>
 
       <section className="mt-24 md:mt-32 px-5 md:px-8">
         <div className="eyebrow body-muted mb-6">What are we?</div>
-        <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
+        <p
+          className="max-w-2xl body-muted font-medium"
+          style={{ fontSize: "clamp(16px, 1.8vw, 28px)", lineHeight: 1.5 }}
+        >
           Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
           top-tier creators. Built by operators, run like a production house.
         </p>
