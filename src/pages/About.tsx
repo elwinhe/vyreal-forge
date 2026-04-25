@@ -1,4 +1,5 @@
 import { PageShell } from "@/components/layout/PageShell";
+import { FadeInUp } from "@/components/motion/FadeInUp";
 import { useState } from "react";
 
 interface Member {
@@ -85,20 +86,22 @@ const About = () => {
       </section>
 
       <section className="mt-24 md:mt-32 px-5 md:px-8">
-        <div className="eyebrow body-muted mb-6">What are we?</div>
-        <p
+        <FadeInUp className="eyebrow body-muted mb-6">What are we?</FadeInUp>
+        <FadeInUp
+          as="p"
+          delay={0.1}
           className="max-w-2xl body-muted font-medium"
           style={{ fontSize: "clamp(20px, 2.6vw, 40px)", lineHeight: 1.4 }}
         >
           Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
           top-tier creators. Built by operators, run like a production house.
-        </p>
+        </FadeInUp>
       </section>
 
       <section className="mt-32 md:mt-48 px-5 md:px-8">
         <div className="flex items-end justify-between mb-10">
-          <h2 className="eyebrow body-muted">The team</h2>
-          <span className="text-sm body-muted">{team.length} operators</span>
+          <FadeInUp as="h2" className="eyebrow body-muted">The team</FadeInUp>
+          <FadeInUp as="span" delay={0.1} className="text-sm body-muted">{team.length} operators</FadeInUp>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
           {team.map((m) => (

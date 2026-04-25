@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PageShell } from "@/components/layout/PageShell";
 import { ProjectCard, PROJECTS } from "@/components/sections/ProjectCard";
+import { FadeInUp } from "@/components/motion/FadeInUp";
 
 const filters = ["All", "AI UGC", "Face-swap", "Motion control"] as const;
 
@@ -11,10 +12,10 @@ const Projects = () => {
   return (
     <PageShell>
       <section className="px-5 md:px-8 pt-10 md:pt-16">
-        <div className="eyebrow body-muted mb-6">Projects</div>
-        <h1 className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">
+        <FadeInUp className="eyebrow body-muted mb-6">Projects</FadeInUp>
+        <FadeInUp as="h1" delay={0.05} className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">
           The reel.
-        </h1>
+        </FadeInUp>
         <div className="mt-10 md:mt-14 flex flex-wrap gap-2">
           {filters.map((f) => (
             <button
