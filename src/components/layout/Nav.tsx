@@ -72,7 +72,7 @@ export function Nav() {
     sessionStorage.getItem(SEEN_KEY) !== "1";
 
   return (
-    <header className="fixed top-0 inset-x-0 z-[80] bg-background/80 backdrop-blur-md border-b border-foreground/10">
+    <header className="fixed top-0 inset-x-0 z-[80] bg-background/80 backdrop-blur-md border-b border-foreground/10 rounded-b-lg overflow-hidden">
       <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
         <button
           onClick={() => {
