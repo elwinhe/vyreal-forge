@@ -17,7 +17,7 @@ const Contact = () => {
           Let's Connect.
         </motion.h1>
 
-        <motion.div style={{ y: yFast }} className="mt-6 space-y-4 md:space-y-6">
+        <motion.div style={{ y: yFast }} className="mt-10 md:mt-16 space-y-4 md:space-y-6">
           <a
             href="mailto:work@vyreal.ai"
             className="block w-fit display font-light text-[12vw] md:text-[9vw] tracking-display leading-[0.9] text-[hsl(var(--muted-ink))] relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-[6px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
