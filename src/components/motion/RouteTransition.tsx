@@ -20,14 +20,19 @@ export function useTransitionNavigate() {
 /**
  * Two-step route transition with held cover.
  * - Default: peach/orange panel sweep
- * - Home ("/"): clean black screen with Vyreal logo (matches HomeLoader)
+ * - Home ("/"): orange panel + black-with-logo panel (lagged 400ms)
+ * - Initial mount on "/": same home intro plays on first paint / refresh
  */
 export function RouteTransition({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [displayedKey, setDisplayedKey] = useState(location.pathname);
-  const [phase, setPhase] = useState<Phase>("idle");
-  const [variant, setVariant] = useState<Variant>("panels");
+  // For the initial mount on "/", start already covered so no flash of content
+  const initialOnHome = typeof window !== "undefined" && window.location.pathname === "/";
+  const [phase, setPhase] = useState<Phase>(initialOnHome ? "holding" : "idle");
+  const [variant, setVariant] = useState<Variant>(initialOnHome ? "home" : "panels");
+  // Track whether the current cover came from an initial mount (skip entry sweep)
+  const fromInitial = useRef(initialOnHome);
   const isFirst = useRef(true);
   const pendingPath = useRef<string | null>(null);
 
@@ -35,6 +40,7 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
     (to: string) => {
       if (to === location.pathname) return;
       pendingPath.current = to;
+      fromInitial.current = false;
       setVariant(to === "/" ? "home" : "panels");
       setPhase("covering");
     },
@@ -69,6 +75,7 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
       return;
     }
     if (phase === "idle") {
+      fromInitial.current = false;
       setVariant(location.pathname === "/" ? "home" : "panels");
       setPhase("covering");
     }
@@ -85,6 +92,10 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
 
   const covered = phase === "covering" || phase === "holding";
   const revealing = phase === "revealing";
+
+  // When mounting already-covered (initial home load), panels should start at y:0
+  // and only animate on reveal. Otherwise, sweep in from below.
+  const startCovered = fromInitial.current && covered;
 
   return (
     <Ctx.Provider value={{ navigateWithTransition }}>
@@ -125,22 +136,38 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
           )}
         </AnimatePresence>
       ) : (
-        // Home variant — single clean black panel sweep with static logo.
-        // Unmounts after reveal so it never animates back down.
+        // Home variant — orange panel covers first, then black-with-logo
+        // panel covers 400ms later. On reveal, both slide up off-screen.
         <AnimatePresence>
           {phase !== "idle" && (
-            <motion.div
-              key="home-cover"
-              className="fixed inset-0 z-[100] pointer-events-none bg-loader flex items-center justify-center"
-              initial={{ y: "100%" }}
-              animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
-              exit={{ y: "-100%" }}
-              transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1] }}
-            >
-              <span className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
-                Vyreal
-              </span>
-            </motion.div>
+            <>
+              {/* Orange panel — leads */}
+              <motion.div
+                key="home-orange"
+                className="fixed inset-0 z-[100] pointer-events-none bg-transition2"
+                initial={startCovered ? { y: "0%" } : { y: "100%" }}
+                animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
+                exit={{ y: "-100%" }}
+                transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1] }}
+              />
+              {/* Black-with-logo panel — lags by 400ms on cover, leads on reveal */}
+              <motion.div
+                key="home-cover"
+                className="fixed inset-0 z-[101] pointer-events-none bg-loader flex items-center justify-center"
+                initial={startCovered ? { y: "0%" } : { y: "100%" }}
+                animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
+                exit={{ y: "-100%" }}
+                transition={{
+                  duration: 0.6,
+                  ease: [0.7, 0, 0.3, 1],
+                  delay: phase === "covering" ? 0.4 : 0,
+                }}
+              >
+                <span className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
+                  Vyreal
+                </span>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       )}
