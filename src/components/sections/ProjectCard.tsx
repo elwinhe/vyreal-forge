@@ -71,7 +71,7 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.tag}
         </span>
       </div>
-      <figcaption className="absolute inset-x-0 bottom-0 p-6 md:p-8 flex items-end justify-between z-10">
+      <figcaption className="absolute inset-x-0 bottom-0 p-2 md:p-3 flex items-end justify-between z-10">
         <div className="text-xs lg:text-sm xl:text-base uppercase tracking-[0.18em] text-white/95">
           {project.views}
         </div>
