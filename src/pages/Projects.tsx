@@ -20,7 +20,7 @@ const Projects = () => {
             <button
               key={f}
               onClick={() => setActive(f)}
-              className={`px-4 py-2 lg:px-5 lg:py-2.5 rounded-full border text-sm lg:text-base transition-colors ${
+              className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border text-sm sm:text-base transition-colors ${
                 active === f
                   ? "bg-foreground text-background border-foreground"
                   : "border-foreground/15 hover:bg-transition1/40"
