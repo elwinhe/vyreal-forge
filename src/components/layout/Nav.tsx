@@ -9,7 +9,7 @@ function MenuIcon({ open }: { open: boolean }) {
   const ease = [0.16, 1, 0.3, 1] as const;
   const duration = 0.4;
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" className="overflow-visible">
+    <svg width="22" height="22" viewBox="0 0 16 16" className="overflow-visible">
       {/* Top bar -> top half of X */}
       <motion.line
         x1="2"
@@ -92,21 +92,20 @@ export function Nav() {
           </motion.span>
         </button>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <button
             aria-label="Toggle theme"
             onClick={() => setDark((d) => !d)}
-            className="h-10 w-10 grid place-items-center rounded-full border border-foreground/15 hover:bg-transition1/40 transition-colors"
+            className="h-11 w-11 grid place-items-center hover:text-transition2 transition-colors"
             title="Dark mode coming soon"
           >
-            {dark ? <Moon size={16} /> : <Sun size={16} />}
+            {dark ? <Moon size={20} /> : <Sun size={20} />}
           </button>
           <button
-            aria-label="Open menu"
+            aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
-            className="h-10 px-4 inline-flex items-center gap-2 rounded-full border border-foreground/15 hover:bg-transition1/40 transition-colors"
+            className="h-11 w-11 grid place-items-center hover:text-transition2 transition-colors"
           >
-            <span className="text-sm">{open ? "Close" : "Menu"}</span>
             <MenuIcon open={open} />
           </button>
         </div>
