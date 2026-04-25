@@ -41,6 +41,7 @@ const Index = () => {
             >
               Real results.
             </motion.h1>
+
             {/* Hero reel placeholder */}
             <motion.div
               style={{ y: reelY }}
