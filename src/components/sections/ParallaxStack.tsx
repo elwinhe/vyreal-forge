@@ -19,23 +19,16 @@ export function ParallaxStack({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const yTop = useTransform(scrollYProgress, [0, 1], [20, -20]);
-  const yBottom = useTransform(scrollYProgress, [0, 1], [60, -60]);
+  const yText = useTransform(scrollYProgress, [0, 1], [40, -40]);
   const yCaption = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
     <div ref={ref} className="relative">
-      <motion.div
-        style={{ y: yTop }}
-        className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]"
-      >
-        {top}
-      </motion.div>
-      <motion.div
-        style={{ y: yBottom }}
-        className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2"
-      >
-        {bottom}
+      <motion.div style={{ y: yText }}>
+        <div className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">{top}</div>
+        <div className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2">
+          {bottom}
+        </div>
       </motion.div>
       {caption && (
         <motion.div style={{ y: yCaption }} className="mt-12 md:mt-20 grid grid-cols-12">
