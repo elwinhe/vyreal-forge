@@ -22,7 +22,6 @@ const Index = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-        >
           {/* HERO */}
           <section ref={heroRef} className="px-5 md:px-8 pt-10 md:pt-16">
             <div className="eyebrow body-muted mb-6">AI content studio · The ultimate UGC orchestrator</div>
