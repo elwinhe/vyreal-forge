@@ -39,9 +39,8 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
       <AnimatePresence mode="wait">
         <motion.div
           key={displayedKey}
-          initial={{ y: phase === "revealing" ? 80 : 0, opacity: phase === "revealing" ? 0 : 1 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
         >
           {children}
         </motion.div>
