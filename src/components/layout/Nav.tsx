@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTransitionNavigate } from "@/components/motion/RouteTransition";
 
 const items = [
   { label: "Home", to: "/" },
@@ -13,18 +13,20 @@ const items = [
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useTransitionNavigate();
 
   return (
     <header className="fixed top-0 inset-x-0 z-[80] bg-background/80 backdrop-blur-md border-b border-foreground/10">
       <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
-        <Link
-          to="/"
-          onClick={() => setOpen(false)}
+        <button
+          onClick={() => {
+            setOpen(false);
+            navigate("/");
+          }}
           className="display text-2xl md:text-[28px] tracking-display leading-none"
         >
           Vyreal
-        </Link>
+        </button>
 
         <div className="flex items-center gap-2">
           <button
