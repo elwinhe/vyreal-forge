@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 /**
  * Two stacked text rows that scroll at different velocities,
@@ -15,12 +16,15 @@ export function ParallaxStack({
   caption?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const yText = useTransform(scrollYProgress, [0, 1], [40, -40]);
-  const yCaption = useTransform(scrollYProgress, [0, 1], [100, -100]);
+  const yTextRaw = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const yCaptionRaw = useTransform(scrollYProgress, [0, 1], [100, -100]);
+  const yText = isMobile ? 0 : yTextRaw;
+  const yCaption = isMobile ? 0 : yCaptionRaw;
 
   return (
     <div ref={ref} className="relative">

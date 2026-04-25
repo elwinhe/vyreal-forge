@@ -1,12 +1,16 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { PageShell } from "@/components/layout/PageShell";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Contact = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const ySlow = useTransform(scrollYProgress, [0, 1], [60, -60]);
-  const yFast = useTransform(scrollYProgress, [0, 1], [180, -180]);
+  const ySlowRaw = useTransform(scrollYProgress, [0, 1], [60, -60]);
+  const yFastRaw = useTransform(scrollYProgress, [0, 1], [180, -180]);
+  const ySlow = isMobile ? 0 : ySlowRaw;
+  const yFast = isMobile ? 0 : yFastRaw;
 
   return (
     <PageShell>
