@@ -98,6 +98,12 @@
     color: hsl(var(--muted-ink));
     line-height: 1.55;
   }
+  /* Bump secondary text size on the largest screens */
+  @media (min-width: 1536px) {
+    .body-muted {
+      font-size: 1.125em;
+    }
+  }
   .hairline {
     background-color: hsl(var(--hairline) / 0.1);
   }
