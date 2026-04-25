@@ -43,7 +43,7 @@ const Index = () => {
               style={{ y: reelY }}
               className="mt-12 md:mt-20 frame-media aspect-[16/9] w-full relative"
               initial={{ opacity: 0, scale: 0.98 }}
-              animate={loaderDone ? { opacity: 1, scale: 1 } : {}}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
               <div
