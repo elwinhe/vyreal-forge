@@ -117,17 +117,24 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
           />
         </>
       ) : (
-        // Home variant — single clean black panel sweep with static logo
-        <motion.div
-          className="fixed inset-0 z-[100] pointer-events-none bg-loader flex items-center justify-center"
-          initial={{ y: "100%" }}
-          animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
-          transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1] }}
-        >
-          <span className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
-            Vyreal
-          </span>
-        </motion.div>
+        // Home variant — single clean black panel sweep with static logo.
+        // Unmounts after reveal so it never animates back down.
+        <AnimatePresence>
+          {phase !== "idle" && (
+            <motion.div
+              key="home-cover"
+              className="fixed inset-0 z-[100] pointer-events-none bg-loader flex items-center justify-center"
+              initial={{ y: "100%" }}
+              animate={covered ? { y: "0%" } : revealing ? { y: "-100%" } : { y: "100%" }}
+              exit={{ y: "-100%" }}
+              transition={{ duration: 0.6, ease: [0.7, 0, 0.3, 1] }}
+            >
+              <span className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
+                Vyreal
+              </span>
+            </motion.div>
+          )}
+        </AnimatePresence>
       )}
     </Ctx.Provider>
   );
