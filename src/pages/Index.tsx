@@ -29,18 +29,18 @@ const Index = () => {
         >
           {/* HERO */}
           <section ref={heroRef} className="px-5 md:px-8 pt-10 md:pt-16">
-            <div className="eyebrow body-muted mb-6">AI content studio · The ultimate UGC orchestrator</div>
+            <div className="eyebrow body-muted mb-6">AI content studio · The ultimate Ad Orchestrator</div>
             <motion.h1
               style={{ y: headlineY }}
               className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]"
             >
-              Winning AI ads.
+              Ads at scale.
             </motion.h1>
             <motion.h1
               style={{ y: headlineY }}
               className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2"
             >
-              Guided formats.
+              Real Results.
             </motion.h1>
 
             {/* Hero reel placeholder */}
