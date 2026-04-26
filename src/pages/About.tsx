@@ -93,7 +93,7 @@ const About = () => {
           className="max-w-2xl body-muted font-medium"
           style={{ fontSize: "clamp(20px, 2.6vw, 40px)", lineHeight: 1.4 }}
         >
-          Vyreal is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
+          Stratton is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
           top-tier creators. Built by operators, run like a production house.
         </FadeInUp>
       </section>

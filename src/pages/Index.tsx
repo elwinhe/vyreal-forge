@@ -161,7 +161,7 @@ const Index = () => {
           {/* BLURB */}
           <section className="mt-40 md:mt-56 px-5 md:px-8">
             <ParallaxStack
-              top="Vyreal"
+              top="Stratton"
               bottom="real virality"
               caption="We're here to create videos that perform, spanning winning UGC formats at scale. From concept to execution, we work closely with you to orchestrate an end-to-end production process that leaves real impact."
             />
