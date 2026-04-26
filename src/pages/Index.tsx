@@ -34,13 +34,13 @@ const Index = () => {
               style={{ y: headlineY }}
               className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]"
             >
-              Your Ultimate Ad maker.
+              Winning AI ads.
             </motion.h1>
             <motion.h1
               style={{ y: headlineY }}
               className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2"
             >
-              with Expert Guidance.
+              Guided formats.
             </motion.h1>
 
             {/* Hero reel placeholder */}
