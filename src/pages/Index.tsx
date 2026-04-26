@@ -32,7 +32,7 @@ const Index = () => {
             <div className="eyebrow body-muted mb-6">AI content studio · The ultimate UGC orchestrator</div>
             <motion.h1
               style={{ y: headlineY }}
-              className="display text-[15vw] md:text-[14vw] tracking-display leading-[1]"
+              className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]"
             >
               UGC at scale.
             </motion.h1>
@@ -91,31 +91,34 @@ const Index = () => {
           <section className="mt-32 md:mt-48">
             <FadeInUp className="eyebrow body-muted mb-6 px-5 md:px-8">Who we worked with</FadeInUp>
             <div className="border-y border-foreground/10 py-8">
-            <Marquee>
-              {["NORTHWAVE", "LUXE / CO", "SERA", "OBELISK", "FORMA", "ATELIER 9", "MONO", "RIVER & OAK"].map(
-                (name, i) => (
-                  <div key={i} className="flex items-center gap-16">
-                    <span className="display text-3xl md:text-5xl tracking-display text-foreground/65">{name}</span>
-                    {i % 2 === 0 && (
-                      <span
-                        className="h-12 w-12 rounded-full"
-                        style={{
-                          background: `linear-gradient(135deg,#EACBB9,#CC6329)`,
-                        }}
-                        aria-label="Creator avatar"
-                      />
-                    )}
-                  </div>
-                ),
-              )}
-            </Marquee>
+              <Marquee>
+                {["NORTHWAVE", "LUXE / CO", "SERA", "OBELISK", "FORMA", "ATELIER 9", "MONO", "RIVER & OAK"].map(
+                  (name, i) => (
+                    <div key={i} className="flex items-center gap-16">
+                      <span className="display text-3xl md:text-5xl tracking-display text-foreground/65">{name}</span>
+                      {i % 2 === 0 && (
+                        <span
+                          className="h-12 w-12 rounded-full"
+                          style={{
+                            background: `linear-gradient(135deg,#EACBB9,#CC6329)`,
+                          }}
+                          aria-label="Creator avatar"
+                        />
+                      )}
+                    </div>
+                  ),
+                )}
+              </Marquee>
             </div>
           </section>
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-16">
-              <FadeInUp as="h2" className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start">
+              <FadeInUp
+                as="h2"
+                className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start"
+              >
                 Projects
               </FadeInUp>
               <FadeInUp
