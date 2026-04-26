@@ -164,7 +164,7 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
                 }}
               >
                 <span className="display text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
-                  Vyreal
+                  Stratton
                 </span>
               </motion.div>
             </>

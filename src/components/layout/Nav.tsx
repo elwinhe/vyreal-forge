@@ -85,7 +85,7 @@ export function Nav() {
             transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
             className="inline-block"
           >
-            Vyreal
+            Stratton
           </motion.span>
         </button>
 

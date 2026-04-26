@@ -42,7 +42,7 @@ export function HomeLoader({ onDone }: { onDone?: () => void }) {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="display text-[hsl(var(--background))] text-7xl md:text-9xl"
           >
-            Vyreal
+            Stratton
           </motion.span>
         </motion.div>
       )}

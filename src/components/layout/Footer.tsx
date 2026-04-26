@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="px-5 md:px-8 pt-24 md:pt-40 pb-10">
       <div>
         <div className="display text-[14vw] md:text-[10vw] leading-[0.85] tracking-display">
-          Vyreal
+          Stratton
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-10">
@@ -50,7 +50,7 @@ export function Footer() {
 
       <div className="mt-16 pt-6 hairline h-px w-full" />
       <div className="pt-4 flex justify-between text-xs body-muted">
-        <span>© 2026 Vyreal.ai</span>
+        <span>© 2026 Stratton</span>
         <span>All rights reserved.</span>
       </div>
     </footer>
