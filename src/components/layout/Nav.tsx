@@ -53,6 +53,7 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 import { useTransitionNavigate } from "@/components/motion/RouteTransition";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const items = [
   { label: "Home", to: "/" },
@@ -89,13 +90,16 @@ export function Nav() {
           </motion.span>
         </button>
 
-        <button
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((o) => !o)}
-          className="h-11 w-11 grid place-items-center transition-colors"
-        >
-          <MenuIcon open={open} />
-        </button>
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+          <button
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((o) => !o)}
+            className="h-11 w-11 grid place-items-center transition-colors"
+          >
+            <MenuIcon open={open} />
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
