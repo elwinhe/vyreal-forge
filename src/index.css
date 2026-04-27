@@ -276,9 +276,15 @@
     transform: scale(0.97);
   }
   .glass-btn-active {
-    background: rgba(10, 10, 10, 0.85);
-    color: hsl(var(--background));
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.32);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.70);
+    box-shadow:
+      0 4px 28px rgba(0, 0, 0, 0.20),
+      inset 0 1px 0 rgba(255, 255, 255, 0.60);
+  }
+  .glass-btn-active::before {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), transparent 55%);
   }
   .glass-btn-on-dark {
     color: #fff;
