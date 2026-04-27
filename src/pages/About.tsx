@@ -98,7 +98,7 @@ const About = () => {
         </FadeInUp>
       </section>
 
-      <section className="mt-32 md:mt-48 px-5 md:px-8">
+      <section className="mt-16 md:mt-20 px-5 md:px-8">
         <div className="flex items-end justify-between mb-10">
           <FadeInUp as="h2" className="eyebrow body-muted">
             The team
