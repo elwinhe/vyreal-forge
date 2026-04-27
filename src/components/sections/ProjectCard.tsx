@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
     title: "Glow serum — pour reveal",
     views: "2.4M views",
     tag: "Motion control",
-    bg: "linear-gradient(160deg,#4A2A6B 0%,#2D1646 60%,#000 100%)",
+    bg: "linear-gradient(160deg,#5E3590 0%,#2D1646 60%,#000 100%)",
   },
   {
     title: "Synthetic creator — fitness vertical",
@@ -25,19 +25,19 @@ export const PROJECTS: Project[] = [
     title: "Hook remix — DTC supplement",
     views: "3.7M views",
     tag: "Face-swap",
-    bg: "linear-gradient(160deg,#222 0%,#444 50%,#4A2A6B 100%)",
+    bg: "linear-gradient(160deg,#222 0%,#444 50%,#5E3590 100%)",
   },
   {
     title: "Macro pour — fragrance launch",
     views: "880K views",
     tag: "Motion control",
-    bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 70%,#4A2A6B 100%)",
+    bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 70%,#5E3590 100%)",
   },
   {
     title: "AI talent — skincare ritual",
     views: "1.9M views",
     tag: "AI UGC",
-    bg: "linear-gradient(160deg,#D9CBE8 0%,#4A2A6B 100%)",
+    bg: "linear-gradient(160deg,#D9CBE8 0%,#5E3590 100%)",
   },
   {
     title: "Hook A/B — energy drink",

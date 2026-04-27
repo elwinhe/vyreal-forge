@@ -14,7 +14,7 @@ const team: Member[] = [
     name: "Rishi",
     role: "Co-founder · CEO",
     bio: "Built creator monetization stacks from zero to eight figures. Operator-first.",
-    bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 60%,#4A2A6B 100%)",
+    bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 60%,#5E3590 100%)",
   },
   {
     name: "Richard",
@@ -26,7 +26,7 @@ const team: Member[] = [
     name: "Elwin",
     role: "Head of Creative",
     bio: "Leads the creative design and maintains backend infrastructure supporting our workflows",
-    bg: "linear-gradient(160deg,#222 0%,#444 50%,#4A2A6B 100%)",
+    bg: "linear-gradient(160deg,#222 0%,#444 50%,#5E3590 100%)",
   },
   {
     name: "Ishaan",
