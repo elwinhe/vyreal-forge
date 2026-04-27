@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { PageShell } from "@/components/layout/PageShell";
+import { FadeInUp } from "@/components/motion/FadeInUp";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Contact = () => {
