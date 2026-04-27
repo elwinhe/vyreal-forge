@@ -75,7 +75,7 @@ const Index = () => {
           </section>
 
           {/* CLIENT / CREATOR MARQUEE */}
-          <section className="mt-32 md:mt-48">
+          <section className="mt-12 md:mt-20">
             <FadeInUp className="eyebrow body-muted mb-6 px-5 md:px-8">Who we worked with</FadeInUp>
             <div className="border-y border-foreground/10 py-8">
               <Marquee>
