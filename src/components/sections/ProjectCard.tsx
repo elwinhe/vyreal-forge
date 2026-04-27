@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+
 import { useRef, useState } from "react";
 import { useVideoLightbox } from "@/components/video/VideoLightbox";
 import reel1 from "@/assets/reels/reel1_hi.mp4";
