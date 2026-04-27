@@ -49,7 +49,8 @@ const Index = () => {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-16">
             <FadeInUp
               as="h2"
-              className="display text-[12vw] md:text-[14vw] tracking-display leading-[0.85] self-start"
+              className="display tracking-display leading-[0.85] self-start"
+              style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
             >
               Projects
             </FadeInUp>
