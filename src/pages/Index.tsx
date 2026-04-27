@@ -29,24 +29,10 @@ const Index = () => {
         >
           {/* HERO */}
           <section ref={heroRef} className="px-5 md:px-8 pt-10 md:pt-16">
-            <div className="eyebrow body-muted mb-6">AI content studio · The ultimate Ad Orchestrator</div>
-            <motion.h1
-              style={{ y: headlineY }}
-              className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]"
-            >
-              Ads at scale.
-            </motion.h1>
-            <motion.h1
-              style={{ y: headlineY }}
-              className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2"
-            >
-              Real Results.
-            </motion.h1>
-
-            {/* Hero reel placeholder */}
+            {/* Hero reel placeholder — full screen */}
             <motion.div
               style={{ y: reelY }}
-              className="mt-12 md:mt-20 frame-media aspect-[16/9] w-full relative"
+              className="frame-media w-screen relative -mx-5 md:-mx-8"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -63,15 +49,17 @@ const Index = () => {
                   background: "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.35), transparent 60%)",
                 }}
               />
-              <div className="absolute inset-0 grid place-items-center">
-                <div className="text-center text-white/95">
-                  <div className="text-[10px] uppercase tracking-[0.2em] opacity-80 mb-3">
-                    [ hero reel — placeholder ]
-                  </div>
-                  <div className="display text-5xl md:text-8xl tracking-display">real / virality</div>
-                </div>
+              <div className="relative z-10 min-h-screen w-full grid place-items-center px-5 md:px-8">
+                <motion.div style={{ y: headlineY }} className="text-center text-white">
+                  <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]">
+                    Ads at scale.
+                  </h1>
+                  <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2">
+                    Real Results.
+                  </h1>
+                </motion.div>
               </div>
-              <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.18em] text-white/80">
+              <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.18em] text-white/80 z-10">
                 Reel 2026
               </div>
             </motion.div>
