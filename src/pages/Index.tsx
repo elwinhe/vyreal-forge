@@ -22,12 +22,17 @@ const Index = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* HERO — text anchored upper-center, min 75vh */}
+          {/* HERO — scattered reels around centered headline (desktop), horizontal row (mobile) */}
           <section
-            className="px-5 md:px-8 pt-[140px] md:pt-[180px] flex flex-col"
-            style={{ minHeight: "75vh" }}
+            ref={heroRef}
+            className="hero-vignette relative px-5 md:px-8 pt-[140px] md:pt-0 flex flex-col md:items-center md:justify-center overflow-hidden"
+            style={{ minHeight: "100vh" }}
           >
-            <div className="w-full max-w-6xl mx-auto text-center">
+            {/* Desktop: scattered reels with mouse parallax */}
+            <ScatteredReels heroRef={heroRef} />
+
+            {/* Centered headline group */}
+            <div className="relative z-10 w-full max-w-6xl mx-auto text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -62,12 +67,12 @@ const Index = () => {
               </motion.div>
             </div>
 
-            {/* 5-card horizontal video row */}
+            {/* Mobile only: horizontal scroll row of reels */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-12 md:mt-16 -mx-5 md:-mx-8"
+              className="md:hidden mt-12 -mx-5 relative z-10"
             >
               <VideoCardRow />
             </motion.div>
