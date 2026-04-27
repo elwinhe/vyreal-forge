@@ -15,16 +15,32 @@ const Contact = () => {
   return (
     <PageShell>
       <section ref={ref} className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
-        <div className="eyebrow body-muted mb-6">Contact</div>
+        <motion.div
+          className="eyebrow body-muted mb-6"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        >
+          Contact
+        </motion.div>
 
         <motion.h1
           style={{ y: ySlow, fontSize: "clamp(4rem, 14vw, 13rem)" }}
           className="display tracking-display leading-[0.85]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
         >
           Let's Connect.
         </motion.h1>
 
-        <motion.div style={{ y: yFast }} className="mt-10 md:mt-16 space-y-4 md:space-y-6">
+        <motion.div
+          style={{ y: yFast }}
+          className="mt-10 md:mt-16 space-y-4 md:space-y-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
+        >
           <a
             href="mailto:work@strattonlabs.co"
             className="block w-fit display font-light tracking-display leading-[0.9] text-[hsl(var(--muted-ink))] relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-[5px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
