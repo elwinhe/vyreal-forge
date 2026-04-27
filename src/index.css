@@ -76,7 +76,7 @@
 
   .dark {
     /* Dark palette */
-    --background: 0 0% 0%; /* #000000 */
+    --background: 268 50% 4%; /* near-black purple abyss */
     --foreground: 0 0% 100%; /* #FFFFFF */
     --muted-ink: 0 0% 65%;
 
