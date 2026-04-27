@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { PageShell } from "@/components/layout/PageShell";
 import { FadeInUp } from "@/components/motion/FadeInUp";
 import { useState } from "react";
@@ -73,16 +74,32 @@ const About = () => {
   return (
     <PageShell>
       <section className="py-12 px-5 md:px-8 pt-[120px] md:pt-[160px]">
-        <div className="eyebrow body-muted mb-6">About</div>
-        <h1 className="display tracking-display leading-[0.85]" style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}>
+        <motion.div
+          className="eyebrow body-muted mb-6"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.55, ease: [0.16, 1, 0.3, 1] }}
+        >
+          About
+        </motion.div>
+        <motion.h1
+          className="display tracking-display leading-[0.85]"
+          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.75, ease: [0.16, 1, 0.3, 1] }}
+        >
           Built by
-        </h1>
-        <h1
+        </motion.h1>
+        <motion.h1
           className="display tracking-display leading-[0.85] text-transition2"
           style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.95, ease: [0.16, 1, 0.3, 1] }}
         >
           Industry Experts.
-        </h1>
+        </motion.h1>
       </section>
 
       <section className="py-12 px-5 md:px-8">
