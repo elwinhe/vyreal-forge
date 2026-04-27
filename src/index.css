@@ -192,6 +192,29 @@
     position: relative;
     z-index: 1;
   }
+  /* Dark mode: ultra-faint horizontal scanlines / micro-banding for
+     cinematic depth. Fixed, non-interactive, layered above background
+     gradients but below any app content. */
+  .dark body > .scanlines,
+  .dark::before {
+    /* fallback selector noop — actual layer below */
+  }
+  .dark #root::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    mix-blend-mode: soft-light;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      hsl(270 30% 80% / 0.035) 0px,
+      hsl(270 30% 80% / 0.035) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
   ::selection {
     background: hsl(var(--transition-2));
     color: hsl(var(--background));
