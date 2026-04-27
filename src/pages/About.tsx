@@ -78,7 +78,7 @@ const About = () => {
           className="eyebrow body-muted mb-6"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
           About
         </motion.div>
@@ -87,7 +87,7 @@ const About = () => {
           style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
         >
           Built by
         </motion.h1>
@@ -96,7 +96,7 @@ const About = () => {
           style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.05, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
         >
           Industry Experts.
         </motion.h1>

@@ -13,10 +13,10 @@ const Projects = () => {
   return (
     <PageShell>
       <section className="py-12 px-5 md:px-8 pt-[120px] md:pt-[160px]">
-        <FadeInUp className="eyebrow body-muted mb-6">Projects</FadeInUp>
+        <FadeInUp delay={0.1} className="eyebrow body-muted mb-6">Projects</FadeInUp>
         <FadeInUp
           as="h1"
-          delay={0.15}
+          delay={0.3}
           className="display tracking-display leading-[0.85]"
           style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
         >
