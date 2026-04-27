@@ -72,7 +72,7 @@ function TeamCard({ m }: { m: Member }) {
 const About = () => {
   return (
     <PageShell>
-      <section className="px-5 md:px-8 pt-10 md:pt-16">
+      <section className="px-5 md:px-8">
         <div className="eyebrow body-muted mb-6">About</div>
         <h1 className="display tracking-display leading-[0.85]" style={{ fontSize: "clamp(64px, 15vw, 240px)" }}>
           Built by
@@ -100,8 +100,12 @@ const About = () => {
 
       <section className="mt-32 md:mt-48 px-5 md:px-8">
         <div className="flex items-end justify-between mb-10">
-          <FadeInUp as="h2" className="eyebrow body-muted">The team</FadeInUp>
-          <FadeInUp as="span" delay={0.2} className="text-sm body-muted">{team.length} operators</FadeInUp>
+          <FadeInUp as="h2" className="eyebrow body-muted">
+            The team
+          </FadeInUp>
+          <FadeInUp as="span" delay={0.2} className="text-sm body-muted">
+            {team.length} operators
+          </FadeInUp>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
           {team.map((m) => (
