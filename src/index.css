@@ -81,7 +81,7 @@
     --muted-ink: 0 0% 65%;
 
     --transition-1: 268 35% 22%; /* deeper purple variant */
-    --transition-2: 267 50% 55%; /* lifted purple for dark mode */
+    --transition-2: 239 84% 67%; /* #6366F1 indigo */
     --loader: 0 0% 100%;
 
     --hairline: 0 0% 100%;
@@ -102,16 +102,16 @@
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 100%;
     --input: 0 0% 20%;
-    --ring: 267 50% 55%;
+    --ring: 239 84% 67%;
 
     --sidebar-background: 0 0% 0%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
     --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 267 50% 55%;
+    --sidebar-accent: 239 84% 67%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 100%;
-    --sidebar-ring: 267 50% 55%;
+    --sidebar-ring: 239 84% 67%;
   }
 }
 
