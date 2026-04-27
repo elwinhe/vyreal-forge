@@ -9,7 +9,7 @@ const Contact = () => {
   const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const ySlowRaw = useTransform(scrollYProgress, [0, 1], [60, -60]);
-  const yFastRaw = useTransform(scrollYProgress, [0, 1], [180, -180]);
+  const yFastRaw = useTransform(scrollYProgress, [0, 1], [80, -80]);
   const ySlow = isMobile ? 0 : ySlowRaw;
   const yFast = isMobile ? 0 : yFastRaw;
 
