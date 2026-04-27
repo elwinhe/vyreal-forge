@@ -90,7 +90,7 @@ export function Nav() {
           </motion.span>
         </button>
 
-        {/* Desktop inline nav — hidden while overlay menu is open */}
+        {/* Desktop inline nav — spread across the middle, hidden while overlay menu is open */}
         <AnimatePresence>
           {!open && (
             <motion.nav
@@ -99,7 +99,7 @@ export function Nav() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -4 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-1"
+              className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(46vw,560px)] items-center justify-between"
             >
               {items.map((it) => {
                 const isActive =
@@ -108,8 +108,8 @@ export function Nav() {
                   <button
                     key={it.to}
                     onClick={() => navigate(it.to)}
-                    className={`px-4 py-2 text-sm tracking-wide transition-colors rounded-full hover:bg-foreground/5 ${
-                      isActive ? "text-foreground font-medium" : "text-foreground/70 hover:text-foreground"
+                    className={`px-2 py-2 text-sm tracking-wide transition-colors hover:text-foreground ${
+                      isActive ? "text-foreground" : "text-foreground/70"
                     }`}
                   >
                     {it.label}
