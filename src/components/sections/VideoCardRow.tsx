@@ -4,19 +4,26 @@ import reel2 from "@/assets/reels/reel2.mp4";
 import reel3 from "@/assets/reels/reel3.mp4";
 import reel4 from "@/assets/reels/reel4.mp4";
 import reel5 from "@/assets/reels/reel5.mp4";
+import reel1Hi from "@/assets/reels/reel1_hi.mp4";
+import reel2Hi from "@/assets/reels/reel2_hi.mp4";
+import reel3Hi from "@/assets/reels/reel3_hi.mp4";
+import reel4Hi from "@/assets/reels/reel4_hi.mp4";
+import reel5Hi from "@/assets/reels/reel5_hi.mp4";
+import { useVideoLightbox } from "@/components/video/VideoLightbox";
 
 interface ReelCard {
   views: string;
   poster?: string;
   src?: string;
+  srcHi?: string;
 }
 
 const CARDS: ReelCard[] = [
-  { views: "2.4M views", src: reel1 },
-  { views: "1.1M views", src: reel2 },
-  { views: "3.7M views", src: reel3 },
-  { views: "880K views", src: reel4 },
-  { views: "4.2M views", src: reel5 },
+  { views: "2.4M views", src: reel1, srcHi: reel1Hi },
+  { views: "1.1M views", src: reel2, srcHi: reel2Hi },
+  { views: "3.7M views", src: reel3, srcHi: reel3Hi },
+  { views: "880K views", src: reel4, srcHi: reel4Hi },
+  { views: "4.2M views", src: reel5, srcHi: reel5Hi },
 ];
 
 /**
@@ -28,6 +35,7 @@ const CARDS: ReelCard[] = [
 export function VideoCardRow() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const { open } = useVideoLightbox();
 
   // Drag-to-scroll
   useEffect(() => {
