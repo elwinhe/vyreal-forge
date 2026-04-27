@@ -13,8 +13,10 @@ export interface Project {
   tag: "AI UGC" | "Face-swap" | "Motion control";
   /** background gradient (fallback while video loads) */
   bg: string;
-  /** video source (mp4) */
+  /** low-bitrate preview video source (mp4) */
   src?: string;
+  /** optional high-resolution source swapped in on play (mp4/mov/webm) */
+  srcHigh?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -65,10 +67,22 @@ export const PROJECTS: Project[] = [
 export function ProjectCard({ project }: { project: Project }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const [hiResLoaded, setHiResLoaded] = useState(false);
+
+  const activeSrc = hiResLoaded && project.srcHigh ? project.srcHigh : project.src;
 
   const play = () => {
     const v = videoRef.current;
     if (!v) return;
+
+    // Swap to the high-res source on first play, preserving currentTime.
+    if (project.srcHigh && !hiResLoaded) {
+      const t = v.currentTime;
+      v.src = project.srcHigh;
+      v.currentTime = t;
+      setHiResLoaded(true);
+    }
+
     v.play().then(() => setPlaying(true)).catch(() => {});
   };
 
@@ -76,7 +90,6 @@ export function ProjectCard({ project }: { project: Project }) {
     const v = videoRef.current;
     if (!v) return;
     v.pause();
-    v.currentTime = 0;
     setPlaying(false);
   };
 
@@ -97,10 +110,10 @@ export function ProjectCard({ project }: { project: Project }) {
         whileHover={{ scale: 1.06 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       >
-        {project.src && (
+        {activeSrc && (
           <video
             ref={videoRef}
-            src={project.src}
+            src={activeSrc}
             muted
             loop
             playsInline
