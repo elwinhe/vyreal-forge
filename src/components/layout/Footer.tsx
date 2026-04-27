@@ -11,8 +11,13 @@ export function Footer() {
     <footer className="px-5 md:px-8 pt-24 md:pt-40 pb-10">
       <div>
         <div
-          className="text-[14vw] md:text-[10vw] leading-[0.85] tracking-display"
-          style={{ fontFamily: '"neue-haas-grotesk-display", sans-serif', fontWeight: 900, fontStyle: "italic" }}
+          className="leading-[0.85] tracking-display"
+          style={{
+            fontFamily: '"neue-haas-grotesk-display", sans-serif',
+            fontWeight: 900,
+            fontStyle: "italic",
+            fontSize: "clamp(3.4rem, 5.8vw, 7rem)",
+          }}
         >
           Stratton
         </div>

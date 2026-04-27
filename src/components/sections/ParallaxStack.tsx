@@ -29,8 +29,16 @@ export function ParallaxStack({
   return (
     <div ref={ref} className="relative">
       <motion.div style={{ y: yText }}>
-        <div className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">{top}</div>
-        <div className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85] text-transition2">
+        <div
+          className="display tracking-display leading-[0.85]"
+          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
+        >
+          {top}
+        </div>
+        <div
+          className="display tracking-display leading-[0.85] text-transition2"
+          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
+        >
           {bottom}
         </div>
       </motion.div>
