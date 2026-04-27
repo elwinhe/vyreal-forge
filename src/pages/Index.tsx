@@ -4,6 +4,7 @@ import { Marquee } from "@/components/sections/Marquee";
 import { ProjectCard, PROJECTS } from "@/components/sections/ProjectCard";
 import { ParallaxStack } from "@/components/sections/ParallaxStack";
 import { Services } from "@/components/sections/Services";
+import { Stats } from "@/components/sections/Stats";
 import { VideoCardRow } from "@/components/sections/VideoCardRow";
 import { FadeInUp } from "@/components/motion/FadeInUp";
 import { ArrowRight } from "lucide-react";
@@ -93,6 +94,9 @@ const Index = () => {
               </Marquee>
             </div>
           </section>
+
+          {/* STATS */}
+          <Stats />
 
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
