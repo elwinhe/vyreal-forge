@@ -26,7 +26,7 @@ const Index = () => {
           {/* HERO — scattered reels around centered headline (desktop), horizontal row (mobile) */}
           <section
             ref={heroRef}
-            className="hero-vignette relative px-5 md:px-8 pt-[140px] md:pt-0 flex flex-col md:items-center md:justify-center overflow-hidden"
+            className="hero-vignette relative px-5 md:px-8 pt-[200px] pb-24 md:pt-0 md:pb-0 flex flex-col md:items-center md:justify-center overflow-hidden"
             style={{ minHeight: "100vh" }}
           >
             {/* Desktop: scattered reels with mouse parallax */}
