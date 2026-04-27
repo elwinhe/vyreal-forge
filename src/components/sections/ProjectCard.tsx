@@ -128,6 +128,12 @@ export function ProjectCard({ project }: { project: Project }) {
         />
       </motion.div>
 
+      {/* Bottom contrast gradient — sits above the zoom layer, below the text */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-1/4 pointer-events-none z-[5]"
+        style={{ background: "linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0))" }}
+      />
+
       {/* Static overlay UI — does not zoom */}
       <div className="absolute top-5 right-5 z-10">
         <span className="text-xs lg:text-sm xl:text-base uppercase tracking-[0.18em] text-white/85 bg-black/30 backdrop-blur px-4 py-2 lg:px-5 lg:py-2.5 rounded-full">
