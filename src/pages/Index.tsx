@@ -34,7 +34,7 @@ const Index = () => {
             {/* Centered headline group */}
             <div className="relative z-10 w-full max-w-6xl mx-auto text-center">
               <h1
-                className="hero-type display tracking-display leading-[1.02]"
+                className="hero-type display tracking-display leading-[1.18] pb-2"
                 style={{ fontSize: "clamp(3.5rem, 5vw, 6rem)" }}
               >
                 The ultimate <span className="text-transition2">AI UGC</span> Agency
