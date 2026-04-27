@@ -94,14 +94,14 @@ const Index = () => {
           </div>
         </section>
 
-        {/* BLURB */}
-        <section className="py-12 px-5 md:px-8">
+        {/* BLURB — temporarily disabled */}
+        {/* <section className="py-12 px-5 md:px-8">
           <ParallaxStack
             top="Stratton"
             bottom="real virality"
             caption="We're here to create videos that perform, spanning winning UGC formats at scale. From concept to execution, we work closely with you to orchestrate an end-to-end production process that leaves real impact."
           />
-        </section>
+        </section> */}
 
         {/* SERVICES */}
         <Services />
