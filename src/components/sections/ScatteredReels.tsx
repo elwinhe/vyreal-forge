@@ -70,7 +70,7 @@ const REELS: ReelPos[] = [
     srcHi: reel5Hi,
   },
   {
-    style: { bottom: "8%", right: "15.2%" },
+    style: { bottom: "8%", right: "15.8%" },
     baseTransform: "rotate(6deg) skewX(-4deg)",
     depth: 0.035,
     delay: "1.15s",
