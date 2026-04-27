@@ -17,7 +17,7 @@ const stats: Stat[] = [
 
 export function Stats() {
   return (
-    <section className="py-16 px-5 md:px-8">
+    <section className="py-12 px-5 md:px-8">
       <div
         className="relative w-full rounded-3xl overflow-hidden px-5 md:px-12 py-16 md:py-24"
         style={{ backgroundColor: "hsl(268 50% 4%)" }}

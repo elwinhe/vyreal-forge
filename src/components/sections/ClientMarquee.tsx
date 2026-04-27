@@ -17,7 +17,7 @@ const NAMES = [
  */
 export function ClientMarquee() {
   return (
-    <div className="py-16">
+    <div className="py-12">
       <FadeInUp className="eyebrow body-muted mb-6 px-5 md:px-8">
         Who we worked with
       </FadeInUp>
