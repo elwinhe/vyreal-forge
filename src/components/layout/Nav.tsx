@@ -78,7 +78,8 @@ export function Nav() {
             setOpen(false);
             navigate("/");
           }}
-          className="display text-2xl md:text-[28px] tracking-display leading-[1.15] overflow-hidden py-1"
+          className="text-2xl md:text-[28px] leading-[1.15] overflow-hidden py-1"
+          style={{ fontFamily: '"neue-haas-grotesk-display", sans-serif', fontWeight: 900, fontStyle: "italic" }}
         >
           <motion.span
             initial={animateLogo ? { y: "110%" } : false}
