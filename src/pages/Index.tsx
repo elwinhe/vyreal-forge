@@ -33,19 +33,16 @@ const Index = () => {
 
             {/* Centered headline group */}
             <div className="relative z-10 w-full max-w-6xl mx-auto text-center">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                className="display tracking-display leading-[1.02]"
+              <h1
+                className="hero-type display tracking-display leading-[1.02]"
                 style={{ fontSize: "clamp(3.5rem, 5vw, 6rem)" }}
               >
                 The ultimate <span className="text-transition2">AI UGC</span> Agency
-              </motion.h1>
+              </h1>
               <motion.p
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.8, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-6 body-muted mx-auto max-w-2xl"
                 style={{ fontSize: "clamp(16px, 1.4vw, 22px)" }}
               >
@@ -54,7 +51,7 @@ const Index = () => {
               <motion.div
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-8 flex justify-center"
               >
                 <Link
