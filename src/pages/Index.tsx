@@ -58,7 +58,7 @@ const Index = () => {
                   to="/contact"
                   className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-sm md:text-base font-medium"
                 >
-                  Work with Us
+                  <GlassBtnText>Work with Us</GlassBtnText>
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </motion.div>
@@ -146,7 +146,7 @@ const Index = () => {
                 to="/projects"
                 className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-sm md:text-base font-medium"
               >
-                View all projects
+                <GlassBtnText>View all projects</GlassBtnText>
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

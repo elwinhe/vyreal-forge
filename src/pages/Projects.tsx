@@ -25,7 +25,7 @@ const Projects = () => {
                 active === f ? "glass-btn-active" : ""
               }`}
             >
-              {f}
+              <GlassBtnText>{f}</GlassBtnText>
             </button>
           ))}
         </div>
