@@ -31,6 +31,7 @@ const REELS: ReelPos[] = [
     delay: "0.75s",
     views: "2.4M views",
     src: reel1,
+    srcHi: reel1Hi,
   },
   {
     style: { top: "6%", right: "8%" },
@@ -39,6 +40,7 @@ const REELS: ReelPos[] = [
     delay: "0.83s",
     views: "1.1M views",
     src: reel2,
+    srcHi: reel2Hi,
   },
   {
     style: { top: "36%", left: "3%" },
@@ -47,6 +49,7 @@ const REELS: ReelPos[] = [
     delay: "0.91s",
     views: "3.7M views",
     src: reel3,
+    srcHi: reel3Hi,
   },
   {
     style: { top: "32%", right: "4%" },
@@ -55,6 +58,7 @@ const REELS: ReelPos[] = [
     delay: "0.99s",
     views: "880K views",
     src: reel4,
+    srcHi: reel4Hi,
   },
   {
     style: { bottom: "10%", left: "16%" },
@@ -63,6 +67,7 @@ const REELS: ReelPos[] = [
     delay: "1.07s",
     views: "4.2M views",
     src: reel5,
+    srcHi: reel5Hi,
   },
   {
     style: { bottom: "8%", right: "14%" },
@@ -71,6 +76,7 @@ const REELS: ReelPos[] = [
     delay: "1.15s",
     views: "5.6M views",
     src: reel6,
+    srcHi: reel6Hi,
   },
 ];
 
