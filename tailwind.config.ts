@@ -12,8 +12,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter Tight', 'ui-sans-serif', 'system-ui'],
-        display: ['Inter Tight', 'ui-sans-serif', 'system-ui'],
+        sans: ['Hanken Grotesk', 'ui-sans-serif', 'system-ui'],
+        display: ['Hanken Grotesk', 'ui-sans-serif', 'system-ui'],
       },
       colors: {
         border: "hsl(var(--border))",
