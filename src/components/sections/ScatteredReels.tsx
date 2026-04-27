@@ -1,4 +1,10 @@
 import { useEffect, useRef } from "react";
+import reel1 from "@/assets/reels/reel1.mov";
+import reel2 from "@/assets/reels/reel2.mov";
+import reel3 from "@/assets/reels/reel3.mov";
+import reel4 from "@/assets/reels/reel4.mov";
+import reel5 from "@/assets/reels/reel5.mov";
+import reel6 from "@/assets/reels/reel6.mov";
 
 interface ReelPos {
   style: React.CSSProperties;
@@ -6,6 +12,7 @@ interface ReelPos {
   depth: number;
   delay: string;
   views: string;
+  src: string;
 }
 
 const REELS: ReelPos[] = [
@@ -15,6 +22,7 @@ const REELS: ReelPos[] = [
     depth: 0.04,
     delay: "0.75s",
     views: "2.4M views",
+    src: reel1,
   },
   {
     style: { top: "6%", right: "8%" },
@@ -22,6 +30,7 @@ const REELS: ReelPos[] = [
     depth: 0.03,
     delay: "0.83s",
     views: "1.1M views",
+    src: reel2,
   },
   {
     style: { top: "36%", left: "3%" },
@@ -29,6 +38,7 @@ const REELS: ReelPos[] = [
     depth: 0.06,
     delay: "0.91s",
     views: "3.7M views",
+    src: reel3,
   },
   {
     style: { top: "32%", right: "4%" },
@@ -36,6 +46,7 @@ const REELS: ReelPos[] = [
     depth: 0.05,
     delay: "0.99s",
     views: "880K views",
+    src: reel4,
   },
   {
     style: { bottom: "10%", left: "16%" },
@@ -43,6 +54,7 @@ const REELS: ReelPos[] = [
     depth: 0.04,
     delay: "1.07s",
     views: "4.2M views",
+    src: reel5,
   },
   {
     style: { bottom: "8%", right: "14%" },
@@ -50,6 +62,7 @@ const REELS: ReelPos[] = [
     depth: 0.035,
     delay: "1.15s",
     views: "5.6M views",
+    src: reel6,
   },
 ];
 
@@ -137,14 +150,16 @@ export function ScatteredReels({ heroRef }: Props) {
           }}
           className="reel-card pointer-events-auto absolute overflow-hidden"
         >
-          <div className="absolute inset-0 grid place-items-center">
-            <span
-              className="uppercase tracking-[0.22em]"
-              style={{ color: "#666464", fontSize: 11 }}
-            >
-              [ reel ]
-            </span>
-          </div>
+          <video
+            src={r.src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           <div className="absolute left-2 bottom-2 z-10">
             <span className="uppercase tracking-[0.18em] text-white/90 text-[10px]">
               {r.views}
