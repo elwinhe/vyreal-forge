@@ -25,7 +25,7 @@ interface ReelPos {
 
 const REELS: ReelPos[] = [
   {
-    style: { top: "8%", left: "6.4%" },
+    style: { top: "7.8%", left: "6.8%" },
     baseTransform: "rotate(-6deg)",
     depth: 0.04,
     delay: "0.75s",
@@ -94,9 +94,7 @@ export function ScatteredReels({ heroRef }: Props) {
     const wrap = wrapRef.current;
     if (!hero || !wrap) return;
 
-    const cards = Array.from(
-      wrap.querySelectorAll<HTMLElement>("[data-reel]"),
-    );
+    const cards = Array.from(wrap.querySelectorAll<HTMLElement>("[data-reel]"));
 
     const onMove = (e: MouseEvent) => {
       // Only run parallax once the drawer animation has finished, so we
@@ -153,10 +151,7 @@ export function ScatteredReels({ heroRef }: Props) {
   const { open } = useVideoLightbox();
 
   return (
-    <div
-      ref={wrapRef}
-      className="hero-reels pointer-events-none absolute inset-0 hidden md:block"
-    >
+    <div ref={wrapRef} className="hero-reels pointer-events-none absolute inset-0 hidden md:block">
       {REELS.map((r, i) => (
         <div
           key={i}
@@ -172,8 +167,7 @@ export function ScatteredReels({ heroRef }: Props) {
             borderRadius: 14,
             border: "1px solid rgba(255,255,255,0.1)",
             boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
-            background:
-              "linear-gradient(135deg, rgba(234,203,185,0.08) 0%, rgba(234,203,185,0) 60%), #0A0A0A",
+            background: "linear-gradient(135deg, rgba(234,203,185,0.08) 0%, rgba(234,203,185,0) 60%), #0A0A0A",
             transform: r.baseTransform,
             animation: `drawer-rise 1s cubic-bezier(0.16,1,0.3,1) ${r.delay} both`,
           }}
@@ -190,9 +184,7 @@ export function ScatteredReels({ heroRef }: Props) {
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           <div className="absolute left-2 bottom-2 z-10">
-            <span className="uppercase tracking-[0.18em] text-white/90 text-[10px]">
-              {r.views}
-            </span>
+            <span className="uppercase tracking-[0.18em] text-white/90 text-[10px]">{r.views}</span>
           </div>
         </div>
       ))}
