@@ -65,13 +65,15 @@ const Index = () => {
             </FadeInUp>
           </div>
 
-          {/* Mobile: 2-col grid. Desktop: 3-col grid. */}
-          <div className="md:hidden grid grid-cols-2 gap-[6px]">
-            {PROJECTS.slice(0, 4).map((p, i) => (
-              <div key={i} className="max-h-[280px] overflow-hidden">
-                <ProjectCard project={p} />
-              </div>
-            ))}
+          {/* Mobile: horizontal scroll. Desktop: 3-col grid. */}
+          <div className="md:hidden -mx-5 px-5 overflow-x-auto">
+            <div className="flex gap-4 w-max">
+              {PROJECTS.slice(0, 4).map((p, i) => (
+                <div key={i} className="w-[55vw] max-w-[280px] max-h-[70vh]">
+                  <ProjectCard project={p} />
+                </div>
+              ))}
+            </div>
           </div>
           <div className="hidden md:grid grid-cols-3 gap-1 group/cards">
             {PROJECTS.slice(0, 3).map((p, i) => (
