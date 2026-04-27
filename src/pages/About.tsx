@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { PageShell } from "@/components/layout/PageShell";
 import { FadeInUp } from "@/components/motion/FadeInUp";
 import { useState } from "react";
