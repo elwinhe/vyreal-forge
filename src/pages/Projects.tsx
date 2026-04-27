@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PageShell } from "@/components/layout/PageShell";
 import { ProjectCard, PROJECTS } from "@/components/sections/ProjectCard";
 import { FadeInUp } from "@/components/motion/FadeInUp";
+import { GlassBtnText } from "@/components/ui/GlassBtnText";
 
 const filters = ["All", "AI UGC", "Face-swap", "Motion control"] as const;
 
@@ -25,7 +26,7 @@ const Projects = () => {
                 active === f ? "glass-btn-active" : ""
               }`}
             >
-              {f}
+              <GlassBtnText>{f}</GlassBtnText>
             </button>
           ))}
         </div>
