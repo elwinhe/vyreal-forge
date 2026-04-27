@@ -41,13 +41,13 @@ const Index = () => {
                 <div
                   className="absolute inset-0"
                   style={{
-                    background: "linear-gradient(120deg,#0A0A0A 0%,#3a2418 35%,#CC6329 70%,#EACBB9 100%)",
+                    background: "linear-gradient(120deg,#050505 0%,#1a0d08 35%,#7a1f12 70%,#3a0f08 100%)",
                   }}
                 />
                 <div
                   className="absolute inset-0 mix-blend-overlay"
                   style={{
-                    background: "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.35), transparent 60%)",
+                    background: "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.12), transparent 60%)",
                   }}
                 />
                 <div className="relative z-10 h-full w-full grid place-items-center px-5 md:px-8">
