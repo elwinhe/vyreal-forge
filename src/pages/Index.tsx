@@ -29,36 +29,38 @@ const Index = () => {
         >
           {/* HERO */}
           <section ref={heroRef} className="px-5 md:px-8">
-            {/* Hero reel placeholder — full screen */}
+            {/* Hero reel placeholder — full screen, flush to bottom with 4px side margins */}
             <motion.div
               style={{ y: reelY }}
-              className="frame-media w-screen relative -mx-5 md:-mx-8"
+              className="frame-media relative -mx-5 md:-mx-8"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: "linear-gradient(120deg,#0A0A0A 0%,#3a2418 35%,#CC6329 70%,#EACBB9 100%)",
-                }}
-              />
-              <div
-                className="absolute inset-0 mix-blend-overlay"
-                style={{
-                  background: "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.35), transparent 60%)",
-                }}
-              />
-              <div className="relative z-10 min-h-screen w-full grid place-items-center px-5 md:px-8">
-                <motion.div style={{ y: headlineY }} className="text-center text-white">
-                  <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]">Ads at scale.</h1>
-                  <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2">
-                    Real Results.
-                  </h1>
-                </motion.div>
-              </div>
-              <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.18em] text-white/80 z-10">
-                Reel 2026
+              <div className="relative mx-1 h-screen overflow-hidden rounded-2xl">
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: "linear-gradient(120deg,#0A0A0A 0%,#3a2418 35%,#CC6329 70%,#EACBB9 100%)",
+                  }}
+                />
+                <div
+                  className="absolute inset-0 mix-blend-overlay"
+                  style={{
+                    background: "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.35), transparent 60%)",
+                  }}
+                />
+                <div className="relative z-10 h-full w-full grid place-items-center px-5 md:px-8">
+                  <motion.div style={{ y: headlineY }} className="text-center text-white">
+                    <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]">Ads at scale.</h1>
+                    <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2">
+                      Real Results.
+                    </h1>
+                  </motion.div>
+                </div>
+                <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.18em] text-white/80 z-10">
+                  Reel 2026
+                </div>
               </div>
             </motion.div>
 
