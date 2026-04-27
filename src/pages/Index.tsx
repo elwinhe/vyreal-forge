@@ -42,7 +42,7 @@ const Index = () => {
               <motion.p
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.8, delay: 1.75, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-6 body-muted mx-auto max-w-2xl"
                 style={{ fontSize: "clamp(16px, 1.4vw, 22px)" }}
               >
@@ -51,7 +51,7 @@ const Index = () => {
               <motion.div
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.8, delay: 1.95, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-8 flex justify-center"
               >
                 <Link
