@@ -25,7 +25,7 @@ interface ReelPos {
 
 const REELS: ReelPos[] = [
   {
-    style: { top: "8%", left: "6%" },
+    style: { top: "8%", left: "calc(6% + 4px)" },
     baseTransform: "rotate(-6deg)",
     depth: 0.04,
     delay: "0.75s",
@@ -43,7 +43,7 @@ const REELS: ReelPos[] = [
     srcHi: reel2Hi,
   },
   {
-    style: { top: "36%", left: "3%" },
+    style: { top: "36%", left: "calc(3% + 4px)" },
     baseTransform: "rotate(-8deg)",
     depth: 0.06,
     delay: "0.91s",
@@ -61,7 +61,7 @@ const REELS: ReelPos[] = [
     srcHi: reel4Hi,
   },
   {
-    style: { bottom: "10%", left: "16%" },
+    style: { bottom: "10%", left: "calc(16% + 4px)" },
     baseTransform: "rotate(-4deg) skewX(4deg)",
     depth: 0.04,
     delay: "1.07s",
