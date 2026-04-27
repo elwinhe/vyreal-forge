@@ -32,7 +32,7 @@ const Contact = () => {
           >
             Let's Connect.
           </motion.span>
-        </motion.h1>
+        </h1>
 
         <motion.div style={{ y: yFast }} className="mt-10 md:mt-16 space-y-4 md:space-y-6">
           <div className="overflow-hidden w-fit">
