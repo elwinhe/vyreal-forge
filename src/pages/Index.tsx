@@ -37,7 +37,7 @@ const Index = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="relative mx-1 h-screen overflow-hidden rounded-2xl">
+              <div className="relative mx-2 mt-2 h-[calc(100vh-1rem)] overflow-hidden rounded-2xl">
                 <div
                   className="absolute inset-0"
                   style={{
