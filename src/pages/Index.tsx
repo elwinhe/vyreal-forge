@@ -135,7 +135,7 @@ const Index = () => {
             <div className="mt-10 flex justify-center">
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 text-base md:text-lg border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
+                className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-sm md:text-base font-medium"
               >
                 View all projects
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
