@@ -128,7 +128,7 @@ function Lightbox({ state, onClose }: { state: LightboxState; onClose: () => voi
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center"
+      className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-3xl flex items-center justify-center"
       onClick={onClose}
     >
       <motion.div
@@ -158,7 +158,7 @@ function Lightbox({ state, onClose }: { state: LightboxState; onClose: () => voi
         <button
           aria-label="Close"
           onClick={onClose}
-          className="absolute top-3 right-3 md:top-4 md:right-4 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 backdrop-blur text-white/90 flex items-center justify-center transition-colors"
+          className="absolute top-3 right-3 md:top-4 md:right-4 w-10 h-10 rounded-full bg-black/25 hover:bg-black/45 backdrop-blur-xl text-white/90 flex items-center justify-center transition-colors"
         >
           <X size={18} />
         </button>
@@ -166,7 +166,7 @@ function Lightbox({ state, onClose }: { state: LightboxState; onClose: () => voi
         {/* Controls bar */}
         <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 pointer-events-none">
           <div
-            className="pointer-events-auto rounded-2xl bg-black/55 backdrop-blur-md px-4 py-3 flex items-center gap-3 text-white"
+            className="pointer-events-auto rounded-2xl bg-black/25 backdrop-blur-xl px-4 py-3 flex items-center gap-3 text-white"
             style={{ border: "1px solid rgba(255,255,255,0.08)" }}
           >
             <button
