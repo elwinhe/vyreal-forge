@@ -192,25 +192,6 @@
     position: relative;
     z-index: 1;
   }
-  /* Dark mode: ultra-faint horizontal scanlines / micro-banding for
-     cinematic depth. Attached to <html> so it layers independently of
-     body's gradient/grain pseudo-elements. Fixed and non-interactive. */
-  .dark::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 2;
-    opacity: 0.35;
-    mix-blend-mode: screen;
-    background-image: repeating-linear-gradient(
-      to bottom,
-      hsl(270 40% 85% / 0.06) 0px,
-      hsl(270 40% 85% / 0.06) 1px,
-      transparent 1px,
-      transparent 3px
-    );
-  }
   ::selection {
     background: hsl(var(--transition-2));
     color: hsl(var(--background));
