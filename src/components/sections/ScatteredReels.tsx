@@ -25,7 +25,7 @@ interface ReelPos {
 
 const REELS: ReelPos[] = [
   {
-    style: { top: "7.8%", left: "6.8%" },
+    style: { top: "8%", left: "7%" },
     baseTransform: "rotate(-6deg)",
     depth: 0.04,
     delay: "0.75s",
