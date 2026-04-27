@@ -72,7 +72,7 @@ function TeamCard({ m }: { m: Member }) {
 const About = () => {
   return (
     <PageShell>
-      <section className="px-5 md:px-8">
+      <section className="px-5 md:px-8 pt-10 md:pt-16">
         <div className="eyebrow body-muted mb-6">About</div>
         <h1 className="display tracking-display leading-[0.85]" style={{ fontSize: "clamp(64px, 15vw, 240px)" }}>
           Built by
