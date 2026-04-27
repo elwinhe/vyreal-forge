@@ -5,6 +5,13 @@ import reel3 from "@/assets/reels/reel3.mp4";
 import reel4 from "@/assets/reels/reel4.mp4";
 import reel5 from "@/assets/reels/reel5.mp4";
 import reel6 from "@/assets/reels/reel6.mp4";
+import reel1Hi from "@/assets/reels/reel1_hi.mp4";
+import reel2Hi from "@/assets/reels/reel2_hi.mp4";
+import reel3Hi from "@/assets/reels/reel3_hi.mp4";
+import reel4Hi from "@/assets/reels/reel4_hi.mp4";
+import reel5Hi from "@/assets/reels/reel5_hi.mp4";
+import reel6Hi from "@/assets/reels/reel6_hi.mp4";
+import { useVideoLightbox } from "@/components/video/VideoLightbox";
 
 interface ReelPos {
   style: React.CSSProperties;
@@ -13,6 +20,7 @@ interface ReelPos {
   delay: string;
   views: string;
   src: string;
+  srcHi: string;
 }
 
 const REELS: ReelPos[] = [
@@ -23,6 +31,7 @@ const REELS: ReelPos[] = [
     delay: "0.75s",
     views: "2.4M views",
     src: reel1,
+    srcHi: reel1Hi,
   },
   {
     style: { top: "6%", right: "8%" },
@@ -31,6 +40,7 @@ const REELS: ReelPos[] = [
     delay: "0.83s",
     views: "1.1M views",
     src: reel2,
+    srcHi: reel2Hi,
   },
   {
     style: { top: "36%", left: "3%" },
@@ -39,6 +49,7 @@ const REELS: ReelPos[] = [
     delay: "0.91s",
     views: "3.7M views",
     src: reel3,
+    srcHi: reel3Hi,
   },
   {
     style: { top: "32%", right: "4%" },
@@ -47,6 +58,7 @@ const REELS: ReelPos[] = [
     delay: "0.99s",
     views: "880K views",
     src: reel4,
+    srcHi: reel4Hi,
   },
   {
     style: { bottom: "10%", left: "16%" },
@@ -55,6 +67,7 @@ const REELS: ReelPos[] = [
     delay: "1.07s",
     views: "4.2M views",
     src: reel5,
+    srcHi: reel5Hi,
   },
   {
     style: { bottom: "8%", right: "14%" },
@@ -63,6 +76,7 @@ const REELS: ReelPos[] = [
     delay: "1.15s",
     views: "5.6M views",
     src: reel6,
+    srcHi: reel6Hi,
   },
 ];
 
@@ -136,17 +150,19 @@ export function ScatteredReels({ heroRef }: Props) {
     };
   }, [heroRef]);
 
+  const { open } = useVideoLightbox();
+
   return (
     <div
       ref={wrapRef}
       className="hero-reels pointer-events-none absolute inset-0 hidden md:block"
-      aria-hidden
     >
       {REELS.map((r, i) => (
         <div
           key={i}
           data-reel
           data-depth={r.depth}
+          onClick={() => open({ src: r.srcHi, meta: r.views })}
           style={{
             ...r.style,
             // typed as any to allow CSS custom property
@@ -161,7 +177,7 @@ export function ScatteredReels({ heroRef }: Props) {
             transform: r.baseTransform,
             animation: `drawer-rise 1s cubic-bezier(0.16,1,0.3,1) ${r.delay} both`,
           }}
-          className="reel-card pointer-events-auto absolute overflow-hidden"
+          className="reel-card pointer-events-auto absolute overflow-hidden cursor-pointer"
         >
           <video
             src={r.src}

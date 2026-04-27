@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import { useVideoLightbox } from "@/components/video/VideoLightbox";
 import reel1 from "@/assets/reels/reel1_hi.mp4";
 import reel2 from "@/assets/reels/reel2_hi.mp4";
 import reel3 from "@/assets/reels/reel3_hi.mp4";
@@ -65,6 +66,7 @@ export const PROJECTS: Project[] = [
 export function ProjectCard({ project }: { project: Project }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const { open } = useVideoLightbox();
 
   const play = () => {
     const v = videoRef.current;
@@ -79,14 +81,19 @@ export function ProjectCard({ project }: { project: Project }) {
     setPlaying(false);
   };
 
-  const toggle = () => (playing ? pause() : play());
+  const handleClick = () => {
+    if (project.src) {
+      pause();
+      open({ src: project.src, title: project.title, meta: project.views });
+    }
+  };
 
   return (
     <figure
       className="group relative frame-card aspect-[9/16] w-full max-h-[80vh] overflow-hidden cursor-pointer"
       onMouseEnter={play}
       onMouseLeave={pause}
-      onClick={toggle}
+      onClick={handleClick}
     >
       {/* Zoomable video / background layer */}
       <motion.div
