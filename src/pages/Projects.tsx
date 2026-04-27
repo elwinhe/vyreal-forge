@@ -22,7 +22,7 @@ const Projects = () => {
             <button
               key={f}
               onClick={() => setActive(f)}
-              className={`glass-btn px-5 py-2.5 text-sm sm:text-base font-medium ${
+              className={`glass-btn inline-flex items-center justify-center px-5 py-2.5 text-sm sm:text-base font-medium leading-none ${
                 active === f ? "glass-btn-active" : ""
               }`}
             >
