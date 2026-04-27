@@ -55,7 +55,7 @@
     --secondary-foreground: 0 0% 4%;
     --muted: 30 10% 86%;
     --muted-foreground: 0 1% 39%;
-    --accent: 268 48% 38%;
+    --accent: 239 84% 67%; /* #6366F1 indigo */
     --accent-foreground: 30 13% 92%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 30 13% 92%;
@@ -96,7 +96,7 @@
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 65%;
-    --accent: 268 36% 58%; /* lifted purple-mid for dark mode */
+    --accent: 239 84% 67%; /* #6366F1 indigo */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
