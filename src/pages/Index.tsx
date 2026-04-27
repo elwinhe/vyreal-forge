@@ -43,7 +43,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.75, ease: [0.16, 1, 0.3, 1] }}
-                className="mt-6 body-muted mx-auto max-w-2xl"
+                className="mt-2 body-muted mx-auto max-w-2xl"
                 style={{ fontSize: "clamp(16px, 1.4vw, 22px)" }}
               >
                 Work with our talented team to drive results
@@ -52,7 +52,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.95, ease: [0.16, 1, 0.3, 1] }}
-                className="mt-8 flex justify-center"
+                className="mt-4 flex justify-center"
               >
                 <Link
                   to="/contact"
