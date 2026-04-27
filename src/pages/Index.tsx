@@ -28,7 +28,7 @@ const Index = () => {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* HERO */}
-          <section ref={heroRef} className="px-5 md:px-8 pt-10 md:pt-16">
+          <section ref={heroRef} className="px-5 md:px-8">
             {/* Hero reel placeholder — full screen */}
             <motion.div
               style={{ y: reelY }}
@@ -51,9 +51,7 @@ const Index = () => {
               />
               <div className="relative z-10 min-h-screen w-full grid place-items-center px-5 md:px-8">
                 <motion.div style={{ y: headlineY }} className="text-center text-white">
-                  <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]">
-                    Ads at scale.
-                  </h1>
+                  <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]">Ads at scale.</h1>
                   <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2">
                     Real Results.
                   </h1>
