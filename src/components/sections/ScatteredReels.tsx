@@ -5,6 +5,13 @@ import reel3 from "@/assets/reels/reel3.mp4";
 import reel4 from "@/assets/reels/reel4.mp4";
 import reel5 from "@/assets/reels/reel5.mp4";
 import reel6 from "@/assets/reels/reel6.mp4";
+import reel1Hi from "@/assets/reels/reel1_hi.mp4";
+import reel2Hi from "@/assets/reels/reel2_hi.mp4";
+import reel3Hi from "@/assets/reels/reel3_hi.mp4";
+import reel4Hi from "@/assets/reels/reel4_hi.mp4";
+import reel5Hi from "@/assets/reels/reel5_hi.mp4";
+import reel6Hi from "@/assets/reels/reel6_hi.mp4";
+import { useVideoLightbox } from "@/components/video/VideoLightbox";
 
 interface ReelPos {
   style: React.CSSProperties;
@@ -13,6 +20,7 @@ interface ReelPos {
   delay: string;
   views: string;
   src: string;
+  srcHi: string;
 }
 
 const REELS: ReelPos[] = [
