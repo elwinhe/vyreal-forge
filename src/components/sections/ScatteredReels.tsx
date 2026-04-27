@@ -109,17 +109,30 @@ export function ScatteredReels({ heroRef }: Props) {
       });
     };
 
-    // Allow keyframe animation to complete (last card delay 1.15s + 1s anim)
+    // Allow keyframe animation to complete (last card delay 1.15s + 1s anim).
+    // We listen immediately, but suppress parallax writes until the mount
+    // animation has settled so we don't fight the @keyframes.
     const t = window.setTimeout(() => {
       animatedRef.current = true;
+      // Cancel the running CSS animation so our inline transform takes over
+      // cleanly (otherwise the animation's final frame can keep "winning").
+      cards.forEach((el) => {
+        el.style.animation = "none";
+        const base = el.style.getPropertyValue("--base-transform");
+        el.style.transform = base;
+      });
     }, 2250);
 
     hero.addEventListener("mousemove", onMove);
     hero.addEventListener("mouseleave", onLeave);
+    // Also listen on window as a fallback — the hero has a vignette ::after
+    // overlay (z-index 5) that can swallow mousemove on some browsers.
+    window.addEventListener("mousemove", onMove);
     return () => {
       window.clearTimeout(t);
       hero.removeEventListener("mousemove", onMove);
       hero.removeEventListener("mouseleave", onLeave);
+      window.removeEventListener("mousemove", onMove);
     };
   }, [heroRef]);
 
