@@ -150,17 +150,19 @@ export function ScatteredReels({ heroRef }: Props) {
     };
   }, [heroRef]);
 
+  const { open } = useVideoLightbox();
+
   return (
     <div
       ref={wrapRef}
       className="hero-reels pointer-events-none absolute inset-0 hidden md:block"
-      aria-hidden
     >
       {REELS.map((r, i) => (
         <div
           key={i}
           data-reel
           data-depth={r.depth}
+          onClick={() => open({ src: r.srcHi, meta: r.views })}
           style={{
             ...r.style,
             // typed as any to allow CSS custom property
@@ -175,7 +177,7 @@ export function ScatteredReels({ heroRef }: Props) {
             transform: r.baseTransform,
             animation: `drawer-rise 1s cubic-bezier(0.16,1,0.3,1) ${r.delay} both`,
           }}
-          className="reel-card pointer-events-auto absolute overflow-hidden"
+          className="reel-card pointer-events-auto absolute overflow-hidden cursor-pointer"
         >
           <video
             src={r.src}
