@@ -61,9 +61,6 @@ const items = [
   { label: "Contact", to: "/contact" },
 ];
 
-// Subset shown inline on the desktop top bar (Home is implicit via logo)
-const inlineItems = items.filter((i) => i.to !== "/");
-
 export function Nav() {
   const [open, setOpen] = useState(false);
   const navigate = useTransitionNavigate();
@@ -74,13 +71,13 @@ export function Nav() {
 
   return (
     <header className="fixed top-2 left-2 right-2 z-[80] bg-background/60 backdrop-blur-2xl border border-foreground/10 rounded-2xl overflow-hidden shadow-[0_8px_24px_-12px_hsl(var(--foreground)/0.18)]">
-      <div className="relative px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
+      <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
         <button
           onClick={() => {
             setOpen(false);
             navigate("/");
           }}
-          className="relative z-10 text-2xl md:text-[28px] leading-[1.15] overflow-hidden py-1"
+          className="text-2xl md:text-[28px] leading-[1.15] overflow-hidden py-1"
           style={{ fontFamily: '"Hanken Grotesk", sans-serif', letterSpacing: "-0.02em" }}
         >
           <motion.span
@@ -93,31 +90,7 @@ export function Nav() {
           </motion.span>
         </button>
 
-        {/* Desktop inline nav — absolutely centered within the top row, hidden while overlay menu is open */}
-        <AnimatePresence>
-          {!open && (
-            <motion.nav
-              key="inline-nav"
-              initial={{ opacity: 0, y: -4 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -4 }}
-              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden md:flex absolute inset-y-0 left-1/2 -translate-x-1/2 w-[min(50vw,440px)] items-center justify-between pointer-events-auto"
-            >
-              {inlineItems.map((it) => (
-                <button
-                  key={it.to}
-                  onClick={() => navigate(it.to)}
-                  className="px-2 py-2 text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
-                >
-                  {it.label}
-                </button>
-              ))}
-            </motion.nav>
-          )}
-        </AnimatePresence>
-
-        <div className="relative z-10 flex items-center gap-1">
+        <div className="flex items-center gap-1">
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
