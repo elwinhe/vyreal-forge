@@ -21,8 +21,7 @@ export function HeroHeadline() {
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.75, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-2 body-muted mx-auto max-w-2xl"
-        style={{ fontSize: "clamp(20px, 2.6vw, 32px)", lineHeight: 1.4 }}
+        className="mt-2 body-muted font-medium mx-auto max-w-2xl text-xl md:text-2xl"
       >
         Done-for-you marketing that actually performs.
       </motion.p>
