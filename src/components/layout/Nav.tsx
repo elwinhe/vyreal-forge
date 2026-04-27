@@ -122,7 +122,7 @@ export function Nav() {
                         navigate(it.to);
                       }}
                       className={`nav-slide-item w-full text-center px-6 py-4 display text-3xl md:text-5xl tracking-display ${
-                        isActive ? "is-active" : ""
+                        isActive ? "is-active text-transition2" : ""
                       }`}
                     >
                       <motion.span
