@@ -11,6 +11,7 @@ import { ScatteredReels } from "@/components/sections/ScatteredReels";
 import { FadeInUp } from "@/components/motion/FadeInUp";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GlassBtnText } from "@/components/ui/GlassBtnText";
 
 const Index = () => {
   const heroRef = useRef<HTMLElement>(null);
