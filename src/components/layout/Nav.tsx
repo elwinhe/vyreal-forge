@@ -112,30 +112,36 @@ export function Nav() {
             transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <ul className="py-3">
-              {items.map((it, i) => (
-                <li key={it.to}>
-                  <button
-                    onClick={() => {
-                      setOpen(false);
-                      navigate(it.to);
-                    }}
-                    className="nav-slide-item w-full text-center px-6 py-4 display text-3xl md:text-5xl tracking-display hover:text-transition2 transition-colors"
-                  >
-                    <motion.span
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.05 + i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                      className="relative inline-block overflow-hidden align-bottom leading-[1.1]"
+            <ul className="py-3 list-none">
+              {items.map((it, i) => {
+                const isActive =
+                  it.to === "/" ? location.pathname === "/" : location.pathname.startsWith(it.to);
+                return (
+                  <li key={it.to} className="border-0">
+                    <button
+                      onClick={() => {
+                        setOpen(false);
+                        navigate(it.to);
+                      }}
+                      className={`nav-slide-item w-full text-center px-6 py-4 display text-3xl md:text-5xl tracking-display transition-colors ${
+                        isActive ? "is-active text-transition2" : "hover:text-transition2"
+                      }`}
                     >
-                      <span className="nav-slide-current block">{it.label}</span>
-                      <span aria-hidden className="nav-slide-incoming absolute left-0 top-0 block w-full">
-                        {it.label}
-                      </span>
-                    </motion.span>
-                  </button>
-                </li>
-              ))}
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.05 + i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                        className="relative inline-block overflow-hidden align-bottom leading-[1.1]"
+                      >
+                        <span className="nav-slide-current block">{it.label}</span>
+                        <span aria-hidden className="nav-slide-incoming absolute left-0 top-0 block w-full">
+                          {it.label}
+                        </span>
+                      </motion.span>
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </motion.nav>
         )}
