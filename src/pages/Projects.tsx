@@ -14,7 +14,12 @@ const Projects = () => {
     <PageShell>
       <section className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
         <FadeInUp className="eyebrow body-muted mb-6">Projects</FadeInUp>
-        <FadeInUp as="h1" delay={0.15} className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">
+        <FadeInUp
+          as="h1"
+          delay={0.15}
+          className="display tracking-display leading-[0.85]"
+          style={{ fontSize: "clamp(4rem, 14vw, 13rem)" }}
+        >
           The reel.
         </FadeInUp>
         <div className="mt-10 md:mt-14 flex flex-wrap gap-2">

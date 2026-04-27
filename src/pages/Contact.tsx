@@ -17,7 +17,10 @@ const Contact = () => {
       <section ref={ref} className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
         <div className="eyebrow body-muted mb-6">Contact</div>
 
-        <motion.h1 style={{ y: ySlow }} className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">
+        <motion.h1
+          style={{ y: ySlow, fontSize: "clamp(4rem, 14vw, 13rem)" }}
+          className="display tracking-display leading-[0.85]"
+        >
           Let's Connect.
         </motion.h1>
 
