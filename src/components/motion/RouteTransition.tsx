@@ -164,14 +164,13 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
                 }}
               >
                 <span
-                  className="text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display leading-[0.85]"
+                  className="text-[hsl(var(--background))] text-7xl md:text-9xl leading-[0.85]"
                   style={{
-                    fontFamily: '"neue-haas-grotesk-display", sans-serif',
-                    fontWeight: 900,
-                    fontStyle: "italic",
+                    fontFamily: '"Hanken Grotesk", sans-serif',
+                    letterSpacing: "-0.03em",
                   }}
                 >
-                  Stratton
+                  <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
                 </span>
               </motion.div>
             </>

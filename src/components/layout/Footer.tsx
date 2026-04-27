@@ -11,10 +11,11 @@ export function Footer() {
     <footer className="px-5 md:px-8 pt-24 md:pt-40 pb-10">
       <div>
         <div
-          className="leading-[0.85] tracking-display"
+          className="leading-[0.85]"
           style={{
             fontFamily: '"Hanken Grotesk", sans-serif',
             fontSize: "clamp(3.4rem, 5.8vw, 7rem)",
+            letterSpacing: "-0.03em",
           }}
         >
           <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>

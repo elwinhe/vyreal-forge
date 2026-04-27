@@ -40,14 +40,13 @@ export function HomeLoader({ onDone }: { onDone?: () => void }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-[hsl(var(--background))] text-7xl md:text-9xl leading-[0.85] tracking-display"
+            className="text-[hsl(var(--background))] text-7xl md:text-9xl leading-[0.85]"
             style={{
-              fontFamily: '"neue-haas-grotesk-display", sans-serif',
-              fontWeight: 900,
-              fontStyle: "italic",
+              fontFamily: '"Hanken Grotesk", sans-serif',
+              letterSpacing: "-0.03em",
             }}
           >
-            Stratton
+            <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
           </motion.span>
         </motion.div>
       )}
