@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import reel1 from "@/assets/reels/reel1.mp4";
 import reel2 from "@/assets/reels/reel2.mp4";
 import reel3 from "@/assets/reels/reel3.mp4";
@@ -62,8 +63,32 @@ export const PROJECTS: Project[] = [
 ];
 
 export function ProjectCard({ project }: { project: Project }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const play = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.play().then(() => setPlaying(true)).catch(() => {});
+  };
+
+  const pause = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.pause();
+    v.currentTime = 0;
+    setPlaying(false);
+  };
+
+  const toggle = () => (playing ? pause() : play());
+
   return (
-    <figure className="group relative frame-card aspect-[9/16] w-full max-h-[80vh] overflow-hidden">
+    <figure
+      className="group relative frame-card aspect-[9/16] w-full max-h-[80vh] overflow-hidden cursor-pointer"
+      onMouseEnter={play}
+      onMouseLeave={pause}
+      onClick={toggle}
+    >
       {/* Zoomable video / background layer */}
       <motion.div
         className="absolute inset-0"
@@ -74,12 +99,12 @@ export function ProjectCard({ project }: { project: Project }) {
       >
         {project.src && (
           <video
+            ref={videoRef}
             src={project.src}
-            autoPlay
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             className="absolute inset-0 w-full h-full object-cover"
           />
         )}
