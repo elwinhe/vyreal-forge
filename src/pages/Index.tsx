@@ -28,7 +28,7 @@ const Index = () => {
         {/* HERO */}
         <section
           ref={heroRef}
-          className="hero-vignette relative px-5 md:px-8 pt-[200px] pb-24 md:pt-0 md:pb-0 flex flex-col md:items-center md:justify-center overflow-hidden"
+          className="relative px-5 md:px-8 pt-[200px] pb-24 md:pt-0 md:pb-0 flex flex-col md:items-center md:justify-center overflow-hidden"
           style={{ minHeight: "100vh" }}
         >
           <ScatteredReels heroRef={heroRef} />

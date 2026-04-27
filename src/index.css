@@ -391,20 +391,6 @@
   z-index: 20;
 }
 
-/* Hero radial vignette — fades scattered reels into the background at edges */
-.hero-vignette::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 5;
-  background: radial-gradient(
-    ellipse 60% 70% at 50% 50%,
-    transparent 40%,
-    hsl(var(--background)) 100%
-  );
-}
-
 /* Hero headline left-to-right typewriter reveal */
 @keyframes hero-type-in {
   0% {
