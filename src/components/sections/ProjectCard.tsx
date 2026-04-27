@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+
 import { useRef, useState } from "react";
 import { useVideoLightbox } from "@/components/video/VideoLightbox";
 import reel1 from "@/assets/reels/reel1_hi.mp4";
@@ -95,13 +95,12 @@ export function ProjectCard({ project }: { project: Project }) {
       onMouseLeave={pause}
       onClick={handleClick}
     >
-      {/* Zoomable video / background layer */}
-      <motion.div
+      {/* Zoomable video / background layer (CSS-only hover scale to avoid
+          layer-promoting the card itself, which would break the nav's
+          backdrop-blur sampling above it). */}
+      <div
         className="absolute inset-0"
         style={{ background: project.bg }}
-        initial={false}
-        whileHover={{ scale: 1.06 }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       >
         {project.src && (
           <video
@@ -111,7 +110,7 @@ export function ProjectCard({ project }: { project: Project }) {
             loop
             playsInline
             preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
           />
         )}
         {/* shimmer placeholder */}
@@ -119,7 +118,7 @@ export function ProjectCard({ project }: { project: Project }) {
           className="absolute inset-0 opacity-60 mix-blend-overlay pointer-events-none"
           style={{ background: "radial-gradient(60% 40% at 30% 20%, rgba(255,255,255,0.25), transparent 60%)" }}
         />
-      </motion.div>
+      </div>
 
       {/* Bottom contrast gradient — sits above the zoom layer, below the text */}
       <div
