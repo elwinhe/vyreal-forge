@@ -163,7 +163,14 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
                   delay: phase === "covering" ? 0.2 : 0,
                 }}
               >
-                <span className="display italic font-black text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display">
+                <span
+                  className="text-[hsl(var(--background))] text-7xl md:text-9xl tracking-display leading-[0.85]"
+                  style={{
+                    fontFamily: '"neue-haas-grotesk-display", sans-serif',
+                    fontWeight: 900,
+                    fontStyle: "italic",
+                  }}
+                >
                   Stratton
                 </span>
               </motion.div>
