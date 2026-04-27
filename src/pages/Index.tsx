@@ -26,7 +26,7 @@ const Index = () => {
           {/* HERO — scattered reels around centered headline (desktop), horizontal row (mobile) */}
           <section
             ref={heroRef}
-            className="hero-vignette relative px-5 md:px-8 pt-[140px] md:pt-0 flex flex-col md:items-center md:justify-center overflow-hidden"
+            className="hero-vignette relative px-5 md:px-8 pt-[200px] pb-24 md:pt-0 md:pb-0 flex flex-col md:items-center md:justify-center overflow-hidden"
             style={{ minHeight: "100vh" }}
           >
             {/* Desktop: scattered reels with mouse parallax */}
@@ -70,7 +70,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="md:hidden mt-12 -mx-5 relative z-10"
+              className="md:hidden mt-20 -mx-5 relative z-10"
             >
               <VideoCardRow />
             </motion.div>
