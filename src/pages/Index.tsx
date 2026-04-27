@@ -95,6 +95,9 @@ const Index = () => {
             </div>
           </section>
 
+          {/* STATS */}
+          <Stats />
+
           {/* PROJECTS */}
           <section className="mt-32 md:mt-48 px-5 md:px-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-16">
