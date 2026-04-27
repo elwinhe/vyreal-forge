@@ -53,7 +53,6 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 import { useTransitionNavigate } from "@/components/motion/RouteTransition";
-import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const items = [
   { label: "Home", to: "/" },
@@ -92,7 +91,6 @@ export function Nav() {
         </button>
 
         <div className="flex items-center gap-1">
-          <ThemeToggle />
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
