@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <PageShell>
-      <section className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
+      <section className="py-12 px-5 md:px-8 pt-[120px] md:pt-[160px]">
         <FadeInUp className="eyebrow body-muted mb-6">Projects</FadeInUp>
         <FadeInUp
           as="h1"
@@ -22,7 +22,10 @@ const Projects = () => {
         >
           The reel.
         </FadeInUp>
-        <div className="mt-10 md:mt-14 flex flex-wrap gap-2">
+      </section>
+
+      <section className="py-12 px-5 md:px-8">
+        <div className="flex flex-wrap gap-2">
           {filters.map((f) => (
             <button
               key={f}
@@ -37,7 +40,7 @@ const Projects = () => {
         </div>
       </section>
 
-      <section className="mt-16 md:mt-24 px-5 md:px-8">
+      <section className="py-12 px-5 md:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
           {list.map((p, i) => (
             <ProjectCard key={i} project={p} />
