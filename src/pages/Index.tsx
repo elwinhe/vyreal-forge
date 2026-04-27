@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { PageShell } from "@/components/layout/PageShell";
 import { Marquee } from "@/components/sections/Marquee";
@@ -6,11 +7,13 @@ import { ParallaxStack } from "@/components/sections/ParallaxStack";
 import { Services } from "@/components/sections/Services";
 import { Stats } from "@/components/sections/Stats";
 import { VideoCardRow } from "@/components/sections/VideoCardRow";
+import { ScatteredReels } from "@/components/sections/ScatteredReels";
 import { FadeInUp } from "@/components/motion/FadeInUp";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
+  const heroRef = useRef<HTMLElement>(null);
   return (
     <>
       <PageShell>
