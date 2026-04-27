@@ -29,12 +29,12 @@ export function HeroHeadline() {
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.95, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-12 flex justify-center"
+        className="mt-10 md:mt-12 flex justify-center"
       >
         <button
           type="button"
           onClick={() => navigate("/contact")}
-          className="glass-btn group inline-flex items-center gap-2 px-6 py-4 text-md md:text-lg font-medium"
+          className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-md md:text-lg font-medium"
         >
           <GlassBtnText>Work with Us</GlassBtnText>
           <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
