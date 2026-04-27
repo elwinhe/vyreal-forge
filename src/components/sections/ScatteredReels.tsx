@@ -1,4 +1,10 @@
 import { useEffect, useRef } from "react";
+import reel1 from "@/assets/reels/reel1.mov";
+import reel2 from "@/assets/reels/reel2.mov";
+import reel3 from "@/assets/reels/reel3.mov";
+import reel4 from "@/assets/reels/reel4.mov";
+import reel5 from "@/assets/reels/reel5.mov";
+import reel6 from "@/assets/reels/reel6.mov";
 
 interface ReelPos {
   style: React.CSSProperties;
@@ -6,6 +12,7 @@ interface ReelPos {
   depth: number;
   delay: string;
   views: string;
+  src: string;
 }
 
 const REELS: ReelPos[] = [
