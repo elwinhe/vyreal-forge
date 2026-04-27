@@ -90,6 +90,36 @@ export function Nav() {
           </motion.span>
         </button>
 
+        {/* Desktop inline nav — hidden while overlay menu is open */}
+        <AnimatePresence>
+          {!open && (
+            <motion.nav
+              key="inline-nav"
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-1"
+            >
+              {items.map((it) => {
+                const isActive =
+                  it.to === "/" ? location.pathname === "/" : location.pathname.startsWith(it.to);
+                return (
+                  <button
+                    key={it.to}
+                    onClick={() => navigate(it.to)}
+                    className={`px-4 py-2 text-sm tracking-wide transition-colors rounded-full hover:bg-foreground/5 ${
+                      isActive ? "text-foreground font-medium" : "text-foreground/70 hover:text-foreground"
+                    }`}
+                  >
+                    {it.label}
+                  </button>
+                );
+              })}
+            </motion.nav>
+          )}
+        </AnimatePresence>
+
         <div className="flex items-center gap-1">
           <button
             aria-label={open ? "Close menu" : "Open menu"}
