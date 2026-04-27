@@ -79,6 +79,9 @@ export function ScatteredReels({ heroRef }: Props) {
       const dx = e.clientX - rect.left - rect.width / 2;
       const dy = e.clientY - rect.top - rect.height / 2;
       cards.forEach((el) => {
+        // Skip the hovered card so the CSS :hover transition can play
+        // smoothly without the inline transform overwriting it each frame.
+        if (el.matches(":hover")) return;
         const depth = parseFloat(el.dataset.depth || "0");
         const base = el.style.getPropertyValue("--base-transform");
         el.style.transform = `${base} translate(${dx * depth}px, ${dy * depth}px)`;
@@ -87,6 +90,7 @@ export function ScatteredReels({ heroRef }: Props) {
 
     const onLeave = () => {
       cards.forEach((el) => {
+        if (el.matches(":hover")) return;
         const base = el.style.getPropertyValue("--base-transform");
         el.style.transform = base;
       });
