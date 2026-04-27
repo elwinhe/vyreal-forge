@@ -70,7 +70,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="md:hidden mt-12 -mx-5 relative z-10"
+              className="md:hidden mt-20 -mx-5 relative z-10"
             >
               <VideoCardRow />
             </motion.div>
