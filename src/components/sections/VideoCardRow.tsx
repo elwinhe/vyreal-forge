@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import reel1 from "@/assets/reels/reel1.mov";
-import reel2 from "@/assets/reels/reel2.mov";
-import reel3 from "@/assets/reels/reel3.mov";
-import reel4 from "@/assets/reels/reel4.mov";
-import reel5 from "@/assets/reels/reel5.mov";
+import reel1 from "@/assets/reels/reel1.mp4";
+import reel2 from "@/assets/reels/reel2.mp4";
+import reel3 from "@/assets/reels/reel3.mp4";
+import reel4 from "@/assets/reels/reel4.mp4";
+import reel5 from "@/assets/reels/reel5.mp4";
 
 interface ReelCard {
   views: string;
