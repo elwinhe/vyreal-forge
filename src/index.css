@@ -137,6 +137,7 @@
   body {
     @apply bg-background text-foreground;
     font-family:
+      "Hanken Grotesk",
       "Inter Tight",
       ui-sans-serif,
       system-ui,
