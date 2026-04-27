@@ -158,7 +158,7 @@
 
 @layer utilities {
   .display {
-    font-family: "Stratton Display", "Inter Tight", sans-serif;
+    font-family: "Stratton Display", "Hanken Grotesk", "Inter Tight", sans-serif;
     font-weight: 600;
     font-style: normal !important;
     font-synthesis: none;
