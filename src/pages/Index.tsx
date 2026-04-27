@@ -44,8 +44,8 @@ const Index = () => {
         {/* STATS */}
         <Stats />
 
-        {/* PROJECTS */}
-        <section className="py-12 px-5 md:px-8">
+        {/* PROJECTS — temporarily disabled (redundant with hero reels) */}
+        {/* <section className="py-12 px-5 md:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-16">
             <FadeInUp
               as="h2"
@@ -65,7 +65,6 @@ const Index = () => {
             </FadeInUp>
           </div>
 
-          {/* Mobile: horizontal scroll. Desktop: 3-col grid. */}
           <div className="md:hidden -mx-5 px-5 overflow-x-auto">
             <div className="flex gap-4 w-max">
               {PROJECTS.slice(0, 4).map((p, i) => (
@@ -92,7 +91,7 @@ const Index = () => {
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-        </section>
+        </section> */}
 
         {/* BLURB — temporarily disabled */}
         {/* <section className="py-12 px-5 md:px-8">
