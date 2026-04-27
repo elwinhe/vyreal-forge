@@ -56,6 +56,15 @@ const Index = () => {
                     <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2">
                       Real Results.
                     </h1>
+                    <div className="mt-8 flex justify-center">
+                      <Link
+                        to="/contact"
+                        className="group inline-flex items-center gap-2 text-base md:text-lg text-white border-b border-white/40 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
+                      >
+                        Work with Us
+                        <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </div>
                   </motion.div>
                 </div>
                 <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.18em] text-white/80 z-10">
@@ -63,16 +72,6 @@ const Index = () => {
                 </div>
               </div>
             </motion.div>
-
-            <div className="mt-8 flex justify-center">
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-2 text-base md:text-lg border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
-              >
-                Work with Us
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
           </section>
 
           {/* CLIENT / CREATOR MARQUEE */}
