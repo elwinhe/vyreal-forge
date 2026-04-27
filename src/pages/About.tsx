@@ -72,7 +72,7 @@ function TeamCard({ m }: { m: Member }) {
 const About = () => {
   return (
     <PageShell>
-      <section className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
+      <section className="py-12 px-5 md:px-8 pt-[120px] md:pt-[160px]">
         <div className="eyebrow body-muted mb-6">About</div>
         <h1 className="display tracking-display leading-[0.85]" style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}>
           Built by
@@ -85,7 +85,7 @@ const About = () => {
         </h1>
       </section>
 
-      <section className="mt-24 md:mt-32 px-5 md:px-8">
+      <section className="py-12 px-5 md:px-8">
         <FadeInUp className="eyebrow body-muted mb-6">What are we?</FadeInUp>
         <FadeInUp
           as="p"
@@ -98,7 +98,7 @@ const About = () => {
         </FadeInUp>
       </section>
 
-      <section className="mt-24 md:mt-32 px-5 md:px-8">
+      <section className="py-12 px-5 md:px-8">
         <div className="flex items-end justify-between mb-10">
           <FadeInUp as="h2" className="eyebrow body-muted">
             The team
