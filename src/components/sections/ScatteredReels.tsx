@@ -13,42 +13,42 @@ const REELS: ReelPos[] = [
     style: { top: "8%", left: "6%" },
     baseTransform: "rotate(-6deg)",
     depth: 0.04,
-    delay: "0.10s",
+    delay: "0.75s",
     views: "2.4M views",
   },
   {
     style: { top: "6%", right: "8%" },
     baseTransform: "rotate(5deg)",
     depth: 0.03,
-    delay: "0.18s",
+    delay: "0.83s",
     views: "1.1M views",
   },
   {
     style: { top: "36%", left: "3%" },
     baseTransform: "rotate(-8deg)",
     depth: 0.06,
-    delay: "0.26s",
+    delay: "0.91s",
     views: "3.7M views",
   },
   {
     style: { top: "32%", right: "4%" },
     baseTransform: "rotate(7deg)",
     depth: 0.05,
-    delay: "0.34s",
+    delay: "0.99s",
     views: "880K views",
   },
   {
     style: { bottom: "10%", left: "16%" },
     baseTransform: "rotate(-4deg) skewX(4deg)",
     depth: 0.04,
-    delay: "0.42s",
+    delay: "1.07s",
     views: "4.2M views",
   },
   {
     style: { bottom: "8%", right: "14%" },
     baseTransform: "rotate(6deg) skewX(-4deg)",
     depth: 0.035,
-    delay: "0.50s",
+    delay: "1.15s",
     views: "5.6M views",
   },
 ];
@@ -92,10 +92,10 @@ export function ScatteredReels({ heroRef }: Props) {
       });
     };
 
-    // Allow keyframe animation to complete (last card delay 0.50s + 1s anim)
+    // Allow keyframe animation to complete (last card delay 1.15s + 1s anim)
     const t = window.setTimeout(() => {
       animatedRef.current = true;
-    }, 1600);
+    }, 2250);
 
     hero.addEventListener("mousemove", onMove);
     hero.addEventListener("mouseleave", onLeave);
