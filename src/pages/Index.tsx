@@ -82,7 +82,7 @@ const Index = () => {
                         <span
                           className="h-12 w-12 rounded-full"
                           style={{
-                            background: `linear-gradient(135deg,#EACBB9,#CC6329)`,
+                            background: `linear-gradient(135deg,#D9CBE8,#4A2A6B)`,
                           }}
                           aria-label="Creator avatar"
                         />

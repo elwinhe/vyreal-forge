@@ -14,31 +14,31 @@ const team: Member[] = [
     name: "Rishi",
     role: "Co-founder · CEO",
     bio: "Built creator monetization stacks from zero to eight figures. Operator-first.",
-    bg: "linear-gradient(160deg,#0A0A0A 0%,#3a2418 60%,#CC6329 100%)",
+    bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 60%,#4A2A6B 100%)",
   },
   {
     name: "Richard",
     role: "Co-founder · Operations",
     bio: "Motion-control systems, AI pipelines, and a long history of shipping hits.",
-    bg: "linear-gradient(160deg,#EACBB9 0%,#8C5B45 70%,#1A1212 100%)",
+    bg: "linear-gradient(160deg,#D9CBE8 0%,#7A5C9A 70%,#15101F 100%)",
   },
   {
     name: "Elwin",
     role: "Head of Creative",
     bio: "Leads the creative design and maintains backend infrastructure supporting our workflows",
-    bg: "linear-gradient(160deg,#222 0%,#444 50%,#CC6329 100%)",
+    bg: "linear-gradient(160deg,#222 0%,#444 50%,#4A2A6B 100%)",
   },
   {
     name: "Ishaan",
     role: "Content Lead",
     bio: "2M followers across socials, 51M total engagement, scripting wizard.",
-    bg: "linear-gradient(160deg,#1A1212 0%,#6B3A22 60%,#EACBB9 100%)",
+    bg: "linear-gradient(160deg,#15101F 0%,#3D2459 60%,#D9CBE8 100%)",
   },
   {
     name: "Victor",
     role: "Tech Lead",
     bio: "The orchestrator behind agentic workflow management.",
-    bg: "linear-gradient(160deg,#0A0A0A 0%,#2a2a2a 50%,#8C5B45 100%)",
+    bg: "linear-gradient(160deg,#0A0A0A 0%,#2a2a2a 50%,#7A5C9A 100%)",
   },
 ];
 
