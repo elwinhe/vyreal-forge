@@ -22,7 +22,7 @@ const Index = () => {
         initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        // No wrapper gap — each section owns its own py-16 spacing.
+        // No wrapper gap — each section owns its own py-12 spacing.
         className="flex flex-col"
       >
         {/* HERO */}
@@ -45,7 +45,7 @@ const Index = () => {
         <Stats />
 
         {/* PROJECTS */}
-        <section className="py-16 px-5 md:px-8">
+        <section className="py-12 px-5 md:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-16">
             <FadeInUp
               as="h2"
@@ -94,7 +94,7 @@ const Index = () => {
         </section>
 
         {/* BLURB */}
-        <section className="py-16 px-5 md:px-8">
+        <section className="py-12 px-5 md:px-8">
           <ParallaxStack
             top="Stratton"
             bottom="real virality"
