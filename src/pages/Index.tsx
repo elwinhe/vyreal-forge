@@ -1,24 +1,15 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { PageShell } from "@/components/layout/PageShell";
 import { Marquee } from "@/components/sections/Marquee";
 import { ProjectCard, PROJECTS } from "@/components/sections/ProjectCard";
 import { ParallaxStack } from "@/components/sections/ParallaxStack";
 import { Services } from "@/components/sections/Services";
+import { VideoCardRow } from "@/components/sections/VideoCardRow";
 import { FadeInUp } from "@/components/motion/FadeInUp";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const isMobile = useIsMobile();
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const headlineYRaw = useTransform(scrollYProgress, [0, 1], [0, -40]);
-  const reelYRaw = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const headlineY = isMobile ? 0 : headlineYRaw;
-  const reelY = isMobile ? 0 : reelYRaw;
-
   return (
     <>
       <PageShell>
@@ -27,50 +18,54 @@ const Index = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* HERO */}
-          <section ref={heroRef} className="px-5 md:px-8">
-            {/* Hero reel placeholder — full screen, flush to bottom with 4px side margins */}
+          {/* HERO — text anchored upper-center, min 75vh */}
+          <section
+            className="px-5 md:px-8 pt-[140px] md:pt-[180px] flex flex-col"
+            style={{ minHeight: "75vh" }}
+          >
+            <div className="w-full max-w-6xl mx-auto text-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                className="display tracking-display leading-[1.02]"
+                style={{ fontSize: "clamp(3.5rem, 5vw, 6rem)" }}
+              >
+                The ultimate <span className="text-transition2">AI UGC</span> Agency
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-6 body-muted mx-auto max-w-2xl"
+                style={{ fontSize: "clamp(16px, 1.4vw, 22px)" }}
+              >
+                Work with our talented team to drive results
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-8 flex justify-center"
+              >
+                <Link
+                  to="/contact"
+                  className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-sm md:text-base font-medium"
+                >
+                  Work with Us
+                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* 5-card horizontal video row */}
             <motion.div
-              style={{ y: reelY }}
-              className="frame-media relative -mx-5 md:-mx-8"
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="mt-12 md:mt-16 -mx-5 md:-mx-8"
             >
-              <div className="relative mx-2 mt-[88px] md:mt-[100px] h-[calc(100vh-96px)] md:h-[calc(100vh-108px)] overflow-hidden rounded-2xl">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: "linear-gradient(120deg,#050505 0%,#1a0d08 35%,#7a1f12 70%,#3a0f08 100%)",
-                  }}
-                />
-                <div
-                  className="absolute inset-0 mix-blend-overlay"
-                  style={{
-                    background: "radial-gradient(80% 60% at 30% 30%, rgba(255,255,255,0.12), transparent 60%)",
-                  }}
-                />
-                <div className="relative z-10 h-full w-full grid place-items-center px-5 md:px-8">
-                  <motion.div style={{ y: headlineY }} className="text-center text-white">
-                    <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1]">Ads at scale.</h1>
-                    <h1 className="display text-[12vw] md:text-[11vw] tracking-display leading-[1] text-transition2">
-                      Real Results.
-                    </h1>
-                    <div className="mt-8 flex justify-center">
-                      <Link
-                        to="/contact"
-                        className="group inline-flex items-center gap-2 text-base md:text-lg text-white border-b border-white/40 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
-                      >
-                        Work with Us
-                        <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    </div>
-                  </motion.div>
-                </div>
-                <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.18em] text-white/80 z-10">
-                  Reel 2026
-                </div>
-              </div>
+              <VideoCardRow />
             </motion.div>
           </section>
 
@@ -140,7 +135,7 @@ const Index = () => {
             <div className="mt-10 flex justify-center">
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 text-base md:text-lg border-b border-foreground/30 pb-1 hover:border-transition2 hover:text-transition2 transition-colors"
+                className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-sm md:text-base font-medium"
               >
                 View all projects
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
