@@ -14,7 +14,7 @@ export function HeroHeadline() {
         className="hero-type display tracking-display leading-[1.18] pb-2"
         style={{ fontSize: "clamp(3.5rem, 5vw, 6rem)" }}
       >
-        The Ultimate <span className="text-transition2">AI</span> UGC Agency
+        We're an AI<span className="text-transition2">UGC Sudio</span>
       </h1>
       <motion.p
         initial={{ opacity: 0, y: 14 }}
