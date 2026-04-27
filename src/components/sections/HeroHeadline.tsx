@@ -34,7 +34,7 @@ export function HeroHeadline() {
         <button
           type="button"
           onClick={() => navigate("/contact")}
-          className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-sm md:text-base font-medium"
+          className="glass-btn group inline-flex items-center gap-2 px-6 py-6 text-sm md:text-base font-medium"
         >
           <GlassBtnText>Work with Us</GlassBtnText>
           <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
