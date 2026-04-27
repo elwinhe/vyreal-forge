@@ -45,7 +45,7 @@ export function HomeLoader({ onDone }: { onDone?: () => void }) {
               fontFamily: '"neue-haas-grotesk-display", sans-serif',
             }}
           >
-            <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
+            <span style={{ fontWeight: 700, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 400, fontStyle: "italic" }}>Labs</span>
           </motion.span>
         </motion.div>
       )}

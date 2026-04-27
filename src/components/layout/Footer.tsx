@@ -17,7 +17,7 @@ export function Footer() {
             fontSize: "clamp(3.4rem, 5.8vw, 7rem)",
           }}
         >
-          <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
+          <span style={{ fontWeight: 700, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 400, fontStyle: "italic" }}>Labs</span>
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-10">

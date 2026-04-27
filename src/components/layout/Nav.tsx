@@ -86,7 +86,7 @@ export function Nav() {
             transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
             className="inline-block"
           >
-            <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
+            <span style={{ fontWeight: 700, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 400, fontStyle: "italic" }}>Labs</span>
           </motion.span>
         </button>
 
