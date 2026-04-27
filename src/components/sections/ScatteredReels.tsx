@@ -48,7 +48,7 @@ const REELS: ReelPos[] = [
     style: { bottom: "8%", right: "14%" },
     baseTransform: "rotate(6deg) skewX(-4deg)",
     depth: 0.035,
-    delay: "0.50s",
+    delay: "1.15s",
     views: "5.6M views",
   },
 ];
