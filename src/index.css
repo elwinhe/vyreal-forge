@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&display=swap");
 
+@font-face {
+  font-family: "Stratton Display";
+  src:
+    url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/l?subset_id=2&fvd=n6&v=3") format("woff2"),
+    url("https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/d?subset_id=2&fvd=n6&v=3") format("woff");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -133,9 +144,9 @@
 
 @layer utilities {
   .display {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family: "Stratton Display", "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-style: normal !important;
     font-synthesis: none;
     letter-spacing: -0.04em;
     line-height: 0.88;
