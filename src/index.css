@@ -217,6 +217,48 @@
   .marquee-track {
     animation: marquee 40s linear infinite;
   }
+  /* Apple-style glass button — sitewide CTA / chip / tab treatment */
+  .glass-btn {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 2px 12px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    color: hsl(var(--foreground));
+    transition:
+      background 200ms ease,
+      box-shadow 200ms ease,
+      transform 120ms ease;
+  }
+  .glass-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 4px 18px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  }
+  .glass-btn:active {
+    transform: scale(0.97);
+  }
+  .glass-btn-active {
+    background: rgba(10, 10, 10, 0.85);
+    color: hsl(var(--background));
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  .glass-btn-on-dark {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+  /* Hide scrollbar utility for horizontal card row */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @keyframes marquee {
