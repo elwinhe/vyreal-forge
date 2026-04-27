@@ -129,10 +129,10 @@ export function Nav() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.05 + i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                        className="relative inline-block overflow-hidden align-bottom leading-[1.1]"
+                        className="relative inline-block overflow-hidden align-bottom leading-[1.1] pr-[0.12em]"
                       >
                         <span className="nav-slide-current block">{it.label}</span>
-                        <span aria-hidden className="nav-slide-incoming absolute left-0 top-0 block w-full">
+                        <span aria-hidden className="nav-slide-incoming absolute left-0 top-0 block w-full pr-[0.12em]">
                           {it.label}
                         </span>
                       </motion.span>
