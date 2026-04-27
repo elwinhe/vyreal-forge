@@ -133,8 +133,9 @@
 
 @layer utilities {
   .display {
-    font-family: "Inter Tight", sans-serif;
+    font-family: "neue-haas-grotesk-display", "Inter Tight", sans-serif;
     font-weight: 600;
+    font-style: normal;
     letter-spacing: -0.04em;
     line-height: 0.88;
   }
