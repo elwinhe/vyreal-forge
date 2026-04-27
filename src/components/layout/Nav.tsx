@@ -121,8 +121,8 @@ export function Nav() {
                         setOpen(false);
                         navigate(it.to);
                       }}
-                      className={`nav-slide-item w-full text-center px-6 py-4 display text-3xl md:text-5xl tracking-display transition-colors ${
-                        isActive ? "is-active text-transition2" : "hover:text-transition2"
+                      className={`nav-slide-item w-full text-center px-6 py-4 display text-3xl md:text-5xl tracking-display ${
+                        isActive ? "is-active" : ""
                       }`}
                     >
                       <motion.span
