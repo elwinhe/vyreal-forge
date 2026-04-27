@@ -16,7 +16,7 @@ const Contact = () => {
   return (
     <PageShell>
       <section ref={ref} className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
-        <FadeInUp delay={0.1} className="eyebrow body-muted mb-6">
+        <FadeInUp delay={0.1} className="eyebrow body-muted mb-10 md:mb-12">
           Contact
         </FadeInUp>
 
