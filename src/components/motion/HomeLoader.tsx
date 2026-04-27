@@ -40,7 +40,12 @@ export function HomeLoader({ onDone }: { onDone?: () => void }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="display italic font-black text-[hsl(var(--background))] text-7xl md:text-9xl"
+            className="text-[hsl(var(--background))] text-7xl md:text-9xl leading-[0.85] tracking-display"
+            style={{
+              fontFamily: '"neue-haas-grotesk-display", sans-serif',
+              fontWeight: 900,
+              fontStyle: "italic",
+            }}
           >
             Stratton
           </motion.span>
