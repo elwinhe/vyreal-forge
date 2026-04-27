@@ -20,8 +20,8 @@ const Contact = () => {
           Contact
         </FadeInUp>
 
-        <motion.h1
-          style={{ y: ySlow, fontSize: "clamp(3.8rem, 7vw, 8.5rem)" }}
+        <h1
+          style={{ fontSize: "clamp(3.8rem, 7vw, 8.5rem)" }}
           className="display tracking-display leading-[0.85] overflow-hidden"
         >
           <motion.span
