@@ -135,7 +135,7 @@
   .display {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 500;
-    font-style: normal !important;
+    font-style: normal;
     font-synthesis: none;
     letter-spacing: -0.04em;
     line-height: 0.88;
