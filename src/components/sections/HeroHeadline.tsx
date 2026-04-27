@@ -15,7 +15,7 @@ export function HeroHeadline() {
         className="hero-type display tracking-display leading-[1.18] pb-2"
         style={{ fontSize: "clamp(3.5rem, 5vw, 6rem)" }}
       >
-        The AI Content <span className="text-transition2">Engine</span>
+        The AI Content <span className="text-transition2">Studio</span>
       </h1>
       <motion.p
         initial={{ opacity: 0, y: 14 }}
