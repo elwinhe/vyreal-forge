@@ -74,12 +74,12 @@ const About = () => {
     <PageShell>
       <section className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
         <div className="eyebrow body-muted mb-6">About</div>
-        <h1 className="display tracking-display leading-[0.85]" style={{ fontSize: "clamp(64px, 15vw, 240px)" }}>
+        <h1 className="display tracking-display leading-[0.85]" style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}>
           Built by
         </h1>
         <h1
           className="display tracking-display leading-[0.85] text-transition2"
-          style={{ fontSize: "clamp(64px, 15vw, 240px)" }}
+          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
         >
           Industry Experts.
         </h1>
