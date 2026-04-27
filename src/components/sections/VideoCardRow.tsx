@@ -1,4 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import reel1 from "@/assets/reels/reel1.mov";
+import reel2 from "@/assets/reels/reel2.mov";
+import reel3 from "@/assets/reels/reel3.mov";
+import reel4 from "@/assets/reels/reel4.mov";
+import reel5 from "@/assets/reels/reel5.mov";
 
 interface ReelCard {
   views: string;
@@ -7,11 +12,11 @@ interface ReelCard {
 }
 
 const CARDS: ReelCard[] = [
-  { views: "2.4M views" },
-  { views: "1.1M views" },
-  { views: "3.7M views" },
-  { views: "880K views" },
-  { views: "4.2M views" },
+  { views: "2.4M views", src: reel1 },
+  { views: "1.1M views", src: reel2 },
+  { views: "3.7M views", src: reel3 },
+  { views: "880K views", src: reel4 },
+  { views: "4.2M views", src: reel5 },
 ];
 
 /**
@@ -97,25 +102,16 @@ export function VideoCardRow() {
               }}
             >
               <video
+                src={card.src}
+                autoPlay
                 muted
                 loop
                 playsInline
-                preload="none"
+                preload="auto"
                 poster={card.poster}
                 className="absolute inset-0 w-full h-full object-cover"
-              >
-                {card.src && <source src={card.src} type="video/mp4" />}
-              </video>
-
-              {/* Centered "[ reel ]" label */}
-              <div className="absolute inset-0 grid place-items-center pointer-events-none">
-                <span
-                  className="uppercase tracking-[0.22em]"
-                  style={{ color: "#666464", fontSize: 11 }}
-                >
-                  [ reel ]
-                </span>
-              </div>
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
               {/* View count badge */}
               <div className="absolute left-3 bottom-3 z-10">
