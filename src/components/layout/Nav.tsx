@@ -70,7 +70,7 @@ export function Nav() {
     location.pathname === "/" && typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY) !== "1";
 
   return (
-    <header className="fixed top-2 left-2 right-2 z-[80] bg-background/60 backdrop-blur-2xl border border-foreground/10 rounded-2xl overflow-hidden shadow-[0_8px_24px_-12px_hsl(var(--foreground)/0.18)]">
+    <header className="fixed top-2 left-2 right-2 z-[80] bg-background/75 backdrop-blur-2xl border border-foreground/10 rounded-2xl overflow-hidden shadow-[0_8px_24px_-12px_hsl(var(--foreground)/0.18)]">
       <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
         <button
           onClick={() => {
