@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import reel1 from "@/assets/reels/reel1.mp4";
-import reel2 from "@/assets/reels/reel2.mp4";
-import reel3 from "@/assets/reels/reel3.mp4";
-import reel4 from "@/assets/reels/reel4.mp4";
-import reel5 from "@/assets/reels/reel5.mp4";
-import reel6 from "@/assets/reels/reel6.mp4";
+import reel1 from "@/assets/reels/reel1_hi.mp4";
+import reel2 from "@/assets/reels/reel2_hi.mp4";
+import reel3 from "@/assets/reels/reel3_hi.mp4";
+import reel4 from "@/assets/reels/reel4_hi.mp4";
+import reel5 from "@/assets/reels/reel5_hi.mp4";
+import reel6 from "@/assets/reels/reel6_hi.mp4";
 
 export interface Project {
   title: string;
