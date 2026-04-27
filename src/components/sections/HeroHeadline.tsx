@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { GlassBtnText } from "@/components/ui/GlassBtnText";
+import { useTransitionNavigate } from "@/components/motion/RouteTransition";
 
 /**
  * Centered hero title + subhead + CTA group.
  * Layout-agnostic: parent owns positioning and surrounding visuals.
  */
 export function HeroHeadline() {
+  const navigate = useTransitionNavigate();
   return (
     <div className="relative z-10 w-full max-w-6xl mx-auto text-center">
       <h1
@@ -31,13 +32,14 @@ export function HeroHeadline() {
         transition={{ duration: 0.8, delay: 1.95, ease: [0.16, 1, 0.3, 1] }}
         className="mt-8 flex justify-center"
       >
-        <Link
-          to="/contact"
+        <button
+          type="button"
+          onClick={() => navigate("/contact")}
           className="glass-btn group inline-flex items-center gap-2 px-6 py-3 text-sm md:text-base font-medium"
         >
           <GlassBtnText>Work with Us</GlassBtnText>
           <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-        </Link>
+        </button>
       </motion.div>
     </div>
   );
