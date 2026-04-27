@@ -75,7 +75,7 @@ export function VideoCardRow() {
     <div className="relative w-full">
       <div
         ref={trackRef}
-        className="no-scrollbar grid grid-cols-3 gap-2 px-5 md:flex md:gap-4 md:overflow-x-auto md:cursor-grab md:select-none md:px-8 md:pb-2"
+        className="no-scrollbar flex gap-4 overflow-x-auto cursor-grab select-none px-5 md:px-8 pb-2"
       >
         {CARDS.map((card, i) => {
           const isHovered = hoveredIdx === i;
@@ -85,8 +85,9 @@ export function VideoCardRow() {
               key={i}
               onMouseEnter={() => setHoveredIdx(i)}
               onMouseLeave={() => setHoveredIdx(null)}
-              className="relative shrink-0 aspect-[9/16] w-full max-h-[40vh] md:w-[200px] md:max-h-none overflow-hidden transition-transform duration-300 ease-out"
+              className="relative shrink-0 aspect-[9/16] overflow-hidden transition-transform duration-300 ease-out"
               style={{
+                width: 200,
                 borderRadius: 12,
                 background:
                   "linear-gradient(135deg, rgba(234,203,185,0.08) 0%, rgba(234,203,185,0) 60%), #0A0A0A",
@@ -113,21 +114,21 @@ export function VideoCardRow() {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
               {/* View count badge */}
-              <div className="absolute left-2 bottom-2 md:left-3 md:bottom-3 z-10">
-                <span className="uppercase tracking-[0.18em] text-white/90 text-[9px] md:text-[10px]">
+              <div className="absolute left-3 bottom-3 z-10">
+                <span className="uppercase tracking-[0.18em] text-white/90 text-[10px]">
                   {card.views}
                 </span>
               </div>
             </div>
           );
         })}
-        {/* Trailing spacer so last card can clear the right fade — desktop scroll only */}
-        <div className="hidden md:block shrink-0 w-8" aria-hidden />
+        {/* Trailing spacer so last card can clear the right fade */}
+        <div className="shrink-0 w-8" aria-hidden />
       </div>
 
-      {/* Right-edge fade gradient — desktop scroll only */}
+      {/* Right-edge fade gradient */}
       <div
-        className="hidden md:block pointer-events-none absolute top-0 right-0 h-full w-24"
+        className="pointer-events-none absolute top-0 right-0 h-full w-24"
         style={{
           background:
             "linear-gradient(to left, hsl(var(--background)) 0%, hsl(var(--background) / 0) 100%)",
