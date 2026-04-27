@@ -32,7 +32,10 @@ const Index = () => {
             <ScatteredReels heroRef={heroRef} />
 
             {/* Centered headline group */}
-            <div className="relative z-10 w-full max-w-6xl mx-auto text-center">
+            <div
+              className="relative z-10 w-full mx-auto text-center"
+              style={{ maxWidth: "680px", padding: "0 24px" }}
+            >
               <h1
                 className="hero-type display tracking-display leading-[1.18] pb-2"
                 style={{ fontSize: "clamp(3.5rem, 5vw, 6rem)" }}
