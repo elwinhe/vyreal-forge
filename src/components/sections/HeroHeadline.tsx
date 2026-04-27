@@ -23,7 +23,7 @@ export function HeroHeadline() {
         className="mt-2 body-muted mx-auto max-w-2xl"
         style={{ fontSize: "clamp(16px, 1.4vw, 22px)" }}
       >
-        Done-for-you UGC that actually performs.
+        Done-for-you marketing content that actually performs.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 14 }}
