@@ -13,13 +13,11 @@ export function Footer() {
         <div
           className="leading-[0.85] tracking-display"
           style={{
-            fontFamily: '"neue-haas-grotesk-display", sans-serif',
-            fontWeight: 900,
-            fontStyle: "italic",
+            fontFamily: '"Hanken Grotesk", sans-serif',
             fontSize: "clamp(3.4rem, 5.8vw, 7rem)",
           }}
         >
-          Stratton
+          <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-10">

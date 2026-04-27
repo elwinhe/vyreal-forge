@@ -78,7 +78,7 @@ export function Nav() {
             navigate("/");
           }}
           className="text-2xl md:text-[28px] leading-[1.15] overflow-hidden py-1"
-          style={{ fontFamily: '"neue-haas-grotesk-display", sans-serif', fontWeight: 900, fontStyle: "italic" }}
+          style={{ fontFamily: '"Hanken Grotesk", sans-serif' }}
         >
           <motion.span
             initial={animateLogo ? { y: "110%" } : false}
@@ -86,7 +86,7 @@ export function Nav() {
             transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
             className="inline-block"
           >
-            Stratton
+            <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
           </motion.span>
         </button>
 
