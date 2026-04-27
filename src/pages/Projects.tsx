@@ -18,7 +18,7 @@ const Projects = () => {
           as="h1"
           delay={0.15}
           className="display tracking-display leading-[0.85]"
-          style={{ fontSize: "clamp(4rem, 14vw, 13rem)" }}
+          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
         >
           The reel.
         </FadeInUp>
