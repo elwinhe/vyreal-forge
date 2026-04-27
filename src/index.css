@@ -407,21 +407,7 @@
   );
 }
 
-/* Page-wide vignette — same edge fade as hero, fixed to the viewport so
-   it wraps the entire homepage (hero through footer). Sits above the
-   background layers but below all app content. */
-.page-vignette::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: radial-gradient(
-    ellipse 70% 80% at 50% 50%,
-    transparent 35%,
-    hsl(var(--background) / 0.85) 100%
-  );
-}
+
 
 /* Hero headline left-to-right typewriter reveal */
 @keyframes hero-type-in {
