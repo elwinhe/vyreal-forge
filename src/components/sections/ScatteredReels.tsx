@@ -92,10 +92,10 @@ export function ScatteredReels({ heroRef }: Props) {
       });
     };
 
-    // Allow keyframe animation to complete (last card delay 0.50s + 1s anim)
+    // Allow keyframe animation to complete (last card delay 1.15s + 1s anim)
     const t = window.setTimeout(() => {
       animatedRef.current = true;
-    }, 1600);
+    }, 2250);
 
     hero.addEventListener("mousemove", onMove);
     hero.addEventListener("mouseleave", onLeave);
