@@ -13,7 +13,7 @@ export function Footer() {
         <div
           className="leading-[0.85] tracking-display"
           style={{
-            fontFamily: '"Hanken Grotesk", sans-serif',
+            fontFamily: '"neue-haas-grotesk-display", sans-serif',
             fontSize: "clamp(3.4rem, 5.8vw, 7rem)",
           }}
         >

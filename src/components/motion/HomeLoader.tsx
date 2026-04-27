@@ -43,11 +43,9 @@ export function HomeLoader({ onDone }: { onDone?: () => void }) {
             className="text-[hsl(var(--background))] text-7xl md:text-9xl leading-[0.85] tracking-display"
             style={{
               fontFamily: '"neue-haas-grotesk-display", sans-serif',
-              fontWeight: 900,
-              fontStyle: "italic",
             }}
           >
-            Stratton
+            <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
           </motion.span>
         </motion.div>
       )}
