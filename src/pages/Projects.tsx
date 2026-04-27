@@ -21,10 +21,8 @@ const Projects = () => {
             <button
               key={f}
               onClick={() => setActive(f)}
-              className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border text-sm sm:text-base transition-colors ${
-                active === f
-                  ? "bg-foreground text-background border-foreground"
-                  : "border-foreground/15 hover:bg-transition1/40"
+              className={`glass-btn px-5 py-2.5 text-sm sm:text-base font-medium ${
+                active === f ? "glass-btn-active" : ""
               }`}
             >
               {f}
