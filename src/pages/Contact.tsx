@@ -14,7 +14,7 @@ const Contact = () => {
 
   return (
     <PageShell>
-      <section ref={ref} className="px-5 md:px-8 pt-10 md:pt-16">
+      <section ref={ref} className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
         <div className="eyebrow body-muted mb-6">Contact</div>
 
         <motion.h1 style={{ y: ySlow }} className="display text-[18vw] md:text-[14vw] tracking-display leading-[0.85]">

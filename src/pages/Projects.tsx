@@ -11,7 +11,7 @@ const Projects = () => {
 
   return (
     <PageShell>
-      <section className="px-5 md:px-8 pt-10 md:pt-16">
+      <section className="px-5 md:px-8 pt-[120px] md:pt-[160px]">
         <FadeInUp className="eyebrow body-muted mb-6">Projects</FadeInUp>
         <FadeInUp as="h1" delay={0.15} className="display text-[20vw] md:text-[14vw] tracking-display leading-[0.85]">
           The reel.
