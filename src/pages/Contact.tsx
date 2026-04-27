@@ -47,7 +47,7 @@ const Contact = () => {
               work@strattonlabs.co
             </motion.a>
           </div>
-          <div className="overflow-hidden w-fit">
+          <div className="w-fit pb-3" style={{ clipPath: "inset(0 0 -20px 0)" }}>
             <motion.a
               href="tel:+16692472645"
               className="block w-fit display font-light tracking-display leading-[0.9] text-[hsl(var(--muted-ink))] relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-[5px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
