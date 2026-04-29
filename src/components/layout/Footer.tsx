@@ -52,7 +52,7 @@ export function Footer() {
           className="leading-[0.85]"
           style={{
             fontFamily: '"Hanken Grotesk", sans-serif',
-            fontSize: "clamp(3.4rem, 9vw, 9rem)",
+            fontSize: "clamp(2.25rem, 4vw, 4.5rem)",
             letterSpacing: "-0.04em",
           }}
         >
