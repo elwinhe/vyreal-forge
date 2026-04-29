@@ -131,8 +131,10 @@ export function Nav() {
             <MenuIcon open={open} />
           </button>
         </div>
+      </div>
 
       <AnimatePresence>
+
         {open && (
           <motion.nav
             initial={{ height: 0, opacity: 0 }}
