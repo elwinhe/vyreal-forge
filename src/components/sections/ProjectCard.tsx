@@ -88,25 +88,20 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <figure
       className="group relative frame-card aspect-[9/16] w-full max-h-[80vh] overflow-hidden cursor-pointer"
-      onMouseEnter={play}
-      onMouseLeave={pause}
       onClick={handleClick}
     >
-      {/* Zoomable video / background layer (CSS-only hover scale to avoid
-          layer-promoting the card itself, which would break the nav's
-          backdrop-blur sampling above it). */}
+      {/* Zoomable poster layer (CSS-only hover scale to avoid layer-promoting
+          the card itself, which would break the nav's backdrop-blur sampling). */}
       <div
         className="absolute inset-0"
         style={{ background: project.bg }}
       >
-        {project.src && (
-          <video
-            ref={videoRef}
-            src={project.src}
-            muted
-            loop
-            playsInline
-            preload="metadata"
+        {project.poster && (
+          <img
+            src={project.poster}
+            alt={project.title}
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
           />
         )}
