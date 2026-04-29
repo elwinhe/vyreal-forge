@@ -90,7 +90,7 @@ export function Nav() {
           </motion.span>
         </button>
 
-        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-16 lg:gap-20 text-base tracking-wide font-semibold text-white">
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-20 lg:gap-28 text-base tracking-wide font-semibold text-white">
           {items
             .filter((it) => it.to !== "/")
             .map((it) => {
