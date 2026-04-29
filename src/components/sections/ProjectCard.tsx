@@ -1,5 +1,4 @@
 
-import { useRef, useState } from "react";
 import { useVideoLightbox } from "@/components/video/VideoLightbox";
 import reel1 from "@/assets/reels/reel1_hi.mp4";
 import reel2 from "@/assets/reels/reel2_hi.mp4";
@@ -7,6 +6,12 @@ import reel3 from "@/assets/reels/reel3_hi.mp4";
 import reel4 from "@/assets/reels/reel4_hi.mp4";
 import reel5 from "@/assets/reels/reel5_hi.mp4";
 import reel6 from "@/assets/reels/reel6_hi.mp4";
+import poster1 from "@/assets/reels/posters/reel1.jpg";
+import poster2 from "@/assets/reels/posters/reel2.jpg";
+import poster3 from "@/assets/reels/posters/reel3.jpg";
+import poster4 from "@/assets/reels/posters/reel4.jpg";
+import poster5 from "@/assets/reels/posters/reel5.jpg";
+import poster6 from "@/assets/reels/posters/reel6.jpg";
 
 export interface Project {
   title: string;
