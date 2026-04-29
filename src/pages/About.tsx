@@ -14,7 +14,7 @@ const team: Member[] = [
   {
     name: "Rishi",
     role: "Co-founder · CEO",
-    bio: "Built creator monetization stacks from zero to eight figures. Operator-first.",
+    bio: "Operator-first, previously raised 8 figures with Figment Capital, Luca Netz",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 60%,#5E3590 100%)",
   },
   {
