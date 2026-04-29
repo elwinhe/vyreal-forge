@@ -37,7 +37,7 @@ const team: Member[] = [
   },
   {
     name: "Victor",
-    role: "Tech Lead",
+    role: "AI Engineer",
     bio: "The orchestrator behind agentic workflow management.",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#2a2a2a 50%,#7A5C9A 100%)",
   },
