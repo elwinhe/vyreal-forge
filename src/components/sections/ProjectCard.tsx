@@ -32,6 +32,7 @@ export const PROJECTS: Project[] = [
     tag: "Motion control",
     bg: "linear-gradient(160deg,#5E3590 0%,#2D1646 60%,#000 100%)",
     src: reel1,
+    poster: poster1,
   },
   {
     title: "Synthetic creator — fitness vertical",
@@ -39,6 +40,7 @@ export const PROJECTS: Project[] = [
     tag: "AI UGC",
     bg: "linear-gradient(160deg,#D9CBE8 0%,#7A5C9A 70%,#15101F 100%)",
     src: reel2,
+    poster: poster2,
   },
   {
     title: "Hook remix — DTC supplement",
@@ -46,6 +48,7 @@ export const PROJECTS: Project[] = [
     tag: "Face-swap",
     bg: "linear-gradient(160deg,#222 0%,#444 50%,#5E3590 100%)",
     src: reel3,
+    poster: poster3,
   },
   {
     title: "Macro pour — fragrance launch",
@@ -53,6 +56,7 @@ export const PROJECTS: Project[] = [
     tag: "Motion control",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 70%,#5E3590 100%)",
     src: reel4,
+    poster: poster4,
   },
   {
     title: "AI talent — skincare ritual",
@@ -60,6 +64,7 @@ export const PROJECTS: Project[] = [
     tag: "AI UGC",
     bg: "linear-gradient(160deg,#D9CBE8 0%,#5E3590 100%)",
     src: reel5,
+    poster: poster5,
   },
   {
     title: "Hook A/B — energy drink",
@@ -67,30 +72,15 @@ export const PROJECTS: Project[] = [
     tag: "Face-swap",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#1f1f1f 100%)",
     src: reel6,
+    poster: poster6,
   },
 ];
 
 export function ProjectCard({ project }: { project: Project }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
   const { open } = useVideoLightbox();
-
-  const play = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.play().then(() => setPlaying(true)).catch(() => {});
-  };
-
-  const pause = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.pause();
-    setPlaying(false);
-  };
 
   const handleClick = () => {
     if (project.src) {
-      pause();
       open({ src: project.src, title: project.title, meta: project.views });
     }
   };
