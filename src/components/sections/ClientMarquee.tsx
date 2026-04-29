@@ -1,7 +1,7 @@
 import { Marquee } from "@/components/sections/Marquee";
 import { FadeInUp } from "@/components/motion/FadeInUp";
 
-const NAMES = ["NORTHWAVE", "LUXE / CO", "DITTO", "FRACTURE", "ALTA", "CLOUTED", "MONO", "RIVER & OAK"];
+const NAMES = ["DITTO", "FRACTURE", "ALTA"];
 
 /**
  * "Who we worked with" eyebrow + horizontal logo/creator marquee.
