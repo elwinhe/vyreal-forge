@@ -45,80 +45,66 @@ export function Footer() {
       {/* Hairline divider */}
       <div className="mt-16 md:mt-24 hairline h-px w-full" />
 
-      {/* Wordmark */}
-      <div
-        className="mt-12 md:mt-16 leading-[0.85]"
-        style={{
-          fontFamily: '"Hanken Grotesk", sans-serif',
-          fontSize: "clamp(3.4rem, 9vw, 9rem)",
-          letterSpacing: "-0.04em",
-        }}
-      >
-        <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span>
-        <span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
-      </div>
-
-      {/* Link columns */}
-      <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
-        {/* Contact */}
-        <div className="md:col-span-6 space-y-3">
-          <div className="eyebrow body-muted mb-4">Contact</div>
-          <a
-            href="mailto:work@strattonlabs.co"
-            className="block w-fit text-2xl md:text-3xl tracking-tight relative after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-          >
-            work@strattonlabs.co
-          </a>
-          <a
-            href="tel:+16692472645"
-            className="block w-fit text-2xl md:text-3xl tracking-tight body-muted relative after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-          >
-            (669) 247-2645
-          </a>
+      {/* Logo + link columns row */}
+      <div className="mt-12 md:mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-12">
+        {/* Wordmark */}
+        <div
+          className="leading-[0.85]"
+          style={{
+            fontFamily: '"Hanken Grotesk", sans-serif',
+            fontSize: "clamp(3.4rem, 9vw, 9rem)",
+            letterSpacing: "-0.04em",
+          }}
+        >
+          <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span>
+          <span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
         </div>
 
-        {/* Sitemap */}
-        <div className="md:col-span-3">
-          <div className="eyebrow body-muted mb-4">Navigate</div>
-          <ul className="flex flex-col gap-2 text-base md:text-lg">
-            {sitemap.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate(item.href);
-                  }}
-                  className="relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-foreground/40 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Right-side columns */}
+        <div className="flex gap-12 md:gap-20">
+          {/* Sitemap */}
+          <div>
+            <div className="eyebrow body-muted mb-4">Navigate</div>
+            <ul className="flex flex-col gap-2 text-base md:text-lg">
+              {sitemap.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(item.href);
+                    }}
+                    className="relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-foreground/40 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Socials */}
-        <div className="md:col-span-3">
-          <div className="eyebrow body-muted mb-4">Social</div>
-          <ul className="flex flex-col gap-2 text-base md:text-lg">
-            {socials.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group inline-flex items-center gap-1 relative after:content-[''] after:absolute after:left-0 after:right-[18px] after:-bottom-0.5 after:h-px after:bg-foreground/40 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-                >
-                  <span>{s.label}</span>
-                  <ArrowUpRight
-                    size={16}
-                    className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
+          {/* Socials */}
+          <div>
+            <div className="eyebrow body-muted mb-4">Social</div>
+            <ul className="flex flex-col gap-2 text-base md:text-lg">
+              {socials.map((s) => (
+                <li key={s.label}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-center gap-1 relative after:content-[''] after:absolute after:left-0 after:right-[18px] after:-bottom-0.5 after:h-px after:bg-foreground/40 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                  >
+                    <span>{s.label}</span>
+                    <ArrowUpRight
+                      size={16}
+                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
