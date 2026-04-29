@@ -17,7 +17,7 @@ export function Footer() {
   const navigate = useTransitionNavigate();
 
   return (
-    <footer className="px-5 md:px-8 pt-24 md:pt-40 pb-8">
+    <footer className="px-5 md:px-8 pt-12 md:pt-12 pb-8">
       {/* CTA row */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 md:gap-12">
         <div className="max-w-3xl">
