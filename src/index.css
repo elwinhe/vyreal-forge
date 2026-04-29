@@ -44,6 +44,22 @@
 
     --hairline: 0 0% 4%; /* used with /10 opacity */
 
+    /* Background layer system (shared variable shape across themes).
+       Light mode: flat cream — gradients/noise disabled via opacity 0. */
+    --bg-grad-1: 30 13% 92%;
+    --bg-grad-2: 30 13% 92%;
+    --bg-grad-3: 30 13% 92%;
+    --bg-grad-base-from: 30 13% 92%;
+    --bg-grad-base-to: 30 13% 92%;
+    --bg-grad-1-alpha: 0;
+    --bg-grad-2-alpha: 0;
+    --bg-grad-3-alpha: 0;
+    --bg-noise-r: 0.6;
+    --bg-noise-g: 0.5;
+    --bg-noise-b: 0.85;
+    --bg-noise-a: 0.85;
+    --bg-noise-opacity: 0;
+
     /* shadcn token bridge */
     --card: 30 13% 92%;
     --card-foreground: 0 0% 4%;
