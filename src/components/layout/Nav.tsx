@@ -71,13 +71,13 @@ export function Nav() {
 
   return (
     <header className="fixed top-2 left-2 right-2 z-[80] bg-background/60 backdrop-blur-2xl border border-foreground/10 rounded-2xl overflow-hidden shadow-[0_8px_24px_-12px_hsl(var(--foreground)/0.18)]">
-      <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between">
+      <div className="px-5 md:px-8 py-4 md:py-5 flex items-center justify-between relative">
         <button
           onClick={() => {
             setOpen(false);
             navigate("/");
           }}
-          className="text-2xl md:text-[28px] leading-[1.15] overflow-hidden py-1"
+          className="text-2xl md:text-[28px] leading-[1.15] overflow-hidden py-1 relative z-10"
           style={{ fontFamily: '"Hanken Grotesk", sans-serif', letterSpacing: "-0.02em" }}
         >
           <motion.span
