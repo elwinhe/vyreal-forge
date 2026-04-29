@@ -31,7 +31,7 @@ export function Stats() {
             <FadeInUp
               key={s.label}
               delay={i * 0.08}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col gap-3"
+              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-8 flex flex-col gap-3 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-white/[0.08] hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_20px_60px_-15px_hsl(var(--transition-2)/0.45),0_0_40px_-10px_hsl(var(--transition-2)/0.3)]"
             >
               <div className="display text-white text-5xl md:text-6xl tracking-display leading-none">{s.value}</div>
               <div className="eyebrow text-white/80">{s.label}</div>

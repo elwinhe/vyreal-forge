@@ -10,7 +10,7 @@ import { useTransitionNavigate } from "@/components/motion/RouteTransition";
 export function HeroHeadline() {
   const navigate = useTransitionNavigate();
   return (
-    <div className="relative z-10 w-full max-w-6xl mx-auto text-center">
+    <div className="relative z-10 w-full max-w-6xl mx-auto text-center py-12 md:py-20">
       <h1
         className="hero-type display tracking-display leading-[1.18] pb-2"
         style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
@@ -21,7 +21,7 @@ export function HeroHeadline() {
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.75, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-2 body-muted font-medium mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl"
+        className="mt-5 md:mt-6 body-muted font-medium mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl"
       >
         Done-for-you marketing that actually performs.
       </motion.p>
@@ -29,7 +29,7 @@ export function HeroHeadline() {
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.95, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-10 md:mt-12 flex justify-center"
+        className="mt-14 md:mt-16 flex justify-center"
       >
         <button
           type="button"
