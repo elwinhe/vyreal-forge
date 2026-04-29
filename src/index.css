@@ -182,28 +182,29 @@
     overflow-x: hidden;
     position: relative;
   }
-  /* Dark mode: subtle midnight gradient + grain texture overlay.
-     Layered on a fixed pseudo-element so it stays put on scroll and
-     never affects layout/interactivity. */
-  .dark body::before {
+  /* Background layer system — gradients + grain overlay.
+     Driven entirely by --bg-* CSS variables so theme switches stay
+     consistent. Light mode sets all alphas/opacity to 0, leaving the
+     flat --background color visible. */
+  body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 20% 0%, hsl(268 55% 14% / 0.7), transparent 60%),
-      radial-gradient(ellipse 70% 55% at 85% 15%, hsl(282 50% 11% / 0.6), transparent 65%),
-      radial-gradient(ellipse 90% 70% at 50% 100%, hsl(258 60% 7% / 0.75), transparent 60%),
-      linear-gradient(180deg, hsl(270 55% 6%) 0%, hsl(263 60% 2%) 100%);
+      radial-gradient(ellipse 80% 60% at 20% 0%, hsl(var(--bg-grad-1) / var(--bg-grad-1-alpha)), transparent 60%),
+      radial-gradient(ellipse 70% 55% at 85% 15%, hsl(var(--bg-grad-2) / var(--bg-grad-2-alpha)), transparent 65%),
+      radial-gradient(ellipse 90% 70% at 50% 100%, hsl(var(--bg-grad-3) / var(--bg-grad-3-alpha)), transparent 60%),
+      linear-gradient(180deg, hsl(var(--bg-grad-base-from)) 0%, hsl(var(--bg-grad-base-to)) 100%);
   }
-  .dark body::after {
+  body::after {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.18;
+    opacity: var(--bg-noise-opacity);
     mix-blend-mode: screen;
     background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.6  0 0 0 0 0.5  0 0 0 0 0.85  0 0 0 0.85 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
     background-size: 220px 220px;
