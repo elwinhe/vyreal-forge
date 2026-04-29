@@ -86,11 +86,12 @@ export function Nav() {
             transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
             className="inline-block"
           >
-            <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span><span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
+            <span style={{ fontWeight: 900, fontStyle: "italic" }}>Stratton</span>
+            <span style={{ fontWeight: 200, fontStyle: "italic" }}>Labs</span>
           </motion.span>
         </button>
 
-        <nav className="hidden min-[860px]:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-20 lg:gap-28 text-base tracking-wide font-semibold text-white whitespace-nowrap">
+        <nav className="hidden min-[960px]:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-20 lg:gap-28 text-base tracking-wide font-semibold text-white whitespace-nowrap">
           {items
             .filter((it) => it.to !== "/")
             .map((it) => {
@@ -130,8 +131,7 @@ export function Nav() {
           >
             <ul className="py-3 list-none">
               {items.map((it, i) => {
-                const isActive =
-                  it.to === "/" ? location.pathname === "/" : location.pathname.startsWith(it.to);
+                const isActive = it.to === "/" ? location.pathname === "/" : location.pathname.startsWith(it.to);
                 return (
                   <li key={it.to} className="border-0">
                     <button
