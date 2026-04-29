@@ -21,7 +21,7 @@ const Contact = () => {
         </FadeInUp>
 
         <h1
-          style={{ fontSize: "clamp(3.8rem, 7vw, 8.5rem)" }}
+          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
           className="display tracking-display leading-[0.85] overflow-hidden"
         >
           <motion.span
@@ -39,7 +39,7 @@ const Contact = () => {
             <motion.a
               href="mailto:work@strattonlabs.co"
               className="block w-fit display font-light tracking-display leading-[0.9] text-[hsl(var(--muted-ink))] relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-[5px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-              style={{ fontFamily: '"Hanken Grotesk", sans-serif', fontSize: "clamp(2.28rem, 4.2vw, 5.1rem)" }}
+              style={{ fontFamily: '"Hanken Grotesk", sans-serif', fontSize: "clamp(2.25rem, 4vw, 4.5rem)" }}
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
@@ -51,7 +51,7 @@ const Contact = () => {
             <motion.a
               href="tel:+16692472645"
               className="block w-fit display font-light tracking-display leading-[0.9] text-[hsl(var(--muted-ink))] relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-[5px] after:bg-accent after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-              style={{ fontFamily: '"Hanken Grotesk", sans-serif', fontSize: "clamp(2.28rem, 4.2vw, 5.1rem)" }}
+              style={{ fontFamily: '"Hanken Grotesk", sans-serif', fontSize: "clamp(2.25rem, 4vw, 4.5rem)" }}
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
