@@ -13,7 +13,7 @@ export function HeroHeadline() {
     <div className="relative z-10 w-full max-w-6xl mx-auto text-center">
       <h1
         className="hero-type display tracking-display leading-[1.18] pb-2"
-        style={{ fontSize: "clamp(3.5rem, 5vw, 6rem)" }}
+        style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
       >
         The AI Content <span className="text-transition2">Studio</span>
       </h1>
