@@ -1,5 +1,4 @@
 
-import { useRef, useState } from "react";
 import { useVideoLightbox } from "@/components/video/VideoLightbox";
 import reel1 from "@/assets/reels/reel1_hi.mp4";
 import reel2 from "@/assets/reels/reel2_hi.mp4";
@@ -7,15 +6,23 @@ import reel3 from "@/assets/reels/reel3_hi.mp4";
 import reel4 from "@/assets/reels/reel4_hi.mp4";
 import reel5 from "@/assets/reels/reel5_hi.mp4";
 import reel6 from "@/assets/reels/reel6_hi.mp4";
+import poster1 from "@/assets/reels/posters/reel1.jpg";
+import poster2 from "@/assets/reels/posters/reel2.jpg";
+import poster3 from "@/assets/reels/posters/reel3.jpg";
+import poster4 from "@/assets/reels/posters/reel4.jpg";
+import poster5 from "@/assets/reels/posters/reel5.jpg";
+import poster6 from "@/assets/reels/posters/reel6.jpg";
 
 export interface Project {
   title: string;
   views: string;
   tag: "AI UGC" | "Face-swap" | "Motion control";
-  /** background gradient (fallback while video loads) */
+  /** background gradient (fallback while poster loads) */
   bg: string;
-  /** video source (mp4) */
+  /** video source (mp4) — opened in lightbox on click */
   src?: string;
+  /** first-frame poster image */
+  poster?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -25,6 +32,7 @@ export const PROJECTS: Project[] = [
     tag: "Motion control",
     bg: "linear-gradient(160deg,#5E3590 0%,#2D1646 60%,#000 100%)",
     src: reel1,
+    poster: poster1,
   },
   {
     title: "Synthetic creator — fitness vertical",
@@ -32,6 +40,7 @@ export const PROJECTS: Project[] = [
     tag: "AI UGC",
     bg: "linear-gradient(160deg,#D9CBE8 0%,#7A5C9A 70%,#15101F 100%)",
     src: reel2,
+    poster: poster2,
   },
   {
     title: "Hook remix — DTC supplement",
@@ -39,6 +48,7 @@ export const PROJECTS: Project[] = [
     tag: "Face-swap",
     bg: "linear-gradient(160deg,#222 0%,#444 50%,#5E3590 100%)",
     src: reel3,
+    poster: poster3,
   },
   {
     title: "Macro pour — fragrance launch",
@@ -46,6 +56,7 @@ export const PROJECTS: Project[] = [
     tag: "Motion control",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#2A1B3D 70%,#5E3590 100%)",
     src: reel4,
+    poster: poster4,
   },
   {
     title: "AI talent — skincare ritual",
@@ -53,6 +64,7 @@ export const PROJECTS: Project[] = [
     tag: "AI UGC",
     bg: "linear-gradient(160deg,#D9CBE8 0%,#5E3590 100%)",
     src: reel5,
+    poster: poster5,
   },
   {
     title: "Hook A/B — energy drink",
@@ -60,30 +72,15 @@ export const PROJECTS: Project[] = [
     tag: "Face-swap",
     bg: "linear-gradient(160deg,#0A0A0A 0%,#1f1f1f 100%)",
     src: reel6,
+    poster: poster6,
   },
 ];
 
 export function ProjectCard({ project }: { project: Project }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
   const { open } = useVideoLightbox();
-
-  const play = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.play().then(() => setPlaying(true)).catch(() => {});
-  };
-
-  const pause = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.pause();
-    setPlaying(false);
-  };
 
   const handleClick = () => {
     if (project.src) {
-      pause();
       open({ src: project.src, title: project.title, meta: project.views });
     }
   };
@@ -91,25 +88,20 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <figure
       className="group relative frame-card aspect-[9/16] w-full max-h-[80vh] overflow-hidden cursor-pointer"
-      onMouseEnter={play}
-      onMouseLeave={pause}
       onClick={handleClick}
     >
-      {/* Zoomable video / background layer (CSS-only hover scale to avoid
-          layer-promoting the card itself, which would break the nav's
-          backdrop-blur sampling above it). */}
+      {/* Zoomable poster layer (CSS-only hover scale to avoid layer-promoting
+          the card itself, which would break the nav's backdrop-blur sampling). */}
       <div
         className="absolute inset-0"
         style={{ background: project.bg }}
       >
-        {project.src && (
-          <video
-            ref={videoRef}
-            src={project.src}
-            muted
-            loop
-            playsInline
-            preload="metadata"
+        {project.poster && (
+          <img
+            src={project.poster}
+            alt={project.title}
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
           />
         )}
