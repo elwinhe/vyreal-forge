@@ -10,7 +10,7 @@ const stats: Stat[] = [
   { value: "18M+", label: "Views generated", sub: "Across paid + organic" },
   { value: "51M", label: "Total engagement", sub: "Likes, shares, comments" },
   { value: "4.2M", label: "Single video peak", sub: "Top-performing asset" },
-  { value: "3×", label: "Avg ROAS lift", sub: "Vs. brand baseline" },
+  { value: "Up to 3×", label: "Avg ROAS lift", sub: "Vs. brand baseline" },
   { value: "72h", label: "Avg turnaround", sub: "Brief to delivery" },
   { value: "100+", label: "Videos shipped", sub: "Across all clients" },
 ];
