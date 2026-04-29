@@ -108,7 +108,7 @@ const About = () => {
           as="p"
           delay={0.2}
           className="max-w-2xl body-muted font-medium"
-          style={{ fontSize: "clamp(20px, 2.6vw, 40px)", lineHeight: 1.4 }}
+          style={{ fontSize: "clamp(18px, 2vw, 28px)", lineHeight: 1.4 }}
         >
           Stratton is an AI content studio operating two arms. UGC built for performance, and AI-led monetization for
           top-tier creators. Built by operators, run like a production house.
