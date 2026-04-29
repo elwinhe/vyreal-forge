@@ -17,10 +17,12 @@ export interface Project {
   title: string;
   views: string;
   tag: "AI UGC" | "Face-swap" | "Motion control";
-  /** background gradient (fallback while video loads) */
+  /** background gradient (fallback while poster loads) */
   bg: string;
-  /** video source (mp4) */
+  /** video source (mp4) — opened in lightbox on click */
   src?: string;
+  /** first-frame poster image */
+  poster?: string;
 }
 
 export const PROJECTS: Project[] = [
