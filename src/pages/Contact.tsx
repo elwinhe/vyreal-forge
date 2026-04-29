@@ -60,7 +60,7 @@ const Contact = () => {
             </motion.a>
           </div>
 
-          <FadeInUp delay={0.7} className="pt-10 md:pt-16">
+          <FadeInUp delay={0.7} className="pt-6 md:pt-10">
             <p className="max-w-2xl body-muted font-medium text-xl md:text-2xl">
               Have something to promote? Don't hesitate to reach out.
             </p>
