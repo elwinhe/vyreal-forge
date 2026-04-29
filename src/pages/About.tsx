@@ -84,7 +84,7 @@ const About = () => {
         </motion.div>
         <motion.h1
           className="display tracking-display leading-[0.90]"
-          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
+          style={{ fontSize: "clamp(3rem, 5vw, 5.5rem)" }}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
@@ -93,7 +93,7 @@ const About = () => {
         </motion.h1>
         <motion.h1
           className="display tracking-display leading-[0.90] text-transition2"
-          style={{ fontSize: "clamp(3.4rem, 5.8vw, 7rem)" }}
+          style={{ fontSize: "clamp(3rem, 5vw, 5.5rem)" }}
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
