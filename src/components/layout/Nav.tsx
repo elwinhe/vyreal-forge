@@ -91,10 +91,11 @@ export function Nav() {
           </motion.span>
         </button>
 
-        <nav className={`${open ? "hidden" : "hidden min-[960px]:flex"} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-20 lg:gap-28 text-base tracking-wide font-semibold text-white whitespace-nowrap`}>
+        <nav className={`${open ? "hidden" : "hidden min-[960px]:flex"} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-12 lg:gap-16 text-sm tracking-wide font-medium text-foreground/85 whitespace-nowrap`}>
           {items
             .filter((it) => it.to !== "/")
             .map((it) => {
+              const isActive = location.pathname.startsWith(it.to);
               return (
                 <button
                   key={it.to}
@@ -102,6 +103,9 @@ export function Nav() {
                     setOpen(false);
                     navigate(it.to);
                   }}
+                  className={`relative py-1 transition-colors hover:text-foreground after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-current after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isActive ? "text-foreground after:scale-x-100" : ""
+                  }`}
                 >
                   {it.label}
                 </button>
@@ -109,16 +113,24 @@ export function Nav() {
             })}
         </nav>
 
-        <div className="flex items-center gap-1 relative z-10">
+        <div className="flex items-center gap-2 relative z-10">
+          <button
+            onClick={() => {
+              setOpen(false);
+              navigate("/contact");
+            }}
+            className="hidden min-[960px]:inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors"
+          >
+            Work with Us
+          </button>
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
-            className="h-11 w-11 grid place-items-center transition-colors"
+            className="h-11 w-11 grid place-items-center transition-colors min-[960px]:hidden"
           >
             <MenuIcon open={open} />
           </button>
         </div>
-      </div>
 
       <AnimatePresence>
         {open && (
