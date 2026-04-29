@@ -28,8 +28,8 @@ const services: Service[] = [
 export function Services() {
   const [hover, setHover] = useState<number | null>(null);
   return (
-    <section className="py-12 px-5 md:px-8">
-      <FadeInUp className="eyebrow body-muted mb-6">Services</FadeInUp>
+    <section className="pt-24 md:pt-32 pb-12 px-5 md:px-8">
+      <FadeInUp className="eyebrow body-muted mb-10 md:mb-14">Services</FadeInUp>
       <div>
         {services.map((s, i) => (
           <FadeInUp
