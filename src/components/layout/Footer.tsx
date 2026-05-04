@@ -125,8 +125,8 @@ export function Footer() {
       </div>
 
       {/* Meta row */}
-      <div className="mt-20 pt-5 hairline h-px w-full" />
-      <div className="pt-4 flex flex-col-reverse sm:flex-row gap-2 sm:gap-0 sm:justify-between text-xs body-muted">
+      <div className="relative mt-20 pt-5 hairline h-px w-full" />
+      <div className="relative pt-4 flex flex-col-reverse sm:flex-row gap-2 sm:gap-0 sm:justify-between text-xs body-muted">
         <span>© 2026 StrattonLabs — All rights reserved.</span>
         <span>Designed & built in California</span>
       </div>
