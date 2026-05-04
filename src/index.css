@@ -448,3 +448,131 @@
   z-index: 9999;
   will-change: transform, opacity;
 }
+
+/* ============================================================
+   Stratton space hero — design tokens from uploaded hero export.
+   Provides .space-bg, .planet-glow, .planet-horizon,
+   .hero-text-glow, .text-gradient-nebula, .bg-gradient-nebula,
+   .animate-shine, .font-display, plus twinkle/shoot keyframes.
+   ============================================================ */
+
+.font-display {
+  font-family: "DM Serif Display", Georgia, serif;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@layer utilities {
+  .text-gradient-nebula {
+    background: linear-gradient(135deg, hsl(20 80% 72%), hsl(275 60% 55%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-nebula {
+    background: linear-gradient(135deg, hsl(20 80% 72%), hsl(275 60% 55%));
+  }
+  .animate-shine {
+    animation: shine 2.8s ease-in-out infinite;
+  }
+  .space-bg {
+    background:
+      /* Milky Way diagonal band */
+      linear-gradient(118deg,
+        transparent 28%,
+        hsl(280 25% 32% / 0.32) 40%,
+        hsl(285 28% 42% / 0.42) 48%,
+        hsl(288 30% 46% / 0.46) 52%,
+        hsl(285 26% 40% / 0.38) 58%,
+        hsl(280 22% 30% / 0.28) 66%,
+        transparent 80%),
+      /* Dust lane */
+      linear-gradient(118deg,
+        transparent 46%,
+        hsl(280 30% 10% / 0.40) 49.5%,
+        hsl(280 30% 10% / 0.30) 51%,
+        transparent 54%),
+      /* Galactic core warm cloud */
+      radial-gradient(ellipse 32% 22% at 64% 34%,
+        hsl(40 50% 58% / 0.30),
+        hsl(35 45% 48% / 0.18) 40%,
+        transparent 72%),
+      /* Pink hydrogen-alpha cloud */
+      radial-gradient(ellipse 50% 28% at 30% 70%,
+        hsl(15 55% 48% / 0.18),
+        transparent 75%),
+      /* Cool blue reflection nebula */
+      radial-gradient(ellipse 35% 24% at 80% 24%,
+        hsl(230 50% 48% / 0.18),
+        transparent 75%),
+      /* Top atmospheric airglow */
+      radial-gradient(ellipse 75% 35% at 50% 0%,
+        hsl(275 50% 28% / 0.45),
+        transparent 75%),
+      /* Warm horizon */
+      radial-gradient(ellipse 100% 18% at 50% 100%,
+        hsl(35 55% 52% / 0.30),
+        hsl(350 45% 32% / 0.18) 50%,
+        transparent 85%),
+      /* Vignette */
+      radial-gradient(ellipse 110% 85% at 50% 45%,
+        transparent 50%,
+        hsl(275 50% 4% / 0.55) 95%,
+        hsl(275 50% 3% / 0.75) 100%),
+      /* Base deep-space gradient */
+      linear-gradient(180deg,
+        hsl(275 55% 7%),
+        hsl(275 55% 5%) 55%,
+        hsl(285 50% 8%) 88%,
+        hsl(35 55% 14%));
+  }
+  .hero-text-glow {
+    color: hsl(280 30% 96% / 0.85);
+    -webkit-text-stroke: 1px hsl(280 35% 98% / 0.9);
+    text-shadow:
+      0 1px 0 hsl(0 0% 100% / 0.6),
+      0 6px 16px hsl(275 60% 55% / 0.4),
+      0 0 28px hsl(20 80% 72% / 0.25),
+      0 0 64px hsl(275 60% 55% / 0.2);
+  }
+  .planet-horizon {
+    background:
+      radial-gradient(circle at 50% 50%, hsl(270 55% 7%) 0%, hsl(270 55% 7%) 49.6%, transparent 49.9%),
+      radial-gradient(circle at 50% 50%,
+        transparent 49%,
+        hsl(18 75% 80% / 0.75) 49.72%,
+        hsl(12 80% 68% / 0.50) 50.0%,
+        hsl(275 60% 55% / 0.30) 50.6%,
+        hsl(270 55% 42% / 0.15) 51.4%,
+        transparent 52.6%);
+    opacity: 0.95;
+  }
+  .planet-glow {
+    background:
+      radial-gradient(circle at 50% 50%,
+        transparent 48%,
+        hsl(15 80% 70% / 0.30) 49.8%,
+        hsl(270 60% 55% / 0.28) 50.5%,
+        hsl(270 55% 42% / 0.10) 53%,
+        transparent 60%);
+    filter: blur(70px);
+  }
+}
+
+@keyframes shine {
+  0% { transform: translateX(0) skewX(-12deg); }
+  60%, 100% { transform: translateX(450%) skewX(-12deg); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.7; }
+}
+@keyframes shoot {
+  0% { opacity: 0; }
+  20% { opacity: 0.55; }
+  100% { opacity: 0; }
+}
+
+/* DM Serif Display for hero headline */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
