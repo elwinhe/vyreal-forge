@@ -91,23 +91,23 @@
   }
 
   .dark {
-    /* Dark palette */
-    --background: 268 50% 4%; /* near-black purple abyss */
-    --foreground: 0 0% 100%; /* #FFFFFF */
-    --muted-ink: 0 0% 65%;
+    /* Dark palette — Stratton space theme (deep nebula + warm horizon) */
+    --background: 270 55% 6%; /* deep space */
+    --foreground: 250 20% 97%;
+    --muted-ink: 270 8% 72%;
 
-    --transition-1: 268 35% 22%; /* deeper purple variant */
-    --transition-2: 267 50% 55%; /* lifted purple for dark mode */
+    --transition-1: 275 35% 22%; /* deep nebula violet */
+    --transition-2: 280 60% 62%; /* lifted nebula violet for accents */
     --loader: 0 0% 100%;
 
     --hairline: 0 0% 100%;
 
-    /* Background layer system — dark theme values */
-    --bg-grad-1: 268 55% 14%;
-    --bg-grad-2: 282 50% 11%;
-    --bg-grad-3: 258 60% 7%;
-    --bg-grad-base-from: 270 55% 6%;
-    --bg-grad-base-to: 263 60% 2%;
+    /* Background layer system — dark theme values (space) */
+    --bg-grad-1: 275 55% 14%;
+    --bg-grad-2: 285 50% 11%;
+    --bg-grad-3: 260 60% 5%;
+    --bg-grad-base-from: 270 55% 5%;
+    --bg-grad-base-to: 265 60% 2%;
     --bg-grad-1-alpha: 0.7;
     --bg-grad-2-alpha: 0.6;
     --bg-grad-3-alpha: 0.75;
