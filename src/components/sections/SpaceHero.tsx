@@ -13,7 +13,7 @@ import clip5 from "@/assets/videos/clips/clip-5.mp4";
 import clip6 from "@/assets/videos/clips/clip-6.mp4";
 import clip7 from "@/assets/videos/clips/clip-7.mp4";
 
-import dashboardMockup from "@/assets/dashboard-mockup.jpg";
+import dashboardMockup from "@/assets/dashboard-mockup.webp";
 
 const allClips = [clip1, clip2, clip3, clip4, clip5, clip6, clip7];
 
@@ -194,7 +194,7 @@ export function SpaceHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.9, ease: "easeOut" }}
-            className="hero-text-glow font-display text-5xl tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
+            className="hero-text-glow font-display text-4xl tracking-tight sm:text-5xl md:text-6xl"
           >
             The New Way <br />
             to <span className="text-gradient-nebula">Market</span>
@@ -204,7 +204,7 @@ export function SpaceHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.1, duration: 0.6 }}
-            className="mt-6 max-w-xl text-base text-foreground/85 md:text-lg"
+            className="mt-5 max-w-xl text-base text-foreground/85 md:text-lg"
           >
             Done-for-you marketing that actually performs.
           </motion.p>
@@ -215,7 +215,7 @@ export function SpaceHero() {
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 2.35, duration: 0.5, ease: "backOut" }}
-            className="group relative mt-9 inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/20 bg-gradient-nebula px-8 py-3.5 text-sm font-semibold text-white shadow-[0_10px_40px_-8px_hsl(275_60%_55%/0.6)] transition hover:shadow-[0_14px_50px_-6px_hsl(275_70%_60%/0.8)]"
+            className="group relative mt-8 inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/20 bg-gradient-nebula px-8 py-3.5 text-sm font-semibold text-white shadow-[0_10px_40px_-8px_hsl(275_60%_55%/0.6)] transition hover:shadow-[0_14px_50px_-6px_hsl(275_70%_60%/0.8)]"
           >
             <span
               aria-hidden
@@ -229,7 +229,7 @@ export function SpaceHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.6, duration: 0.5 }}
-            className="mt-6 flex items-center gap-2 text-xs text-foreground/60"
+            className="mt-5 flex items-center gap-2 text-xs text-foreground/60"
           >
             <span className="flex -space-x-1.5">
               <span className="h-5 w-5 rounded-full border border-white/20 bg-gradient-to-br from-[hsl(275_55%_65%)] to-[hsl(280_60%_45%)]" />
