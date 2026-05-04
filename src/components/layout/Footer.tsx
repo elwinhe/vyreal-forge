@@ -59,10 +59,10 @@ export function Footer() {
       </div>
 
       {/* Hairline divider */}
-      <div className="mt-16 md:mt-24 hairline h-px w-full" />
+      <div className="relative mt-16 md:mt-24 hairline h-px w-full" />
 
       {/* Logo + link columns row */}
-      <div className="mt-12 md:mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-12">
+      <div className="relative mt-12 md:mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-12">
         {/* Wordmark */}
         <div
           className="leading-[0.85]"
