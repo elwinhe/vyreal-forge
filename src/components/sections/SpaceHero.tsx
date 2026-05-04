@@ -229,7 +229,7 @@ export function SpaceHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.6, duration: 0.5 }}
-            className="mt-6 flex items-center gap-2 text-xs text-foreground/60"
+            className="mt-5 flex items-center gap-2 text-xs text-foreground/60"
           >
             <span className="flex -space-x-1.5">
               <span className="h-5 w-5 rounded-full border border-white/20 bg-gradient-to-br from-[hsl(275_55%_65%)] to-[hsl(280_60%_45%)]" />
