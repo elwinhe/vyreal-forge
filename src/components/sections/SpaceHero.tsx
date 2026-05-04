@@ -13,11 +13,15 @@ import clip5 from "@/assets/videos/clips/clip-5.mp4";
 import clip6 from "@/assets/videos/clips/clip-6.mp4";
 import clip7 from "@/assets/videos/clips/clip-7.mp4";
 
+import dashboardMockup from "@/assets/dashboard-mockup.jpg";
+
 const allClips = [clip1, clip2, clip3, clip4, clip5, clip6, clip7];
 
 // Cards comet in around the headline (timing from uploaded export).
 const CARDS_IN = 1.8;
 
+// Card positions match the uploaded reference exactly — they sit
+// around the headline within a compact hero stage (top third of viewport).
 const cards = [
   {
     startIndex: 0,
@@ -134,11 +138,7 @@ export function SpaceHero() {
   }, [isDesktop]);
 
   return (
-    <section
-      ref={heroRef}
-      className="relative overflow-hidden"
-      style={{ minHeight: "100vh" }}
-    >
+    <section ref={heroRef} className="relative overflow-hidden">
       <StarField />
 
       {/* Planet horizon arc — top half visible behind the headline */}
@@ -152,11 +152,10 @@ export function SpaceHero() {
         </div>
       </div>
 
-      {/* Hero stage */}
+      {/* Hero stage — compact (top third only), cards comet in around the headline */}
       <div
         ref={stageRef}
-        className="relative mx-auto max-w-7xl px-6 md:px-8 pt-28 md:pt-24 pb-20"
-        style={{ minHeight: "100vh" }}
+        className="container-page relative mx-auto max-w-7xl px-6 md:px-8 mt-4 pt-24 md:pt-20 h-[60vh] min-h-[480px] md:h-[44vh] md:min-h-[380px]"
       >
         {isDesktop && (
           <div className="absolute inset-0 hidden md:block">
@@ -190,7 +189,7 @@ export function SpaceHero() {
           </div>
         )}
 
-        <div className="relative z-10 flex min-h-[80vh] flex-col items-center justify-center text-center">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -240,6 +239,63 @@ export function SpaceHero() {
             <span>Trusted by 40+ brands · 120M+ views generated</span>
           </motion.div>
         </div>
+      </div>
+
+      {/* Dashboard preview — tilted screen frame rising from below (desktop only) */}
+      <div
+        className="container-page relative z-10 mx-auto hidden max-w-7xl px-6 pb-24 md:block md:px-8 mt-[6vh]"
+        style={{ perspective: "1800px" }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 200, scale: 0.92, rotateX: 18, rotateY: -8 }}
+          animate={{
+            opacity: 1,
+            y: [0, -10, 0],
+            scale: 1,
+            rotateX: 14,
+            rotateY: -8,
+            rotateZ: 1,
+          }}
+          transition={{
+            opacity: { delay: 3.4, duration: 1.2, ease: [0.16, 1, 0.3, 1] },
+            scale: { delay: 3.4, duration: 1.2, ease: [0.16, 1, 0.3, 1] },
+            rotateX: { delay: 3.4, duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+            rotateY: { delay: 3.4, duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+            rotateZ: { delay: 3.4, duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+            y: {
+              delay: 4.6,
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
+          style={{ transformStyle: "preserve-3d", transformOrigin: "50% 60%" }}
+          className="relative mx-auto max-w-5xl will-change-transform"
+        >
+          {/* Soft floor shadow / glow under the dashboard */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 -bottom-10 h-24 w-[80%] -translate-x-1/2 rounded-[50%]"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, hsl(275 60% 50% / 0.45), hsl(280 55% 45% / 0.18) 45%, transparent 70%)",
+              filter: "blur(30px)",
+              transform: "translateX(-50%) translateZ(-60px)",
+            }}
+          />
+          <div className="absolute -inset-6 rounded-3xl bg-gradient-to-b from-primary/30 via-primary/10 to-transparent blur-3xl" />
+          <div className="relative overflow-hidden rounded-lg border border-white/15 bg-card/40 shadow-[0_60px_140px_-30px_hsl(270_70%_55%/0.65),0_30px_60px_-20px_hsl(270_30%_5%/0.7)] backdrop-blur-xl">
+            <img
+              src={dashboardMockup}
+              alt="Stratton Labs analytics dashboard preview"
+              width={1920}
+              height={1080}
+              loading="lazy"
+              decoding="async"
+              className="w-full"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
