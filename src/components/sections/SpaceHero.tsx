@@ -13,7 +13,7 @@ import clip5 from "@/assets/videos/clips/clip-5.mp4";
 import clip6 from "@/assets/videos/clips/clip-6.mp4";
 import clip7 from "@/assets/videos/clips/clip-7.mp4";
 
-import dashboardMockup from "@/assets/dashboard-mockup.jpg";
+import dashboardMockup from "@/assets/dashboard-mockup.webp";
 
 const allClips = [clip1, clip2, clip3, clip4, clip5, clip6, clip7];
 
